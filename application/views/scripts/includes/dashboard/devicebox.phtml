@@ -1,0 +1,40 @@
+<!-- Device Box -->
+<div class="modal fade" id="deviceHistory">
+  <div class="modal-dialog">
+    <div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h3><span class="glyphicon glyphicon-phone"></span>  &nbsp;Devices (<span class="pname"></span>)</h3>
+		</div>
+		
+		<div class ="modal-body" >
+			<div class="form-horizontal">
+				<div class="send_group">
+				<table class="table table-striped" >	
+					<thead>
+					<tr>
+						<th width="60px">No. </th>
+						<th><a ng-click="sort_d_by('device_model')"><button class="sort_tool">Device Model <span class="caret"></span></button></a></th>
+						<th><a ng-click="sort_d_by('device_identifier')"><button class="sort_tool">Device Name <span class="caret"></span></button></a></th>
+						<th width="120px">Action</th>					
+					</tr>
+					</thead>				
+					<tbody>
+						<tr ng-if="deviceData.length <= 0">
+							<td colspan="5" align="center" width="820px">
+								<span class="glyphicon glyphicon-exclamation-sign"></span> &nbsp;<strong>No Device Found...</strong>
+							</td>
+						</tr>
+						<tr ng-repeat="data in deviceData | orderBy:predicate_d:reverse_d">
+							<td width="70px" align="center">{{ $index+1 }}.</td>
+							<td width="170px">{{data.device_model}}</td>
+							<td width="170px">{{data.product_name}}</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

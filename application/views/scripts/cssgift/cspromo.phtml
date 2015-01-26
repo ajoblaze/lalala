@@ -1,0 +1,285 @@
+<?php echo $this->doctype();?>
+<html ng-app="myAppSgift">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_g_sgift bd_promo" ng-controller="searchCrtl">
+{{ff()}}
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	<div class="ch-container">
+	<div class="row">
+	   
+	<!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+			
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			$crumb = array("Home" => $this->baseUrl,
+					"Merchant" => "active",
+					"Promo" => "active");
+			$array = array(
+					"item" => $crumb,
+					"class" => "col-lg-7",
+					"style" => "padding-right:0px"
+					);
+			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+		?>
+		
+		<div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+			<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+				<form action="<?php echo $this->baseUrl;?>/merchant/promo" method="GET" role="form" id="search-form">
+					<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default search-btn" type="button" id="advanced_search_button"><span class="caret"></span></button>
+					</span>
+					<input type="text" class="form-control" placeholder="Search.." name="q" id="input_search" value="<?php echo $this->param->q;?>">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</div><!-- /input-group -->
+				</form>
+			</div><!-- /.col-lg-4 col-lg-push-4-->
+			
+			<div class="btn-group pull-right" id="export_csv">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a ng-click="exportCurrent($event)" href="#">Export Filtered Data</a></li>
+					<li><a ng-click="exportAll($event)" href="#">Export All</a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<div class="col-lg-6" >
+			<div class="advanced_search_container col-sm-10" id="advanced_search_container">
+			<div class="panel panel-default">
+			  
+			<div class ="panel-body" >
+				<h3>Advance Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/merchant/promo" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+				<div class="form-horizontal">
+					<div class="advanced-input-group">
+						<?php if ($this->mySession->role != $this->config->role->id->merchant) : ?>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Merchant</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Merchant" name="merchant" id="merchant" value="<?php echo $this->param->merchant;?>">
+							</div>
+						 </div>
+						 <?php endif; ?>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Type</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control advanced-input" placeholder="Type" name="type" id="type" value="<?php echo $this->param->type;?>">
+							</div>
+						 </div>
+						 
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Publish Date</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control advanced-input date" placeholder="Publish Date" name="publish_date" value="<?php echo $this->param->publish_date;?>">
+							</div>
+						 </div>
+						 
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Coupon Title</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control advanced-input" placeholder="Coupon Title" name="coupon_title" id="coupon_title" value="<?php echo $this->param->coupon_title;?>">
+							</div>
+						 </div>
+						 
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><span class="glyphicon glyphicon-search"></span> &nbsp;Search</button>
+					</div>
+					</div>
+				</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+			
+			<div class="panel-body">					
+			<div class="row">
+			
+			
+			<!-- Popup -->
+			<div class="panel panel-primary promo_detail_container">
+			  <div class="panel-heading">
+			  <button type="button" class="close white" data-dismiss="modal" id="close_promo"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="panel-title">Promo Detail</h3>
+			  </div>
+			  <div class="panel-body" id="detail_promo">
+				Panel content
+			  </div>
+			</div>	
+			
+			<div class="panel panel-primary user_detail_container">
+				<div class="panel-heading">
+					<button type="button" class="close" data-dismiss="modal" id="close_user"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="panel-title">User Details</h3>
+				</div>
+				<div class="panel-body" id="detail_user">
+					Panel content
+				</div>
+			</div>
+			
+			<!-- -->
+			
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<form class="form-inline" role="form">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list.length | number:0}}</strong>&nbsp; from 
+						&nbsp;<strong>{{totalData | number:0}}</strong>&nbsp; data</h5></span>
+				</form>
+			</div>
+			
+			<div class="form-group pull-right form-inline" style="margin-right:15px;">	
+				
+				<div class="form-group" id="filter-textbox">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length | number:0}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Filter by..." >
+					</div>
+				</div>
+				<div class="form-group" id="filter-option">
+					<select class="form-control" ng-model="queryBy">
+						<option value="$">All</option>
+						<?php if ($this->mySession->role != $this->config->role->id->merchant) : ?>
+						<option value="merchant_name">Merchant</option>
+						<?php endif; ?>
+						<option value="coupon_title">Coupon Title</option>
+						<option value="claim_type">Type</option>
+						<option value="start_date">Start Date</option>
+						<option value="end_date">End Date</option>
+						<option value="publish_date">Publish Date</option>
+						<option value="total_coupon">Total Coupon</option>
+						<option value="total_redeem">Total Redeem</option>
+						<option value="total_claim">Total Claim</option>
+					</select>		
+				</div>
+				
+				&nbsp; &nbsp;&nbsp;
+				<div class="btn-group">
+				<div class="btn-group">
+					<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="time_filter">
+						<span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a id="btall" ng-click="DateRange = ''" value="all" href="#">All</a></li>
+						<li><a id="bt7days" ng-click="DateRange = 7" value="7days" href="#">7 Days</a></li>
+						<li><a id="bt30days" ng-click="DateRange = 30" value="30days" href="#">30 Days</a></li>
+					</ul>
+				</div>
+				
+				<div class="btn-group">	
+					<!--<button type="button" id="btall" ng-click="DateRange = ''" class="btn btn-primary filter_button " value="all">all</button>
+					<button type="button" id="bt7days" ng-click="DateRange = 7" class="btn btn-primary filter_button" value="7days">7 days</button>
+					<button type="button" id="bt30days" ng-click="DateRange = 30" class="btn btn-primary filter_button" value="30days">30 days</button>-->
+					
+					<button class="btn btn-success" type="button" id="start_date_btn" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span> </button>
+							<div class="date_dropdown pull-right dropdown-menu" role="menu">
+						<div class="row">
+							<div class="col-md-6">
+								<div id="datepicker1"></div>
+								<!--<input type="text" id="datepicker1" placeholder="start date">-->
+							</div>
+							<div class="col-md-6">
+								<div id="datepicker2"></div>
+								<!--<input type="text" id="datepicker2" placeholder="end date">-->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+							<button class="btn btn-success pull-right" id="apply_date" type="button" ng-click="DateRange = ''">Apply</button>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="form-group has-success" id="redeem/claim">
+						<select class="form-control" ng-model="dateBy" id="redeem" style="border-radius: 0px 4px 4px 0px;">
+							<option value="start_date" ng-selected="true">Start Date</option>
+							<option value="end_date">End Date</option>
+							<option value="publish_date">Publish Date</option>
+						</select>	
+				</div>
+				</div>
+			</div>	
+			</div><!-- /.row -->
+
+			<div class='tb-test'>
+				<div class="t-c">
+				<?php 
+					$size = ($this->mySession->role != $this->config->role->id->merchant) ? "8" : "8";
+					$headSize = ($this->mySession->role != $this->config->role->id->merchant) ? "8.1%" : "250px";
+				?>
+				<table class="table table-striped" id="transaction_table" >	
+					<thead>
+					<tr>
+						<th width="<?php echo $headSize; ?>"><a ng-click="sort_by('promo_id')"><button class="sort_tool">Coupon ID</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('merchant_name')"><button class="sort_tool">Channel</button></a></th>
+						<?php if ($this->mySession->role != $this->config->role->id->merchant) : ?>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by('merchant_name')"><button class="sort_tool">Merchant</button></a></th>
+						<?php endif; ?>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('coupon_title')"><button class="sort_tool">Coupon Title</button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by('claim_type')" ><button class="sort_tool">Type</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('start_date | asDate');"><button class="sort_tool">Start Date</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('end_date | asDate');"><button class="sort_tool">End Date</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('publish_date | asDate');"><button class="sort_tool">Publish Date</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('total_coupon');"><button class="sort_tool">Total Coupon</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('total_redeem');"><button class="sort_tool">Total Redeem</button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('total_coupon - total_redeem');"><button class="sort_tool">Redeem Left</button></a></th>
+						<th width="<?php echo ($size-0.1)."%"; ?>"><a ng-click="sort_by('total_claim');"><button class="sort_tool">Total Claim</button></a></th>
+						<th width="<?php echo ($size-0.1)."%"; ?>"><a ng-click="sort_by('total_redeem - total_claim');"><button class="sort_tool">Claim Left</button></a></th>						
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="x in filtered = ( search_list | filter:query  | filter:queryByDay | filter:queryByPickerDay ) | orderBy:predicate:reverse">
+							<td width="<?php echo $headSize; ?>" style="word-break:break-all;">{{x.promo_id}}</td>
+							<td width="<?php echo $size."%"; ?>" >{{x.channel}}</td>
+							<?php if ($this->mySession->role != $this->config->role->id->merchant) : ?>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center" ng-bind-html="trustHtml(x.merchant_name)"></td>
+							<?php endif; ?>
+							<td width="<?php echo $size."%"; ?>" promodata="{{x.promo_id}}" class="cursor stylish" tes-popup style="text-align:center;" ng-bind-html="trustHtml(x.coupon_title)"></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.claim_type}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.start_date }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.end_date }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.publish_date | asDate | date:'dd MMM yyyy HH:mm'}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{ x.total_coupon }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{ (x.total_redeem == null) ? 0 : x.total_redeem }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{ x.total_coupon - x.total_redeem }}</td>
+							<td width="<?php echo ($size-0.1)."%"; ?>" style="text-align:center">{{ x.total_claim }}</td>
+							<td width="<?php echo ($size-0.1)."%"; ?>" style="text-align:center">{{ x.total_redeem - x.total_claim }}</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				</div>
+					
+				<div class="bg-loading">
+					<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+				</div>	
+			</div>
+			<center>
+			<div class="bg-log-loading" style="display:block">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+				</div>
+			</div>
+			</center>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- Cover -->
+	<div class="cover"></div>
+	</body>	
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/cspromo.js"); ?>

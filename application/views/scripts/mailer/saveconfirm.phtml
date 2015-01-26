@@ -1,0 +1,89 @@
+<?php echo $this->doctype();?>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<?php echo $this->headTitle();?>
+		<?php echo $this->render("includes/script.phtml"); ?>
+	</head>
+	<body class="bg-gray">
+	<?php  if ($this->success != 1) { ?>
+	<br/>
+	<div class="col-sm-offset-4 col-sm-4" id="frmlogin">
+	<div class="panel panel-default login-panel">
+		<div class="panel-body">
+			<h4 class="text-center"><i class="glyphicon glyphicon-list-alt"></i> &nbsp;Confirmation Form</h4>
+			<div class="border-grey"></div><div class="clear"></div>
+			<div class="border-white"></div><div class="clear"></div>
+			<br/>
+			<form class="form-horizontal" role="form" method="post" action="<?php echo $this->baseUrl; ?>/mailer/saveconfirm">
+				<?php echo $this->render("includes/hidden.phtml");?>
+				
+				<div class="form-group">
+					<div class="input-group col-sm-offset-1 col-sm-10 ">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+						</span>
+						<input type="email" class="form-control" name="username" id="inputUsername" placeholder="Username" maxlength="30" value="<?php echo $this->param->username;?>" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="input-group col-sm-offset-1 col-sm-10 ">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+						</span>
+						<input type="password" class="form-control" name="password" id="inputPass" placeholder="Password" maxlength="30" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="input-group col-sm-offset-1 col-sm-10 ">
+						<textarea class="form-control large-height" name="reason" placeholder="Please input your reason here.."><?php echo $this->param->reason;?></textarea>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-8 col-sm-3 control-label">
+					  <button type="submit" class="btn btn-default" value="submit"><span class="glyphicon glyphicon-floppy-disk"></span> &nbsp;Submit</button>
+					</div>
+				</div>
+			</form>
+			
+			<div class="form-group">
+				<label for="inputUsername" class="col-sm-7 control-label">
+					<font color="red"><?php echo $this->error;?></font>
+				</label>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- </div> -->
+	<?php } else { ?>
+		<br><br><br><br><br>
+	
+		<div class="confirm-content">
+	
+			<div class="form-group">
+
+				<img src="<?php echo $this->baseUrl ?>/assets/images/success.png" alt="Submitted Successfully" align="middle" width="50%"/>
+				<br />
+
+			</div>
+			
+			<div class="form-group">
+			
+				<h4><font color="#4385cb"><?php echo $this->message;?></font></h4>
+				<br />
+
+			</div>
+			
+			<div class="form-group">
+				<a href="<?php echo $this->baseUrl;?>"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-circle-arrow-right"></span> &nbsp;Continue</button></a>
+			</div>
+	</div>	
+	<?php } ?>
+	</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/login.js"); ?>

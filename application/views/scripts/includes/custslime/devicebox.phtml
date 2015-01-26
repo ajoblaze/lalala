@@ -1,0 +1,48 @@
+<!-- Device Box -->
+<div class="modal fade" id="deviceHistory">
+  <div class="modal-dialog" style="width:855px">
+    <div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h3><span class="glyphicon glyphicon-phone"></span>  &nbsp;Devices (<span class="pname"></span>)</h3>
+		</div>
+		
+		<div class ="modal-body" >
+			<div class="form-horizontal">
+				<div class="send_group">
+				<table class="table table-striped" id="transaction_table" style="width:820px;" >	
+					<thead>
+					<tr>
+						<th width="70px"><a ng-click="sort_d_by('$index')"><button class="sort_tool">No. <span class="caret"></span></button></a></th>
+						<th width="170px"><a ng-click="sort_d_by('device_model')"><button class="sort_tool">Device Model <span class="caret"></span></button></a></th>
+						<th width="170px"><a ng-click="sort_d_by('device_identifier')"><button class="sort_tool">IMEI <span class="caret"></span></button></a></th>
+						<th width="170px" style="text-align:center"><a ng-click="sort_d_by('os_version')"><button class="sort_tool">OS Version <span class="caret"></span></button></a></th>
+						<th width="150px" style="text-align:center"><a ng-click="sort_d_by('status')"><button class="sort_tool">Status <span class="caret"></span></button></a></th>
+						<th width="120px">Action</th>					
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-if="deviceData.length <= 0">
+							<td colspan="5" align="center" width="820px">
+								<span class="glyphicon glyphicon-exclamation-sign"></span> &nbsp;<strong>No Device Found...</strong>
+							</td>
+						</tr>
+						<tr ng-repeat="data in deviceData | orderBy:predicate_d:reverse_d">
+							<td width="70px" align="center">{{ $index+1 }}.</td>
+							<td width="170px">{{data.device_model}}</td>
+							<td width="170px">{{data.device_identifier}}</td>
+							<td width="170px" align="center">{{data.os_version}} </td>
+							<td width="150px" align="center"><span class="label" ng-class="{'label-success' : data.status=='enabled', 'label-danger' : data.status=='disabled'}">{{data.status}}</span></td>
+							<td width="120px">
+								<button class="btn btn-success" ng-if="data.status=='disabled'" title="Activate" ng-click="api($event, data, $index)">Activate</button>
+								<button class="btn btn-danger" ng-if="data.status=='enabled'" title="Suspend" ng-click="api($event, data, $index)" >Suspend</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

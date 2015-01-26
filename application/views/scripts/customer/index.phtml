@@ -1,0 +1,288 @@
+<?php echo $this->doctype();?>
+<html ng-app="customer">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_cs_customer" ng-controller="searchCrtl">
+
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<div class="ch-container">
+	<div class="row">
+	   
+	<!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			$crumb = array("Home" => $this->baseUrl,
+							"Management" => "active",
+							"Customers" => "active");
+			$array = array(
+							"item" => $crumb,
+							"class" => "col-lg-7",
+							"style" => "padding-right:0px"
+							);
+			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+		?>
+		
+		<div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+			<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+				<form action="<?php echo $this->baseUrl;?>/customer/index" method="GET" role="form" id="search-form">
+					<div class="input-group">
+					<span class="input-group-btn">
+				<button class="btn btn-default search-btn" type="button" id="advanced_search_button">
+					<span class="caret"></span>
+				</button>
+				</span>
+					<input type="text" class="form-control" placeholder="Search..." name="q" id="input_search" value="<?php echo $this->param->q;?>">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</div><!-- /input-group -->
+				</form>
+			</div><!-- /.col-lg-4 col-lg-push-4-->
+			
+			<div class="btn-group pull-right cs-not-show" id="export_csv">
+				 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-folder-open"></span> &nbsp;
+					Export CSV &nbsp;&nbsp; <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a ng-click="exportCurrent($event)" href="#">Export Current Document</a></li>
+					<li><a ng-click="exportAll($event)" href="#">Export All</a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<div class="col-sm-6" >
+			<div class="advanced_search_container col-sm-8" id="advanced_search_container">
+			<div class="panel panel-default">
+			  
+			<div class ="panel-body" >
+				<h3>Advance Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/customer/index" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+				<div class="form-horizontal">
+					<div class="advanced-input-group">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control advanced-input" placeholder="User name" name="username" id="username" value="<?php echo $this->param->username;?>">
+							</div>
+						 </div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Email" id="email" name="email" value="<?php echo $this->param->email;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">IMEI or MAC</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control advanced-input" placeholder="IMEI or MAC" id="imei" name="imei" value="<?php echo $this->param->imei;?>">
+							</div>
+						 </div>
+						 
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Device</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control advanced-input" placeholder="Device Model" id="device" name="device" value="<?php echo $this->param->device;?>">
+							</div>
+						 </div>
+						 
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">App</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="app" id="app">
+									<option value="">- All App -</option>
+									<?php 
+										$search = array_search($this->config->project->id->slime, $this->mySession->project);
+										if (is_numeric($search)) {
+									?>
+										<option value="slime" <?php echo (strcasecmp($this->param->app, "slime") == 0) ? "selected" : ""; ?>>Slime</option>
+									<?php } ?>
+									<?php 
+										$search = array_search($this->config->project->id->sgift, $this->mySession->project);
+										if (is_numeric($search)) {
+									?>
+										<option value="sgift" <?php echo (strcasecmp($this->param->app, "sgift") == 0) ? "selected" : ""; ?>>Galaxy Gift ID</option>
+									<?php } ?>
+								</select>
+							</div>
+						 </div>
+						 
+						  <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Status</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="status" id="status">
+									<option value="">- All Status -</option>
+									<option value="enabled" <?php echo (strcasecmp($this->param->status, "enabled") == 0) ? "selected" : ""; ?>>Active</option>
+									<option value="disabled" <?php echo (strcasecmp($this->param->status, "disabled") == 0) ? "selected" : ""; ?>>Suspended</option>
+								</select>
+							</div>
+						 </div>
+						 				 
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><i class="glyphicon glyphicon-search"></i> &nbsp;Search</button>
+					</div>
+					</div>
+				</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+			
+			<div class="panel-body">				
+			<div class="row">
+			
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list.length | number:0}}</strong>&nbsp; from 
+				&nbsp;<strong>{{totalData | number:0}}</strong>&nbsp; data</h5></span>
+			</div>
+			
+			<div class="form-group pull-right form-inline" style="margin-right:15px;">
+				<div class="form-group ">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length | number:0}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Filter by..." >
+					</div>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="queryBy">
+						<option value="$">All</option>
+						<option value="name">Username</option>
+						<option value="email">Email</option>							
+						<option value="imei">IMEI or MAC</option>
+						<option value="device_model">Device</option>
+						<option value="app">App</option>
+						<option value="status">Status</option>
+					</select>		
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+	
+				<div class='tb-test table-responsive'>
+				<div class="t-c">
+				<table class="table table-striped" id="transaction_table" >	
+					<thead>
+					<tr>
+						<th width="220px"><a ng-click="sort_by('name')"><button class="sort_tool">Username <span class="caret"></span></button></a></th>
+						<th width="11%"><a ng-click="sort_by('email')"><button class="sort_tool">Email <span class="caret"></span></button></a></th>
+						<th width="11%" style="text-align:center"><a ng-click="sort_by('device_model')"><button class="sort_tool">Devices <span class="caret"></span></button></a></th>
+						<th width="11%" style="text-align:center;"><a ng-click="sort_by('price')"><button class="sort_tool">Value <span class="caret"></span></button></a></th>
+						<th width="11%" style="text-align:center;"><a ng-click="sort_by('app');"><button class="sort_tool">App <span class="caret"></span></button></a></th>
+						<th width="11%"><a ng-click="sort_by('first_download_date | asDate');"><button class="sort_tool">Activity <span class="caret"></span></button></a></th>
+						<th width="11%" style="text-align:center;"><a ng-click="sort_by('status');"><button class="sort_tool">Status <span class="caret"></span></button></a></th>
+						<th width="11%" style="text-align:center;"><a ng-click="sort_by('status');"><button class="sort_tool">Action</button></a></th>
+						<th width="11%"  style="text-align:center;"><a><button class="sort_tool">History</button></a></th>					
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="x in filtered = ( search_list | filter:query ) | orderBy:predicate:reverse">
+							<td width="220px">{{x.name}}</td>
+							<td width="11%">{{x.email}}</td>
+							<td width="11%" align="center"><capital>{{ (x.device_model == null) ? '-' : x.device_model}}</capital><br/><em>{{(x.product_name == null) ? '-' : x.product_name}}</em><br/><strong> {{x.imei}}</strong></td>
+							<td width="11%" align='center'>{{(x.price == null) ? 0 : (x.price | number:0)}}</td>
+							<td width="11%" align='center'>{{ (x.app.toLowerCase() == 'sgift') ? 'Galaxy Gift ID' : x.app}}</td>
+							<td width="11%"><strong>{{(x.first_download_date == null) ? '-' : (x.first_download_date | asDate | date:'dd MMM y HH:mm')}}</strong><br/>{{(x.last_download_date == null) ? '-' : (x.last_download_date | asDate | date:'dd MMM y HH:mm')}}</td>
+							<td width="11%" align='center'><capital>{{x.status}}</capital></td>
+							<td width="11%" align="center">
+								<a href="#mailChooser" ng-if="x.app.toLowerCase() == 'slime'" data-toggle="modal" style="text-decoration: none;">
+								<button class="btn btn-success" ng-if="x.status=='suspended'" title="Activate" ng-click="doSuspend(x, $event)">Activate</button>
+								<button class="btn btn-danger" ng-if="x.status=='active'" title="Suspend" ng-click="doSuspend(x, $event)" >Suspend</button>
+								</a>
+								&nbsp;
+								<a href="#change_email" ng-if="x.app.toLowerCase() == 'slime'" data-toggle="modal">
+								<button type="button" title="Change Email" ng-click="changeEmail($event, x)" class="btn btn-info"><span class="glyphicon glyphicon-envelope"></span></button>
+								</a>
+								<strong ng-if="x.app.toLowerCase() == 'sgift'">- No Action -</strong>
+							</td>
+							<td width="11%" align="center">
+								<button class="btn btn-primary" ng-click="getHistory($event, x)"><i class="glyphicon glyphicon-book"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				</div>
+				
+				<div class="bg-loading">
+					<div class="loading-text">
+						<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+				</div>
+			</div>
+			<center>
+			<div class="bg-log-loading">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+				</div>
+			</div>
+			</center>			
+			</div>
+			
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<!-- Modal Pop Up -->
+	<?php echo $this->render("includes/mail.phtml"); ?>
+	<?php echo $this->render("includes/emailbox.phtml"); ?>
+	
+	<!-- Detail Pop Up -->
+	<!-- Mail Box -->
+	<div class="modal fade" id="detailHistory">
+	  <div class="modal-dialog" style="width:1200px">
+		<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3>&nbsp;<span class="glyphicon glyphicon-book"></span> &nbsp;History Actions</h3>
+			</div>
+			
+			<div class ="modal-body" >
+			<div class="form-horizontal">
+				<div class="send_group">
+				<table class="table table-striped" style="width:100%;" >	
+					<thead>
+					<tr>
+						<th width="80px"><a ng-click="sort_by('historyID')"><button class="sort_tool">Ticket ID</button></a></th>
+						<th width="160px"><a ng-click="sort_by('name')"><button class="sort_tool">Date</button></a></th>
+						<th><a ng-click="sort_by('email')"><button class="sort_tool">Email</button></a></th>
+						<th width="90px"><a ng-click="sort_by('device_model')"><button class="sort_tool">App</button></a></th>
+						<th width="100px"><a ng-click="sort_by('first_download_date')"><button class="sort_tool">Actions</button></a></th>
+						<th width="150px"><a ng-click="sort_by('app');"><button class="sort_tool">Reason</button></a></th>
+						<th><a ng-click="sort_by('status');"><button class="sort_tool">Status</button></a></th>
+						<th width="100px"><a ng-click="sort_by('status');"><button class="sort_tool">By</button></a></th>
+						<th width="120px"><button class="sort_tool">Approval Date</button></th>						
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="h in history">
+							<td>{{h.historyID}}</td>
+							<td>{{h.created_date | asDate | date:'d MMM y HH:mm'}}</td>
+							<td>{{h.email}}</td>
+							<td>{{h.app}}</td>
+							<td>{{h.actions}}</td>
+							<td>{{h.reason_actions}}</td>
+							<td><strong>{{h.approve_status}}</strong></td>
+							<td>{{h.username}}</td>
+							<td>{{(h.approveDate == null) ? "-" : (h.approveDate | asDate | date:'d MMM y HH:mm')}}</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			</div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	</body>	
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/customer.js"); ?>

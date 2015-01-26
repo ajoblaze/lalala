@@ -1,0 +1,87 @@
+<?php echo $this->doctype();?>
+<html>
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_reviews_salaam bd_salaam">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		<?php echo $this->render("includes/hidden.phtml"); ?>
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+								"Apps" => "active",
+								"Salaam" => "active",
+								"Reviews" => "active");
+				$array = array(
+								"item" => $crumb,
+								"class" => "col-lg-12",
+								"style" => "padding-right:15px"
+								);
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+			
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+				<div class="panel-body">
+					<h3><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</h3><hr/>
+					<div class="form-group pull-right form-inline" style="margin-right:15px;">
+						<div class="btn-group" style="position:relative;top:-70px;margin:0" id="export_csv">
+							<button id="export" class="btn btn-default pull-right"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;Export CSV</button>
+						</div>
+					</div>
+					<div class='tb-test'>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<td width="10%"><a data-col="review_date" class="sortable" title="click to sort"><button class="sort_tool" value="sort_date">Date</button></a></td>
+									<td width="12%"><a data-col="star_rating" class="sortable" title="click to sort"><button class="sort_tool" value="sort_rate">Star Rating</button></a></td>
+									<td width="20%"><a data-col="review_title" class="sortable" title="click to sort"><button class="sort_tool" value="sort_date">Review Title</button></a></td>
+									<td width="50%"><a data-col="review_text" class="sortable" title="click to sort"><button class="sort_tool" value="sort_text">Review Text</button></a></td>
+								</tr>
+							</thead>
+							<tbody id="table_data">
+							<?php
+							$temp_data = $this->review_list;
+							for($i =  0; $i< count($temp_data); $i++){
+							?>
+								<tr>
+								<td><?php echo $this->dateformat($temp_data[$i]["review_date"], $this->config->param->df->FULL_DATE); ?></td>
+								<td class="center"><ul class="star-container">
+								<?php 
+								$star = str_replace("\0", "", $temp_data[$i]["star_rating"]) ;
+									for($x = 0 ; $x < $star; $x++){
+											?>
+												<li><span class="glyphicon glyphicon-star"></span></li>
+											<?php
+									}
+								?>
+								<?php 
+									for($x = 0 ; $x < 5-$star; $x++){
+											?>
+												<li><span class="glyphicon glyphicon-star-empty"></span></li>
+											<?php
+									}
+								?>
+								</ul></td>
+								<td><?php echo $temp_data[$i]["review_title"] ; ?></td>
+								<td><?php echo $temp_data[$i]["review_text"] ; ?></td>
+								</tr>
+							<?php
+								}
+							?>
+					</tbody>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/salaam/salaam_review.js"); ?>

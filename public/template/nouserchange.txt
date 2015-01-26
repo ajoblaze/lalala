@@ -1,0 +1,32 @@
+<body style='background-color:#EBEBEB;padding:10px;'><div style='
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color: #EBEBEB;
+			margin:0;
+			padding:8px;
+		'><center>
+
+<div style='	width:70%;
+			background-color:white;
+			border: 1px solid #CCCCCC;
+			text-align: left;
+			padding:10px;'>
+			<center><img src='http://reporting.srinapps.com/public/assets/img/logo20.png' width='30%'/></center><br/>
+			<div style='border-top:1px solid #e4e4e4;
+			padding-top:5px;
+			padding-bottom:5px;'>
+			</div>
+			Dear <strong>user</strong>, <br/><br/>
+Thanks for verifying your email address. <br/>
+Sorry, your request to change your email {{email}} into {{newemail}} has been rejected
+<br/><br/>
+<div style='float:right;height:80px;'>
+{{app}}</div>
+<br/>
+<br/>
+<br/>
+</div></center></div>
+</body>

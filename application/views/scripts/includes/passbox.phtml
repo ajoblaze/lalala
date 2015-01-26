@@ -1,0 +1,41 @@
+<div id="container-changepass" class="d_none">
+<div class="panel panel-primary" id="changepass">
+<div class="panel-heading">
+	<h3><i class="glyphicon glyphicon-lock"></i> &nbsp;Change Password</h3>
+	<hr/>
+</div>
+<div class="panel-body">
+	<form role="role" autocomplete = "off">
+	<div class="form-group">
+	<label for="inputEmail3" class=control-label">Please change your password for the first time login</label>
+	</div>
+		<div class="form-group">
+		<div class="input-group">
+			<!--<label for="exampleInputPassword1">New Password:</label> -->
+			<span class="input-group-addon">
+				<span class="glyphicon glyphicon-lock"></span>
+			</span>
+			<input type="password" class="form-control" name="newpass" id="newpass" placeholder="New Password">
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="input-group">
+			<!--<label for="exampleInputFile">Confirm New Password:</label>-->
+			<span class="input-group-addon">
+				<span class="glyphicon glyphicon-lock"></span>
+			</span>
+			<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm New password">
+		</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="error">
+				<font color="red" id="lblerror"><?php echo $this->error;?></font>
+			</label>
+		</div>
+		<button type="button" id="btchange" class="pull-right btn btn-default"><span class="glyphicon glyphicon-pencil"></span> &nbsp;Change Password</button>
+	</form>
+</div>
+</div>
+</div>
+<div id="bg-overlay d_none"></div>

@@ -1,0 +1,55 @@
+@font-face{
+	font-family: "Roboto-Light";
+	src : local("Roboto-Light"), url('../fonts/Roboto-Light.ttf');
+}
+body{
+	margin: 0;
+	font-family: "Roboto-Light";
+}
+.bg{
+	width:100%;
+	height:300px;
+	/*background-image:url('../images/bg-grey.jpg');*/
+	background:#428bca;
+	position:relative;
+}
+.img-container{
+	position:absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(50%);
+	z-index:101;
+	border-radius:100%;
+}
+.content{
+	width: 100%;
+	text-align: center;
+	padding-top: 100px;
+	z-index:100;
+	position:relative;
+}
+.maintainance-title{	
+	font-size: 48px;
+	color: #808186;
+	font-weight:bold;
+}
+.divider{
+	width: 60%;
+	margin: 0 auto;
+	border-bottom: 1px solid #808186;
+}
+.maintainance-tag{
+	font-size: 24px;
+	color: #808186;
+}
+@media screen and (max-width: 992px){
+.maintainance-title{	
+	font-size: 32px;
+	color: #808186;
+	font-weight:bold;
+}
+.maintainance-tag{
+	font-size: 24px;
+	color: #808186;
+}
+}

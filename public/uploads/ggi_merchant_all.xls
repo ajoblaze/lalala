@@ -1,0 +1,962 @@
+merchant_id	merchant_name	outlet_id	outlet_name	city
+191	Changhong	19100012	Online	Online
+140	KFC	14000010	Pondok Indah Mall	Jabodetabek
+140	KFC	14000027	Pondok Indah Mall 2	Jabodetabek
+140	KFC	14000034	Pondok Indah Plaza	Jabodetabek
+140	KFC	14000041	ITC Permata Hijau	Jabodetabek
+140	KFC	14000058	Binus kemanggisan	Jabodetabek
+140	KFC	14000065	Depok Mall	Jabodetabek
+140	KFC	14000072	Depok Plaza	Jabodetabek
+140	KFC	14000089	ITC Depok	Jabodetabek
+140	KFC	14000096	Pasar Rebo	Jabodetabek
+140	KFC	14000102	Graha Cijantung	Jabodetabek
+140	KFC	14000119	Ciracas	Jabodetabek
+140	KFC	14000126	La Teracce 	Jabodetabek
+140	KFC	14000133	Margonda Depok	Jabodetabek
+140	KFC	14000140	Bogor Rest Area	Jabodetabek
+140	KFC	14000157	Bogor Pajajaran	Jabodetabek
+140	KFC	14000164	Tugu	Jabodetabek
+140	KFC	14000188	Taman Topi Square	Jabodetabek
+140	KFC	14000195	Bogor Indah Plaza	Jabodetabek
+140	KFC	14000201	Plaza Elokasari	Jabodetabek
+140	KFC	14000218	Mall Taman Anggrek	Jabodetabek
+140	KFC	14000225	Citraland Jakarta	Jabodetabek
+140	KFC	14000232	Daan Mogot	Jabodetabek
+140	KFC	14000249	Puri Indah Mall	Jabodetabek
+140	KFC	14000256	Food Point Puri Indah	Jabodetabek
+127	blibli	12700011	online	Jakarta
+140	KFC	14001765	Aditiawarman Surabaya	Jawa Timur
+142	Alfamart	14200014	Indonesia	Indonesia
+110	Burger King	11000044	Grand Indonesia	Jakarta
+110	Burger King	11000112	Plaza Festival	Jakarta
+110	Burger King	11000136	EDC 13	Jakarta
+110	Burger King	11000082	Cilandak Town Square	Jakarta
+110	Burger King	11000051	Citywalk Sudirman	Jakarta
+110	Burger King	11000174	Botani Square	Jakarta
+110	Burger King	11000099	Blok M	Jakarta
+110	Burger King	11000068	Plaza Semanggi	Jakarta
+110	Burger King	11000150	Cibubur KM 10.5	Jakarta
+110	Burger King	11000167	KM 19	Jakarta
+110	Burger King	11000181	Super Mall Karawaci	Jakarta
+110	Burger King	11000228	Burger King - Call Center Burger King	Jakarta
+110	Burger King	11000204	Lotte Shopping Avenue	Jakarta
+140	KFC	14000171	Bogor Trade Center	Jabodetabek
+140	KFC	14000263	Hypermart Puri Indah	Jabodetabek
+140	KFC	14000270	Teluk Gong 	Jabodetabek
+140	KFC	14000287	Season City	Jabodetabek
+140	KFC	14000294	Roxy Square	Jabodetabek
+140	KFC	14000300	ITC Roxy Mas	Jabodetabek
+140	KFC	14000317	Tanjung Duren	Jabodetabek
+140	KFC	14000324	Bandara Soekarno Hatta 2F	jabodetabek
+140	KFC	14000331	RMY Cengkareng	Jabodetabek
+140	KFC	14000348	Mall Taman Palem	Jabodetabek
+140	KFC	14000355	Mall Taman Palem FC	Jabodetabek
+110	Burger King	11000143	Puri Indah	Jakarta
+110	Burger King	11000198	BSD	Jakarta
+110	Burger King	11000075	Senayan City	Jakarta
+110	Burger King	11000242	Burger King - Paris Van Java	Bandung
+110	Burger King	11000129	Setiabudi	Jakarta
+110	Burger King	11000037	PIK	Jakarta
+110	Burger King	11000211	Burger King - TEST EDC NFC 2	Jakarta
+110	Burger King	11000020	Emporium Pluit	Jakarta
+110	Burger King	11000013	Mall Kelapa Gading 5	Jakarta
+110	Burger King	11000105	Kota Kasablanka	Jakarta
+110	Burger King	11000235	Burger King - Launching	Jakarta
+108	Dairy Queen	10800010	PURI INDAH, 2nd floor	Jakarta
+108	Dairy Queen	10800027	CENTRAL PARK, Lower Ground	Jakarta
+108	Dairy Queen	10800034	GRAND INDONESIA, Food Louver level 3	Jakarta
+108	Dairy Queen	10800041	GRAND INDONESIA, West Mall level 5	Jakarta
+108	Dairy Queen	10800058	PONDOK INDAH MALL, Area 51 Food Court	Jakarta
+108	Dairy Queen	10800065	GANDARIA CITY, Lower Ground	Jakarta
+108	Dairy Queen	10800072	KOTA KASABLANKA, UG	Jakarta
+108	Dairy Queen	10800089	EMPORIUM PLUIT, Food Court level 5	Jakarta
+108	Dairy Queen	10800096	MAL KELAPA GADING 3, MKG 3 Food Court	Jakarta
+108	Dairy Queen	10800102	CARREFOUR LEBAK BULUS	Jakarta
+108	Dairy Queen	10800119	BLOK M PLAZA, South Entrance	Jakarta
+108	Dairy Queen	10800126	SUMMARECON MAL SERPONG	Tangerang
+108	Dairy Queen	10800133	PARIS VAN JAVA, Glamour Level	Bandung
+108	Dairy Queen	10800140	TRANS STUDIO MAL, 2nd floor	Bandung
+108	Dairy Queen	10800157	TUNJUNGAN PLAZA 3, Lower Ground	Surabaya
+108	Dairy Queen	10800164	BEACHWALK KUTA	Bali
+108	Dairy Queen	10800171	East Coast Centre	Surabaya
+116	Chatime	11600909	Binjai	Medan
+116	Chatime	11600299	WTC II	Jakarta
+116	Chatime	11600763	Paragon	Solo
+116	Chatime	11600435	Cihampelas Walk	Bandung
+116	Chatime	11600893	Focal Point	Medan
+116	Chatime	11600817	Summarecon Bekasi	Bekasi
+116	Chatime	11600060	Ciputra Mall	Jakarta
+116	Chatime	11600947	Dago	Bandung
+116	Chatime	11600756	Lippo Mall Kuta	Bali
+116	Chatime	11600855	Living Word 1	Tangerang
+116	Chatime	11600220	Pondok Indah Mall	Jakarta
+116	Chatime	11600305	Hypermart Puri	Jakarta
+116	Chatime	11600084	Citra Grand Cibubur	Jakarta
+116	Chatime	11600336	TERASUTRA BOGOR	Bogor
+116	Chatime	11600480	Yogya Kepatihan	Bandung
+116	Chatime	11600619	LIPPO SUNSET BALI	Bali
+116	Chatime	11600831	Cipinang Indah	Jakarta
+116	Chatime	11600466	Miko Mall Bandung	Bandung
+116	Chatime	11600473	Yogya Jl. Sunda	Bandung
+116	Chatime	11600343	Depok Margonda	Depok
+116	Chatime	11600923	Jambi Prima Mall	Jambi
+116	Chatime	11600572	Tunjungan Plaza Surabaya	Surabaya
+116	Chatime	11600589	BEACH WALK BALI	Bali
+116	Chatime	11600770	Baywalk	Jakarta
+116	Chatime	11600527	DARMO SURABAYA	Surabaya
+116	Chatime	11600046	Central Park 2	Jakarta
+116	Chatime	11600954	Panakkukang - Makassar	Makassar
+116	Chatime	11600725	Centre Point	Medan
+116	Chatime	11600640	Carrefour Sunset	Bali
+116	Chatime	11600114	Gedung Kawan Lama	Jakarta
+116	Chatime	11600237	Puri	Jakarta
+116	Chatime	11600152	Kuningan City 	Jakarta
+116	Chatime	11600176	LIVING PLAZA CINERE	Jakarta
+116	Chatime	11600602	Discovery Mall Bali	Bali
+116	Chatime	11600190	Mal Kelapa Gading	Jakarta
+116	Chatime	11600350	Margo City Depok	Depok
+116	Chatime	11600800	Latanete Maricaya Makassar	Makassar
+116	Chatime	11600169	LIPPO CIKARANG	Jakarta
+116	Chatime	11600510	Ciputra World Surabaya	Surabaya
+116	Chatime	11600039	Central Park 1	Jakarta
+116	Chatime	11600671	HERMES PLACE POLONIA MEDAN	Medan
+116	Chatime	11600268	Senayan City	Jakarta
+116	Chatime	11600657	Central Parkir Kuta	Bali
+116	Chatime	11600244	Rawamangun	Jakarta
+116	Chatime	11600459	Istana Plaza	Bandung
+116	Chatime	11600138	Kemang Village	Jakarta
+116	Chatime	11600497	Ciputra Semarang	Semarang
+116	Chatime	11600558	PAKUWON SUPERMALL SURABAYA	Surabaya
+116	Chatime	11600794	Sentul City	Bogor
+116	Chatime	11600404	Ahmad Yani Bekasi	Bekasi
+116	Chatime	11600978	Palembang Square	Palembang
+116	Chatime	11600442	Festival Citylink	Bandung
+116	Chatime	11600374	GIANT PARAMOUNT ILAGO SERPONG	Tangerang
+116	Chatime	11600121	Grand Indonesia	Jakarta
+116	Chatime	11600411	METROPOLITAN MALL 2 BEKASI	Bekasi
+116	Chatime	11600251	RUKO PIK CROWNGOLF	Jakarta
+116	Chatime	11600626	MBG	Bali
+116	Chatime	11600879	Lenmark	Surabaya
+116	Chatime	11600886	Lippo Mall Kuta	Bali
+116	Chatime	11600916	Jambi Town Square	Jambi
+116	Chatime	11600398	Citra Raya	Tangerang
+116	Chatime	11600633	Sunset Point Bali	Bali
+116	Chatime	11600206	Pejaten	Jakarta
+116	Chatime	11600053	Cibubur Times Square	Jakarta
+116	Chatime	11600688	JUANDA MEDAN	Medan
+116	Chatime	11600565	Plaza Surabaya	Surabaya
+116	Chatime	11600145	Kota Kasablanka	Jakarta
+116	Chatime	11600664	CAMBRIDGE CITY SQUARE MEDAN	Medan
+116	Chatime	11600718	Cibinong	Bogor
+116	Chatime	11600107	Gandaria	Jakarta
+116	Chatime	11600091	EMPORIUM PLUIT	Jakarta
+116	Chatime	11600961	Palembang Indah Mall	Palembang
+116	Chatime	11600695	SUN PLAZA MEDAN	Medan
+116	Chatime	11600015	BLOK M PLAZA	Jakarta
+116	Chatime	11600077	Citra 6	Jakarta
+116	Chatime	11600930	Lippo Plaza Medan	Medan
+116	Chatime	11600022	Carefour Lebak Bulus	Jakarta
+116	Chatime	11600862	Living Word 2	Tangerang
+116	Chatime	11600503	SIMPANG 5 SEMARANG	Semarang
+116	Chatime	11600381	SUPERMALL KARAWACI	Tangerang
+116	Chatime	11600749	The Park	Solo
+116	Chatime	11600183	Mal Artha Gading	Jakarta
+116	Chatime	11600275	Setiabudi	Jakarta
+116	Chatime	11600732	Grand Galaxy	Bekasi
+116	Chatime	11600541	Grand City Surabaya	Surabaya
+116	Chatime	11600367	Alam Sutera	Tangerang
+116	Chatime	11600701	A.Yani Pontianak	Pontianak
+116	Chatime	11600534	East Coast Surabaya	Surabaya
+116	Chatime	11600848	Sarinah Thamrin	Jakarta
+116	Chatime	11600428	Mall Grand Metropolitan	Bekasi
+116	Chatime	11600282	Taman Anggrek	Jakarta
+116	Chatime	11600787	Brastagi Medan	Medan
+116	Chatime	11600596	Denpasar City Square	Bali
+116	Chatime	11600329	Botani Square Bogor	Bogor
+116	Chatime	11600824	Balubur Bandung	Bandung
+116	Chatime	11600312	Bintaro	Jakarta
+116	Chatime	11600213	Plaza Semanggi	Jakarta
+117	Haagen Dazs	11700272	Centre Point Mall	Medan
+117	Haagen Dazs	11700135	Kota Kasablanka	Jakarta
+117	Haagen Dazs	11700265	Hero Pondok Indah	Jakarta
+117	Haagen Dazs	11700180	Surabaya Town Square	Surabaya
+117	Haagen Dazs	11700234	Beachwalk Kuta	Bali
+117	Haagen Dazs	11700074	Central Park	Jakarta
+117	Haagen Dazs	11700203	Galaxy Mall	Surabaya
+117	Haagen Dazs	11700128	Plaza Indonesia	Jakarta
+117	Haagen Dazs	11700029	Pondok Indah Mall 2	Jakarta
+117	Haagen Dazs	11700227	Discovery Mall	Bali
+117	Haagen Dazs	11700111	Senayan City	Jakarta
+117	Haagen Dazs	11700043	Pacific Place	Jakarta
+117	Haagen Dazs	11700036	Lapiazza	Jakarta
+117	Haagen Dazs	11700104	Summarecon Mal Serpong	Tangerang
+117	Haagen Dazs	11700173	Plaza Ambarukmo	Jogja
+117	Haagen Dazs	11700159	Paris Van Java	Bandung
+117	Haagen Dazs	11700067	Cilandak Town Square	Jakarta
+117	Haagen Dazs	11700081	Gandaria City	Jakarta
+117	Haagen Dazs	11700210	Ciputra World	Surabaya
+117	Haagen Dazs	11700012	Plaza Senayan	Jakarta
+117	Haagen Dazs	11700098	Emporium Pluit	Jakarta
+117	Haagen Dazs	11700241	Cambridge City	Medan
+117	Haagen Dazs	11700142	Mall ALam Sutera	Tangerang
+117	Haagen Dazs	11700258	Puri Indah Mall	Jakarta
+117	Haagen Dazs	11700166	Paragon Mall	Semarang
+117	Haagen Dazs	11700197	Tunjungan Plaza 3	Surabaya
+117	Haagen Dazs	11700050	Grand Indonesia	Jakarta
+172	BreadLife	17200592	Lippo Mall Kuta / Kuta Icon - Bali	Bali
+172	BreadLife	17200561	Mall Panakkukang Makasar	Makasar
+172	BreadLife	17200417	KM. 97 - Bandung	Bandung
+172	BreadLife	17200059	CBD Ciledug	Jakarta
+172	BreadLife	17200387	Mall Taman Palem	Jakarta
+172	BreadLife	17200301	Univ. Bunda Mulia	Jakarta
+172	BreadLife	17200400	Mangga Dua Square	Jakarta
+172	BreadLife	17200103	Gandaria City	Jakarta
+172	BreadLife	17200646	Living World	Tangerang
+172	BreadLife	17200196	ITC Cempaka Mas	Jakarta
+172	BreadLife	17200394	Mall Daan Mogot	Jakarta
+172	BreadLife	17200516	Ciputra World Surabaya	Surabaya
+172	BreadLife	17200189	Lotte Shopping Avenue	Jakarta
+172	BreadLife	17200066	Pejaten Village	Jakarta
+172	BreadLife	17200486	Sun Plaza - Medan	Medan
+172	BreadLife	17200554	Braga Bandung	Bandung
+172	BreadLife	17200455	Mall Lembuswana - Samarinda	Samarinda
+172	BreadLife	17200233	Paris Van Java - Bandung	Bandung
+172	BreadLife	17200035	Cibubur Junction	Bogor
+172	BreadLife	17200622	Ubud - Bali	Bali
+172	BreadLife	17200318	Breadlife Food Centrum	Jakarta
+172	BreadLife	17200073	Central Park	Jakarta
+172	BreadLife	17200325	Farmer Supermarket / Citra 6	Jakarta
+172	BreadLife	17200271	Alam Sutera GF	Tangerang
+172	BreadLife	17200226	Teras Kota	Tangerang
+172	BreadLife	17200523	Tunjungan Plaza Surabaya	Surabaya
+172	BreadLife	17200639	Renon - Bali	Bali
+172	BreadLife	17200479	Duta Mall - Banjarmasin	Banjarmasin
+172	BreadLife	17200530	The Plaza Balikpapan	Balikpapan
+172	BreadLife	17200462	Ayuni Megamall - Pontianak	Pontianak
+172	BreadLife	17200080	Mall Puri Indah	Jakarta
+172	BreadLife	17200370	Sampoerna Strategic Square	Jakarta
+172	BreadLife	17200363	Ambasador Mall	Jakarta
+172	BreadLife	17200127	Mall Of Indonesia	Jakarta
+172	BreadLife	17200431	Samarinda Central Plaza	Samarinda
+172	BreadLife	17200288	Cipinang Indah Mall	Jakarta
+172	BreadLife	17200349	Univ. Tarumanegara	Jakarta
+172	BreadLife	17200257	BIP Bandung	Bandung
+172	BreadLife	17200448	Plaza Mulia Samarinda	Samarinda
+172	BreadLife	17200653	St. Morist	Jakarta
+172	BreadLife	17200028	Supermall Karawaci Unit LG	Tangerang
+172	BreadLife	17200509	Center Point - Medan	Medan
+172	BreadLife	17200165	Summarecon Mall Bekasi	Bekasi
+172	BreadLife	17200172	FX Sudirman	Jakarta
+172	BreadLife	17200219	Grand Galaxy Park	Bekasi
+172	BreadLife	17200011	Summarecon Mall Serpong	Tangerang
+172	BreadLife	17200493	Plaza Medan Fair 	Medan
+172	BreadLife	17200202	Braga Bandung	Bandung
+172	BreadLife	17200042	Emporium Pluit	Jakarta
+172	BreadLife	17200356	Mall Atrium Senen	Jakarta
+172	BreadLife	17200141	Bintaro Exchange	Tangerang
+172	BreadLife	17200608	Mall Ciputra Semarang	Semarang
+172	BreadLife	17200158	Plaza Kalibata	Jakarta
+172	BreadLife	17200295	Mega Hypermall Bekasi	Bekasi
+172	BreadLife	17200424	Kuningan City	Jakarta
+172	BreadLife	17200264	Botani Square	Bogor
+172	BreadLife	17200097	Mall Taman Anggrek 	Jakarta
+172	BreadLife	17200240	Trans Studio Mall - Bandung	Bandung
+172	BreadLife	17200585	Balikpapan Trade Center Mall	Balikpapan
+172	BreadLife	17200547	Beachwalk - Bali	Bali
+172	BreadLife	17200332	St. Gambir	Jakarta
+172	BreadLife	17200134	Kota Kasablanka	Jakarta
+172	BreadLife	17200578	Trans Studio Mall - Makasar	Makasar
+172	BreadLife	17200110	Gajah Mada Plaza	Jakarta
+172	BreadLife	17200615	Tunjungan Plaza Island	Surabaya
+111	Krispy Kreme	11100010	Krispy Kreme - Senayan City	Jakarta
+111	Krispy Kreme	11100119	Krispy Kreme - Bellagio Kuningan	Jakarta
+111	Krispy Kreme	11100089	Krispy Kreme - Airport 2D	Tangerang
+111	Krispy Kreme	11100041	Krispy Kreme - Pondok Indah Mall 2	Jakarta
+111	Krispy Kreme	11100027	Krispy Kreme - Plaza Senayan	Jakarta
+111	Krispy Kreme	11100065	Krispy Kreme - Airport 1B	Tangerang
+111	Krispy Kreme	11100096	Krispy Kreme - Airport 2F	Tangerang
+111	Krispy Kreme	11100157	Gambir	Jakarta
+111	Krispy Kreme	11100102	Krispy Kreme - Grand Indonesia	Jakarta
+111	Krispy Kreme	11100058	Krispy Kreme - Airport 1A	Tangerang
+111	Krispy Kreme	11100140	Mid Plaza	Jakarta
+111	Krispy Kreme	11100126	Krispy Kreme - Lotte Shopping Avenue	Jakarta
+111	Krispy Kreme	11100133	Krispy Kreme - Call Center Krispy Kreme	Jakarta
+111	Krispy Kreme	11100072	Krispy Kreme - Airport 1C	Tangerang
+111	Krispy Kreme	11100034	Krispy Kreme - Mall Kelapa Gading 3	Jakarta
+113	Blitzmegaplex	11300045	Central Park Mall Lv.8	Jakarta
+113	Blitzmegaplex	11300069	TERASKOTA,Sektor IV, CBD Lot VII B, BSD City	Tangerang
+113	Blitzmegaplex	11300076	Paris Van Java Resort Lifestyle Place	Bandung
+113	Blitzmegaplex	11300014	Grand Indonesia, 8th floor	Jakarta
+113	Blitzmegaplex	11300038	MOI	Jakarta
+113	Blitzmegaplex	11300052	Bekasi Cyber Park Mall, Lantai 3	Bekasi
+113	Blitzmegaplex	11300083	Grand Galaxy Park, Lantai 3	Bekasi
+113	Blitzmegaplex	11300021	Pacific Place Mall Lt 6	Jakarta
+173	Kafe Betawi	17300117	Mall Of Indonesia	Jakarta
+173	Kafe Betawi	17300285	Tunjungan Plaza - Surabaya	Surabaya
+173	Kafe Betawi	17300025	Cilandak Town Square	Jakarta
+173	Kafe Betawi	17300018	Pondok Indah Mall 1	Jakarta
+173	Kafe Betawi	17300063	EX Plaza	Jakarta
+173	Kafe Betawi	17300100	Pluit Junction	Jakarta
+173	Kafe Betawi	17300261	Grand City - Surabaya	Surabaya
+173	Kafe Betawi	17300070	Grand Indonesia	Jakarta
+173	Kafe Betawi	17300131	Central Park	Jakarta
+173	Kafe Betawi	17300223	Ciputra World	Jakarta
+173	Kafe Betawi	17300315	TransMart Cikokol	Tangerang
+173	Kafe Betawi	17300155	Gandaria City	Jakarta
+173	Kafe Betawi	17300209	Lippo Mall Kemang	Jakarta
+173	Kafe Betawi	17300179	Kuningan City	Jakarta
+173	Kafe Betawi	17300308	Pondok Indah Mall 2	Jakarta
+173	Kafe Betawi	17300216	Kota Kasablanka	Jakarta
+173	Kafe Betawi	17300094	Emporium Pluit	Jakarta
+173	Kafe Betawi	17300049	Pacific Place	Jakarta
+173	Kafe Betawi	17300087	Pluit Village 	Jakarta
+173	Kafe Betawi	17300254	Mall Bali Galeria	Bali
+173	Kafe Betawi	17300186	Plaza Indonesia	Jakarta
+173	Kafe Betawi	17300278	Bandung Super Mall	Bandung
+173	Kafe Betawi	17300124	Mall Kelapa Gading 	Jakarta
+173	Kafe Betawi	17300032	Senayan City	Jakarta
+173	Kafe Betawi	17300056	Setia Budi One	Jakarta
+173	Kafe Betawi	17300230	Surabaya Town Square	Surabaya
+173	Kafe Betawi	17300162	Living Word	Tangerang
+173	Kafe Betawi	17300193	Teras Kota	Tangerang
+173	Kafe Betawi	17300292	Beachwalk - Bali	Bali
+173	Kafe Betawi	17300247	Balcony - Balikpapan	Balikpapan
+173	Kafe Betawi	17300148	Epicentrum Walk	Jakarta
+176	Meiso Reflexology	17600118	Pacific Place 	Jakarta
+176	Meiso Reflexology	17600231	Kelapa Gading Mall	Jakarta
+176	Meiso Reflexology	17600132	Setia Budi One	Jakarta
+176	Meiso Reflexology	17600156	Pondok Indah Plaza II	Jakarta
+176	Meiso Reflexology	17600224	Kota Kasablanca	Jakarta
+176	Meiso Reflexology	17600026	Dharmawangsa Square	Jakarta
+176	Meiso Reflexology	17600163	Ubud - Bali	Bali
+176	Meiso Reflexology	17600248	Bintaro Jaya Exchange	Jakarta
+176	Meiso Reflexology	17600194	Ruko Bukit Darmo	Surabaya
+176	Meiso Reflexology	17600040	Senayan City	Jakarta
+176	Meiso Reflexology	17600125	Plaza Blok M	Jakarta
+176	Meiso Reflexology	17600200	Ciwalk - Bandung	Bandung
+176	Meiso Reflexology	17600170	Legian Kuta - Bali	Bali
+176	Meiso Reflexology	17600255	Bengkel Cafe (Fairground)	Jakarta
+176	Meiso Reflexology	17600071	Plaza Indonesia Extension	Jakarta
+176	Meiso Reflexology	17600033	Cibubur Junction	Bogor
+176	Meiso Reflexology	17600187	Tunjungan Plaza 4 - Surabaya	Surabaya
+176	Meiso Reflexology	17600217	Plaza Indonesia	Jakarta
+176	Meiso Reflexology	17600064	Pondok Indah Mall 1	Jakarta
+176	Meiso Reflexology	17600101	Epicentrum Walk	Jakarta
+176	Meiso Reflexology	17600095	Gandaria City	Jakarta
+176	Meiso Reflexology	17600088	Grand Indonesia	Jakarta
+176	Meiso Reflexology	17600019	Kemang Selatan	Jakarta
+176	Meiso Reflexology	17600149	Pondok Indah Mall 2	Jakarta
+176	Meiso Reflexology	17600057	Town Square Cilandak	Jakarta
+145	Din Tai Fung	14500053	Plaza Indonesia	Jakarta
+145	Din Tai Fung	14500022	Pondok Indah Mall 2	Jakarta
+145	Din Tai Fung	14500084	Lotte Shopping Avenue	Jakarta
+145	Din Tai Fung	14500060	Mall Of Indonesia	Jakarta
+145	Din Tai Fung	14500077	World Trade Center 2	Jakarta
+145	Din Tai Fung	14500107	Galaxy Mall	Surabaya
+145	Din Tai Fung	14500138	Alam Sutera	Tangerang
+145	Din Tai Fung	14500039	Plaza Senayan	Jakarta
+145	Din Tai Fung	14500046	Pacific Place	Jakarta
+145	Din Tai Fung	14500121	Mall Taman Anggrek	Jakarta
+145	Din Tai Fung	14500114	Puri Indah Mall	Jakarta
+145	Din Tai Fung	14500015	Plaza Senayan Arcadia	Jakarta
+145	Din Tai Fung	14500091	Emporium Pluit Mall	Jakarta
+107	Fish & Co	10700044	Plaza Indonesia	Jakarta
+107	Fish & Co	10700143	Kota Kasablanka, Ground Floor FSG - 05	Jakarta
+107	Fish & Co	10700136	Summarecon Mal Serpong 2, #DGF - 206 & 2-7	Tangerang
+107	Fish & Co	10700075	Living World (Alam Sutera), Ground floor Unit G - 25	Tangerang
+107	Fish & Co	10700099	Boulevard Golf Mediterania, Rukan Crown Golf Blok D No 25-27	Jakarta
+107	Fish & Co	10700167	Puri Indah Mall	Jakarta
+107	Fish & Co	10700105	Surabaya Town Square (SUTOS), P03 & P05	Surabaya
+107	Fish & Co	10700150	Central Park Mall, Lower Ground Floor L-211 & L-257B	Jakarta
+107	Fish & Co	10700082	Emporium Pluit Mall, Ground floor Unit G - 39	Jakarta
+107	Fish & Co	10700112	Tunjungan Plaza 3, LG floor Unit 42 - 48	Surabaya
+107	Fish & Co	10700013	Mal Taman Anggrek (MTA), Level 4 Unit 419	Jakarta
+107	Fish & Co	10700020	Cilandak Town Square (CITOS), 1st Floor 140-142	Jakarta
+107	Fish & Co	10700129	Beach Walk Kuta Bali, L1 #C-2	Bali
+107	Fish & Co	10700037	Pondok Indah Mall 2 (PIM2), 3rd Floor #349	Jakarta
+107	Fish & Co	10700051	Pacific Place, Level 4-49 & 4-51	Jakarta
+107	Fish & Co	10700068	Gandaria City, Main street ground floor Unit MG 36 & S 36	Jakarta
+177	Seribu Rasa	17700016	Menteng	Jakarta
+177	Seribu Rasa	17700030	Kuningan	Jakarta
+177	Seribu Rasa	17700023	Mall Gandaria City	Jakarta
+179	Old Town White Coffee	17900072	Mangga Besar	Jakarta
+179	Old Town White Coffee	17900119	Baywalk Mall Pluit	Jakarta
+179	Old Town White Coffee	17900089	RS. Graha Kedoya	Jakarta
+179	Old Town White Coffee	17900034	Living World - Alam Sutera	Tangerang
+179	Old Town White Coffee	17900133	Cambridge Mall - Medan	Medan
+179	Old Town White Coffee	17900140	Center Point Mall - Medan	Medan
+179	Old Town White Coffee	17900102	The Park Solo - Solo	Solo
+179	Old Town White Coffee	17900010	Mall Emporium Pluit	Jakarta
+179	Old Town White Coffee	17900126	Cikarang Groove - Cikarang	Jakarta
+179	Old Town White Coffee	17900065	Botani Square - Bogor	Bogor
+179	Old Town White Coffee	17900096	The Brezze - BSD	Tangerang
+179	Old Town White Coffee	17900027	Mall Taman Anggrek	Jakarta
+179	Old Town White Coffee	17900041	Summarecon Mall Serpong	Tangerang
+179	Old Town White Coffee	17900058	Kota Kasablanka	Jakarta
+156	Popbar	15600042	Baywalk Pluit	Jakarta
+156	Popbar	15600059	Lotte Shopping Avenue Lt. 4	Jakarta
+156	Popbar	15600011	Lotte Shopping Avenue	Jakarta
+156	Popbar	15600028	Plaza Senayan	Jakarta
+156	Popbar	15600035	Central Park	Jakarta
+180	Kyochon	18000023	Kota Kasablanka	Jakarta
+180	Kyochon	18000030	Gandaria City	Jakarta
+180	Kyochon	18000016	Pacific Place	Jakarta
+184	La Hoya	18400014	Gandaria City	Jakarta
+181	Penang Bistro	18100068	Grand Indonesia	Jakarta
+181	Penang Bistro	18100075	Mall Kota Kasablanka	Jakarta
+181	Penang Bistro	18100044	Central Park Mall	Jakarta
+181	Penang Bistro	18100013	Pakubuwono	Jakarta
+181	Penang Bistro	18100037	Mega Kuningan	Jakarta
+181	Penang Bistro	18100051	Mall Kelapa Gading 5	Jakarta
+181	Penang Bistro	18100020	Kebun Sirih	Jakarta
+182	Rons Laboratory	18200027	Pondok Indah Mall 1	Jakarta
+182	Rons Laboratory	18200041	Ciputra World - Surabaya	Surabaya
+182	Rons Laboratory	18200034	Lippo Mall Puri	Jakarta
+182	Rons Laboratory	18200010	Grand Indonesia	Jakarta
+182	Rons Laboratory	18200058	Galaxy Mall - Surabaya	Surabaya
+149	Marche	14900013	Grand Indonesia	Jakarta
+149	Marche	14900020	Plaza Senayan	Jakarta
+143	Twelve Cupcakes	14300028	Central Park Mall - LG #156	Jakarta
+143	Twelve Cupcakes	14300097	Plaza Senayan - LG (Food Hall)	Jakarta
+143	Twelve Cupcakes	14300042	Gandaria City - LG #L-96A	Jakarta
+143	Twelve Cupcakes	14300059	Kota Kasablanka - LG #IU-L.17	Jakarta
+143	Twelve Cupcakes	14300066	Kuningan City - LG #80	Jakarta
+143	Twelve Cupcakes	14300073	Pondok Indah Mall - Street Gallery (G#14)	Jakarta
+143	Twelve Cupcakes	14300080	Pacific Place - LG #23	Jakarta
+143	Twelve Cupcakes	14300011	Baywalk Mall Pluit - 5F #18A	Jakarta
+143	Twelve Cupcakes	14300035	Emporium Pluit - 4F #48	Jakarta
+183	Nanny's Pavillon	18300116	Nanny's Home - Bandung 	Bandung
+183	Nanny's Pavillon	18300086	Bintaro Entertainment Center (BX)	Tangerang
+183	Nanny's Pavillon	18300079	Pondok Indah Mall	Jakarta
+183	Nanny's Pavillon	18300062	Kota Kasablanka 	Jakarta
+183	Nanny's Pavillon	18300093	Le Jardin Des Fleurs Central Park 2	Jakarta
+183	Nanny's Pavillon	18300123	Mall Ciputra Cibubur	Bekasi
+183	Nanny's Pavillon	18300109	Summarecon Mall Bekasi	Bekasi
+183	Nanny's Pavillon	18300055	Beachwalk - Bali	Bali
+183	Nanny's Pavillon	18300017	Terrace Central Park 1	Jakarta
+183	Nanny's Pavillon	18300024	Flavor Bliss 2	Tangerang
+183	Nanny's Pavillon	18300048	Plaza Indonesia	Jakarta
+183	Nanny's Pavillon	18300031	Gandaria City	Jakarta
+183	Nanny's Pavillon	18300130	Jogja City Mall	Yogyakarta
+186	First Love Pattiserie	18600056	Kota Kasablanka	Jakarta
+186	First Love Pattiserie	18600063	Pondok Indah Mall	Jakarta
+186	First Love Pattiserie	18600032	Gandaria City	Jakarta
+186	First Love Pattiserie	18600087	Lippo Mall Kemang	Jakarta
+186	First Love Pattiserie	18600025	Plaza Senayan	Jakarta
+186	First Love Pattiserie	18600018	Plaza Indonesia	Jakarta
+186	First Love Pattiserie	18600094	Mall Alam Sutera	Tangerang
+186	First Love Pattiserie	18600070	Mall Kelapa Gading 3	Jakarta
+186	First Love Pattiserie	18600117	Puri Indah Mall	Jakarta
+186	First Love Pattiserie	18600049	Lotte Shopping Avenue	Jakarta
+186	First Love Pattiserie	18600100	Paris Van Java	Bandung
+185	Pepenero	18500028	World Trade Center II	Jakarta
+185	Pepenero	18500035	Colony Kemang	Jakarta
+185	Pepenero	18500011	Kuningan	Jakarta
+185	Pepenero	18500073	BSD 	Tangerang
+185	Pepenero	18500066	Alamanda	Jakarta
+185	Pepenero	18500042	Plaza Pondok Indah 2	Jakarta
+185	Pepenero	18500080	Jimbaran - Bali	Bali
+185	Pepenero	18500059	The Energy	Jakarta
+174	Auntie Annes	17400015	Lotte Shopping Avenue	Jakarta
+178	Famous Amos	17800105	FoodHall Plaza Indonesia	Jakarta
+178	Famous Amos	17800112	FoodHall Grand Indonesia	Jakarta
+178	Famous Amos	17800129	FoodHall Plaza Senayan	Jakarta
+178	Famous Amos	17800136	FoodHall Pondok Indah Mall 2	Jakarta
+174	Auntie Annes	17400022	Central Park Mall	Jakarta
+174	Auntie Annes	17400039	Gandaria City Mall	Jakarta
+174	Auntie Annes	17400046	Grand Indonesia Shopping Town	Jakarta
+174	Auntie Annes	17400053	Kota Kasablanka Mall	Jakarta
+187	Zalora	18700015	Online	Online
+175	Rejuve	17500029	Gandaria City	Jakarta
+175	Rejuve	17500012	Kota Kasablanka	Jakarta
+175	Rejuve	17500036	Lotte Ciputra World	Jakarta
+175	Rejuve	17500043	Celebrity Fitness Pondok Indah 	Jakarta
+189	Privia	18900019	Mall Of Indonesia	Jakarta
+131	Fonel	13100018	Fonel	Jakarta
+178	Famous Amos	17800013	Plaza Senayan	Jakarta
+178	Famous Amos	17800020	Senayan City	Jakarta
+178	Famous Amos	17800037	Pacific Place	Jakarta
+178	Famous Amos	17800044	Pondok Indah Mall 1	Jakarta
+178	Famous Amos	17800051	Gandaria City	Jakarta
+178	Famous Amos	17800068	Mall Alam Sutera	Jakarta
+178	Famous Amos	17800075	Baywalk Pluit	Jakarta
+178	Famous Amos	17800082	Emporium Pluit	Jakarta
+178	Famous Amos	17800099	FoodHall Kelapa Gading	Jakarta
+188	SK II	18800050	SOGO Alam Sutera	Tangerang
+188	SK II	18800029	SEIBU Grand Indonesia	Jakarta
+188	SK II	18800067	SOGO Pondok Indah Mall 2	Jakarta
+188	SK II	18800036	SOGO Mall Kelapa Gading	Jakarta
+188	SK II	18800012	METRO Mall Taman Anggrek	Jakarta
+188	SK II	18800043	METRO Plaza Senayan	Jakarta
+160	Anomali Coffee	16000032	Kemang	Jakarta
+160	Anomali Coffee	16000018	Senopati 	Jakarta
+160	Anomali Coffee	16000049	eX Plaza Indonesia	Jakarta
+160	Anomali Coffee	16000056	Ubud - Bali	Bali
+160	Anomali Coffee	16000063	Seminyak - Bali	Bali
+160	Anomali Coffee	16000025	Setiabudi	Jakarta
+140	KFC	14000362	Pantai Indah Kapuk	Jabodetabek
+140	KFC	14000379	Citra Garden II	Jabodetabek
+140	KFC	14000386	Pluit Village	Jabodetabek
+140	KFC	14000393	Emporium Pluit	Jabodetabek
+140	KFC	14000409	Taman Semanan Indah	Jabodetabek
+140	KFC	14000416	Bandara Soekarno Hatta Term 1C	Jabodetabek
+140	KFC	14000423	Daan Mogot Baru	Jabodetabek
+140	KFC	14000430	Petronas Ciputat	Jabodetabek
+140	KFC	14000447	Ramayana Ciputat	Jabodetabek
+140	KFC	14000454	Cirendeu	Jabodetabek
+140	KFC	14000461	Pamulang Square	Jabodetabek
+140	KFC	14000478	Carrefour Lebak Bulus	Jabodetabek
+140	KFC	14000485	CBD Ciledug	Jabodetabek
+140	KFC	14000492	Ciledug Pertukangan	Jabodetabek
+140	KFC	14000508	Cinere Mall	Jabodetabek
+140	KFC	14000515	Cilandak Mall	Jabodetabek
+140	KFC	14000522	Ciputat Gaplek	Jabodetabek
+140	KFC	14000539	Parung Plaza	Jabodetabek
+140	KFC	14000546	BSD Plaza	Jabodetabek
+140	KFC	14000553	Giant BSD	Jabodetabek
+140	KFC	14000560	WTC Serpong	Jabodetabek
+140	KFC	14000577	ITC BSD	Jabodetabek
+140	KFC	14000584	ITC BSD Foodcourd	Jabodetabek
+140	KFC	14000591	Summarecon Mall Serpong	Jabodetabek
+140	KFC	14000607	Bintaro Satoe	Jabodetabek
+140	KFC	14000614	Bintaro Plaza	Jabodetabek
+140	KFC	14000621	BSD Square	Jabodetabek
+140	KFC	14000638	Alam Sutera	Jabodetabek
+140	KFC	14000645	Bintaro Annex	Jabodetabek
+140	KFC	14000652	Mall Alam Sutera	Jabodetabek
+140	KFC	14000669	Oil Cnter Jakarta	Jabodetabek
+140	KFC	14000676	Pasar Baru Jakarta	Jabodetabek
+140	KFC	14000683	Harco Pasar Baru	Jabodetabek
+140	KFC	14000690	Sarinah Thamrin	Jabodetabek
+140	KFC	14000706	Tanah Abang Blok A	Jabodetabek
+140	KFC	14000713	Grand Indonesia Lt. 3	Jabodetabek
+140	KFC	14000720	Grand Indonesia Lt. 5	Jabodetabek
+140	KFC	14000737	GT GN Sahari	Jabodetabek
+140	KFC	14000744	Cideng Jakarta	Jabodetabek
+140	KFC	14000751	Sarinah Plaza	Jabodetabek
+140	KFC	14000768	Cibubur Plaza	Jabodetabek
+140	KFC	14000775	Petronas Cibubur	Jabodetabek
+140	KFC	14000782	Tamini Square Jakarta	Jabodetabek
+140	KFC	14000799	Pondok Gede Plaza II	Jabodetabek
+140	KFC	14000805	Pusat Grosir Cililitan	Jabodetabek
+140	KFC	14000812	Carrefour Cawang	Jabodetabek
+140	KFC	14000829	Cibubur Cikeas	Jabodetabek
+140	KFC	14000836	Pondok Gede Park	Jabodetabek
+140	KFC	14000843	Sunter Mall	Jabodetabek
+140	KFC	14000850	ITC Cempaka Mas Foodcourt Lt.1	Jabodetabek
+140	KFC	14000867	Mall Artha Gading	Jabodetabek
+140	KFC	14000874	Kelapa Gading Mall	Jabodetabek
+140	KFC	14000881	Kelapa Gading Boulevard	Jabodetabek
+140	KFC	14000898	Ramayana Semper	Jabodetabek
+140	KFC	14000904	Mall Of Indonesia	Jabodetabek
+140	KFC	14000911	Pratama Bekasi	Jabodetabek
+140	KFC	14000928	Metropolitan Mall Indonesia	Jabodetabek
+140	KFC	14000935	Giant Mega Bekasi	Jabodetabek
+140	KFC	14000942	Carrefour Bekasi	Jabodetabek
+140	KFC	14000959	Grand Mall Bekasi 	Jabodetabek
+140	KFC	14000966	Taman Harapan Indah	Jabodetabek
+140	KFC	14000973	Cakung	Jabodetabek
+140	KFC	14000980	Kalimalang	Jabodetabek
+140	KFC	14000997	Galaxy Mall Bekasi	Jabodetabek
+140	KFC	14001000	Sumareccon Bekasi	Jabodetabek
+140	KFC	14001017	Gajah Mada Plaza	Jabodetabek
+140	KFC	14001024	Lokasari Plaza	Jabodetabek
+140	KFC	14001031	Mangga Dua Plaza	Jabodetabek
+140	KFC	14001048	FCU Mangga Dua Mall Lantai 3	Jabodetabek
+140	KFC	14001055	Harco Mangga Dua	Jabodetabek
+140	KFC	14001062	ITC Mangga Dua	Jabodetabek
+140	KFC	14001079	Mangga Dua Square	Jabodetabek
+140	KFC	14001086	Mangga Dua Square Expres lantai PB 1	Jabodetabek
+140	KFC	14001093	Glodok Plaza	Jabodetabek
+140	KFC	14001109	Hayam Wuruk 2	Jabodetabek
+140	KFC	14001116	Grand Paragon	Jabodetabek
+140	KFC	14001123	Stasiun Kota	Jabodetabek
+140	KFC	14001130	Rest Area Km. 19 Bekasi	Jabodetabek
+140	KFC	14001147	SGC Cikarang	Jabodetabek
+140	KFC	14001154	SGC Cikarang Food Court Lt. 3	Jabodetabek
+140	KFC	14001161	Lippo City Cikarang	Jabodetabek
+140	KFC	14001178	Rest Area Km. 40 Karawang	Jabodetabek
+140	KFC	14001185	Rest Area Km. 57 Cikampek	Jabodetabek
+140	KFC	14001192	Ramayana Karawang	Jabodetabek
+140	KFC	14001208	Rest Area Km. 62 Cikampek	Jabodetabek
+140	KFC	14001215	Pasaraya Manggarai	Jabodetabek
+140	KFC	14001222	MT Haryono Jakarta	Jabodetabek
+140	KFC	14001239	Plaza Kalibata	Jabodetabek
+140	KFC	14001246	Cempaka Putih Jakarta	Jabodetabek
+140	KFC	14001253	Arion Plaza	Jabodetabek
+140	KFC	14001260	Rawamangun Square	Jabodetabek
+140	KFC	14001277	Kalibata City	Jabodetabek
+140	KFC	14001284	Blok M Plaza	Jabodetabek
+140	KFC	14001291	Blok M Mall	Jabodetabek
+140	KFC	14001307	Seibu Pasaraya Blok M	Jabodetabek
+140	KFC	14001314	Kemang	Jabodetabek
+140	KFC	14001321	Ayam Bulungan	Jabodetabek
+140	KFC	14001338	Gunawarman	Jabodetabek
+140	KFC	14001345	Blok M Square	Jabodetabek
+140	KFC	14001352	Gandaria City	Jabodetabek
+140	KFC	14001369	Melawai Plaza	Jabodetabek
+140	KFC	14001376	Basmar Plaza	Jabodetabek
+140	KFC	14001383	Jatinegara	Jabodetabek
+140	KFC	14001390	Citra Klender	Jabodetabek
+140	KFC	14001406	Cikini	Jabodetabek
+140	KFC	14001413	Kenari Mas	Jabodetabek
+140	KFC	14001420	Atrium Senen	Jabodetabek
+140	KFC	14001437	Buaran Plaza Jakarta	Jabodetabek
+140	KFC	14001444	Giant Pondo Bambu	Jabodetabek
+140	KFC	14001451	JX Jatinegara	Jabodetabek
+140	KFC	14001468	Salemba Jakarta	Jabodetabek
+140	KFC	14001475	Raden Inten Jakarta	Jabodetabek
+140	KFC	14001482	Prapatan Tugu Tani	Jabodetabek
+140	KFC	14001499	Gambir 	Jabodetabek
+140	KFC	14001505	Taman Rasuna	Jabodetabek
+140	KFC	14001512	Ambasador Mall	Jabodetabek
+140	KFC	14001529	Wisma BNI	Jabodetabek
+140	KFC	14001536	Tebet	Jabodetabek
+140	KFC	14001543	Plaza Senayan	Jabodetabek
+140	KFC	14001550	Senayan City Jakarta	Jabodetabek
+140	KFC	14001567	Ratu Plaza Jakarta	Jabodetabek
+140	KFC	14001574	Kota Kasablanka	Jabodetabek
+140	KFC	14001581	Lippo Supermall Karawaci	Jabodetabek
+140	KFC	14001598	Ramayana Cimone	Jabodetabek
+140	KFC	14001604	Kisamaun	Jabodetabek
+140	KFC	14001611	Benton Junction	Jabodetabek
+140	KFC	14001628	Nature Park Cimone	Jabodetabek
+140	KFC	14001635	Rest Area Km.14 Tangerang	Jabodetabek
+140	KFC	14001642	Mall Serang	Jabodetabek
+140	KFC	14001659	Simpang Cilegon	Jabodetabek
+140	KFC	14001666	RMY Cilegon	Jabodetabek
+140	KFC	14001673	Metropolis Town Square	Jabodetabek
+140	KFC	14001680	Tangerang City	Jabodetabek
+140	KFC	14001697	Citra Raya Cikupa	Jabodetabek
+140	KFC	14001703	Plaza Surabaya	Jawa Timur
+140	KFC	14001710	Galaxy Plaza	Jawa Timur
+140	KFC	14001727	Mulyosari Surabaya	Jawa Timur
+140	KFC	14001734	Manyar Kertoarjo	Jawa Timur
+140	KFC	14001741	Jembatan Merah Plaza 2	Jawa Timur
+140	KFC	14001758	THR Plaza	Jawa Timur
+140	KFC	14001772	Golden City Mall	Jawa Timur
+140	KFC	14001789	City Of Tomorrow	Jawa Timur
+140	KFC	14001796	Supermal Pakuwon	Jawa Timur
+140	KFC	14001802	Ciputra World Surabaya	Jawa Timur
+140	KFC	14001819	Pondok Chandra	Jawa Timur
+140	KFC	14001826	Pasar Atom Surabaya	Jawa Timur
+140	KFC	14001833	ITC Atom	Jawa Timur
+140	KFC	14001840	Tunjungan Plaza II	Jawa Timur
+140	KFC	14001857	Tunjungan Plaza III	Jawa Timur
+140	KFC	14001864	Royal Plaza Surabaya	Jawa Timur
+140	KFC	14001871	Royal Plaza Foodcourt Lt. 3	Jawa Timur
+140	KFC	14001888	Raya Darmo	Jawa Timur
+140	KFC	14001895	Ahmad Yani Surabaya	Jawa Timur
+140	KFC	14001901	BG Junction Surabaya	Jawa Timur
+140	KFC	14001918	Darmo Trade Center	Jawa Timur
+140	KFC	14001925	Diponegoro	Jawa Timur
+140	KFC	14001932	Taman Dayu Pandaan	Jawa Timur
+140	KFC	14001949	Kawi Malang	Jawa Timur
+140	KFC	14001956	Mall Olympic Garden	Jawa Timur
+140	KFC	14001963	Malang Town Square	Jawa Timur
+140	KFC	14001970	Sarinah Malang	Jawa Timur
+140	KFC	14001987	Suncity Plaza Sidoarjo	Jawa Timur
+140	KFC	14001994	Ramayana Sidoarjo	Jawa Timur
+140	KFC	14002007	Sidoarjo	Jawa Timur
+140	KFC	14002014	Lamongan Plaza	Jawa Timur
+140	KFC	14002021	Dhoho Plaza Kendiri	Jawa Timur
+140	KFC	14002038	Sri Ratu Madiun	Jawa Timur
+140	KFC	14002045	Mojokerto	Jawa Timur
+140	KFC	14002052	Roxy Banyuwangi	Jawa Timur
+140	KFC	14002069	Probolinggo	Jawa Timur
+140	KFC	14002076	Jember	Jawa Timur
+140	KFC	14002083	Kuta Gelael	Bali
+140	KFC	14002090	Kuta Square	Bali
+140	KFC	14002106	Carrefour Denpasar	Bali
+140	KFC	14002113	Discovery Mall	Bali
+140	KFC	14002120	Bandara Ngurah Rai Bali	Bali
+140	KFC	14002137	Jimbaran	Bali
+140	KFC	14002144	Tragia Nusa Dua	Bali
+140	KFC	14002151	Kuta Bex	Bali
+140	KFC	14002168	Singaraja Bali	Bali
+140	KFC	14002175	Denpasar Duta Plaza	Bali
+140	KFC	14002182	Dharma Bali	Bali
+140	KFC	14002199	Wayang Sanur	Bali
+140	KFC	14002205	Ramayana Sesetan	Bali
+140	KFC	14002212	Gatot Subroto Bali	Bali
+140	KFC	14002229	Gatot Subroto Barat Bali	Bali
+140	KFC	14002236	Gatot Subroto Timur Bali	Bali
+140	KFC	14002243	Sesetan Bali	Bali
+140	KFC	14002250	Mataram Mall Lombok	Nusa Tenggara
+140	KFC	14002267	Airlangga Square Lombok	Nusa Tenggara
+140	KFC	14002274	Flobamora Mall Kupang	Nusa Tenggara
+140	KFC	14002281	Sadia Bima	Nusa Tenggara
+140	KFC	14002298	Hasanudin U. PDG	Sulawesi
+140	KFC	14002304	Ahmad Yani Makassar	Sulawesi
+140	KFC	14002311	Makassar Mall	Sulawesi
+140	KFC	14002328	Bandara Hasanuddin	Sulawesi
+140	KFC	14002335	Pantai Losari	Sulawesi
+140	KFC	14002342	Mall Ratu Indah	Sulawesi
+140	KFC	14002359	Sam Ratulangi Makassar	Sulawesi
+140	KFC	14002366	GTC Tanjung Bunga	Sulawesi
+140	KFC	14002373	Talasalapang Makassar	Sulawesi
+140	KFC	14002380	Bulukumba	Sulawesi
+140	KFC	14002397	Makasar Town Square	Sulawesi
+140	KFC	14002403	Panakukang Mas	Sulawesi
+140	KFC	14002410	D'Best Panakukang Mall	Sulawesi
+140	KFC	14002427	Panakukang Square	Sulawesi
+140	KFC	14002434	Pettarani Makassar	Sulawesi
+140	KFC	14002441	Manado Sudirman	Sulawesi
+140	KFC	14002458	Coco Sarapung	Sulawesi
+140	KFC	14002465	Manado Boulevard	Sulawesi
+140	KFC	14002472	Bandara Samratulangi II	Sulawesi
+140	KFC	14002489	Coco Manado	Sulawesi
+140	KFC	14002496	Bahu Mall Manodo	Sulawesi
+140	KFC	14002502	Mega Mall Manado	Sulawesi
+140	KFC	14002519	Tomohon	Sulawesi
+140	KFC	14002526	MTC Manado	Sulawesi
+140	KFC	14002533	Manado Mega Mas	Sulawesi
+140	KFC	14002540	Bitung	Sulawesi
+140	KFC	14002557	Pare-Pare	Sulawesi
+140	KFC	14002564	Palopo	Sulawesi
+140	KFC	14002571	Kendari Jaya Makmur	Sulawesi
+140	KFC	14002588	Luwuk Banggai	Sulawesi
+140	KFC	14002595	MT. Haryono Kendari	Sulawesi
+140	KFC	14002601	Bau-Bau	Sulawesi
+140	KFC	14002618	Palu Hasanuddin	Sulawesi
+140	KFC	14002625	Mall Tatura Palu	Sulawesi
+140	KFC	14002632	Mega Zanur Mall Gorontalo	Sulawesi
+140	KFC	14002649	Ambon Baru Diponegoro	Ambon
+140	KFC	14002656	Alfa Latta Ambon	Ambon
+140	KFC	14002663	Maluku City	Ambon
+140	KFC	14002670	Ambon Plaza	Ambon
+140	KFC	14002687	Jatiland Ternate	Ambon
+140	KFC	14002694	Saga Sorong	Irian
+140	KFC	14002700	Manokwari	Irian
+140	KFC	14002717	Mega Mall Sorong	Irian
+140	KFC	14002724	Timika	Irian
+140	KFC	14002731	Saga Abepura	Irian
+140	KFC	14002748	Jayapura	Irian
+140	KFC	14002755	Pasar Baru Balikpapan	Balikpapan
+140	KFC	14002762	Balikpapan Plaza	Balikpapan
+140	KFC	14002779	Central Balikpapan	Balikpapan
+140	KFC	14002786	Muara Rapak Balikpapan	Balikpapan
+140	KFC	14002793	Arena Fantasi Balikpapan	Balikpapan
+140	KFC	14002809	Balcony City Balikpapan	Balikpapan
+140	KFC	14002816	Samarinda Mulawarman	Samarinda
+140	KFC	14002823	Lembuswana Samarinda	Samarinda
+140	KFC	14002830	Samarinda Central PLZ 	Samarinda
+140	KFC	14002847	Plaza Mulia Samarinda	Samarinda
+140	KFC	14002854	Kantor Pos Banjarmasin	Banjarmasin
+140	KFC	14002861	Duta Mall Banjarmasin	Banjarmasin
+140	KFC	14002878	Banjarbaru	Banjarmasin
+140	KFC	14002885	Citra Banjarmasin	Banjarmasin
+140	KFC	14002892	Ahmad Yani Banjarmasin	Banjarmasin
+140	KFC	14002908	MTC Plangkaraya	Palangkaraya
+140	KFC	14002915	Palangkaraya Mall	Banjarmasin
+140	KFC	14002922	Pontianak	Pontianak
+140	KFC	14002939	Ramayana Pontianak	Pontianak
+140	KFC	14002946	Mega Mall A Yani Pontianak	Pontianak
+140	KFC	14002953	Ahmad Yani Pontianak	Pontianak
+140	KFC	14002960	Ketapang Kalimantan	Kalimantan
+140	KFC	14002977	Batu Licin	Kalimantan
+140	KFC	14002984	THM Plaza Tarakan	Kalimantan
+140	KFC	14002991	Ramayana Bontang	Kalimantan
+140	KFC	14003004	Sangatta Trade Center	Kalimantan
+140	KFC	14003011	Simpang Mataram	Medan
+140	KFC	14003028	Petronas Setiabudi Medan	Medan
+140	KFC	14003035	Medan Mall	Medan
+140	KFC	14003042	Millenium Plaza Medan	Medan
+140	KFC	14003059	Suzuya Binjai	Medan
+140	KFC	14003066	Adam Malik Medan	Medan
+140	KFC	14003073	Medan Fair	Medan
+140	KFC	14003080	Sun Plaza Plaza	Medan
+140	KFC	14003097	Asia Mega Mas	Medan
+140	KFC	14003103	Home Sentra Setiabudi	Medan
+140	KFC	14003110	SPBU Binjai	Medan
+140	KFC	14003127	Simpang Sutomo Medan	Medan
+140	KFC	14003134	Ramayana Medan	Medan
+140	KFC	14003141	Cemara Asri Medan	Medan
+140	KFC	14003158	Suzuya Tanjung Morawa	Medan
+140	KFC	14003165	Raja Medan	Medan
+140	KFC	14003172	Suzuya Medan	Medan
+140	KFC	14003189	Walikota Medan	Medan
+140	KFC	14003196	BTC Mareland	Medan
+140	KFC	14003202	Petronas Imam Bonjol	Medan
+140	KFC	14003219	Green Hill	Medan
+140	KFC	14003226	SPBU Marelan	Medan
+140	KFC	14003233	Titi Kuning Medan	Medan
+140	KFC	14003240	Nasuba Medan	Medan
+140	KFC	14003257	Pematang Siantar	Sumatera
+140	KFC	14003264	Suzuya Rantau Prapat	Sumatera
+140	KFC	14003271	Padangsidempuan	Sumatera
+140	KFC	14003288	Batam Baloi	Batam
+140	KFC	14003295	Batam City Square	Batam
+140	KFC	14003301	Palm Spring Batam	Batam
+140	KFC	14003318	Nagoya Batam	Batam
+140	KFC	14003325	Nagoya Hills Batam	Batam
+140	KFC	14003332	Mega Mall Batam Centre	Batam
+140	KFC	14003349	Panbil Mall Batam	Batam
+140	KFC	14003356	Ramayana Batam	Batam
+140	KFC	14003363	Kaca Puri Tanjung Pinang	Batam
+140	KFC	14003370	Batam Botani	Batam
+140	KFC	14003387	Batu Aji Batam	Batam
+140	KFC	14003394	Tanjung Uncang	Batam
+140	KFC	14003400	Banda Aceh	Aceh
+140	KFC	14003417	Lamyong Aceh	Aceh
+140	KFC	14003424	Keutapang Aceh	Aceh
+140	KFC	14003431	Lhokseumawe	Aceh
+140	KFC	14003448	Meulaboh	Aceh
+140	KFC	14003455	Sudirman Pekanbaru	Pekanbaru
+140	KFC	14003462	Ramayana Sukaramai	Pekanbaru
+140	KFC	14003479	Mall Pekanbaru	Pekanbaru
+140	KFC	14003486	Ciputra Seraya	Pekanbaru
+140	KFC	14003493	SKA Mall Pekanbaru	Pekanbaru
+140	KFC	14003509	Metropolitan City Pekanbaru	Pekanbaru
+140	KFC	14003516	Arifin Ahmad	Pekanbaru
+140	KFC	14003523	Ramayana Pangkalan Kerinci	Sumatera
+140	KFC	14003530	Ramayana Dumai	Sumatera
+140	KFC	14003547	Mandau City	Sumatera
+140	KFC	14003554	IP Palembang 	Palembang
+140	KFC	14003561	Ramayana Palembang	Palembang
+140	KFC	14003578	Royal Asia Palembang	Palembang
+140	KFC	14003585	Merdeka Palembang	Palembang
+140	KFC	14003592	Plaju Palembang	Palembang
+140	KFC	14003608	Prabumulih	Palembang
+140	KFC	14003615	Palembang Trade Center	Palembang
+140	KFC	14003622	Lia Palembang	Palembang
+140	KFC	14003639	Demang Lebar Daun Palembang	Palembang
+140	KFC	14003646	Palembang Square	Palembang
+140	KFC	14003653	Simpang Bandara Palembang	Palembang
+140	KFC	14003660	Lubuk Linggau	Sumatera
+140	KFC	14003677	Ramayana Baturaja	Sumatera
+140	KFC	14003684	Pangkal Pinang Plaza 	Sumatera
+140	KFC	14003691	Bangka Trade Centre	Sumatera
+140	KFC	14003707	Sungai Liat	Sumatera
+140	KFC	14003714	Tanjung Pandan Belitung	Sumatera
+140	KFC	14003721	Ambacang Padang	Padang
+140	KFC	14003738	Plaza Andalas Padang	Padang
+140	KFC	14003745	Minang Plaza Padang	Padang
+140	KFC	14003752	Purus Veteran Padang	Padang
+140	KFC	14003769	SPBU Padang	Padang
+140	KFC	14003776	Ahmad Yani Padang	Padang
+140	KFC	14003783	Bukit Tinggi	Sumatera
+140	KFC	14003790	WTC Jambi	Jambi
+140	KFC	14003806	Prima Mall Jambi	Jambi
+140	KFC	14003813	Sipin Jambi	Jambi
+140	KFC	14003820	Bandar Lampung	Lampung
+140	KFC	14003837	Kartini Mall Lampung	Lampung
+140	KFC	14003844	Chandra Lampung	Lampung
+140	KFC	14003851	Teluk Betung	Lampung
+140	KFC	14003868	Bandar Jaya Lampung	Lampung
+140	KFC	14003875	Pringsewu Lampung	Lampung
+140	KFC	14003882	Kedaton Lampung	Lampung
+140	KFC	14003899	Lampung Square	Lampung
+140	KFC	14003905	Metro Lampung	Lampung
+140	KFC	14003912	Cik Ditiro Lampung	Lampung
+140	KFC	14003929	Way Halim Lampung	Lampung
+140	KFC	14003936	Bengkulu	Bengkulu
+140	KFC	14003943	Mega Mall Bengkulu	Bengkulu
+140	KFC	14003950	Bencoolen Bengkulu	Bengkulu
+140	KFC	14003967	Adisucipto Yogyakarta	Yogyakarta
+140	KFC	14003974	Bandara Adisucipto Y	Yogyakarta
+140	KFC	14003981	Malioboro Mall	Yogyakarta
+140	KFC	14003998	Food Point Malioboro	Yogyakarta
+140	KFC	14004001	Galleria Yogyakarta	Yogyakarta
+140	KFC	14004018	UGM Mirota Yogyakarta	Yogyakarta
+140	KFC	14004025	BDNI Sudirman	Yogyakarta
+140	KFC	14004032	Ambarukmo Mall	Yogyakarta
+140	KFC	14004049	Senturan Yogyakarta	Yogyakarta
+140	KFC	14004056	Citraland Semarang	Semarang
+140	KFC	14004063	Candi Semarang	Semarang
+140	KFC	14004070	Pandanaran	Semarang
+140	KFC	14004087	Bandara Ahmad Yani Semarang	Semarang
+140	KFC	14004094	Pemuda Semarang	Semarang
+140	KFC	14004100	DP Mall Semarang	Semarang
+140	KFC	14004117	Java Semarang	Semarang
+140	KFC	14004124	Plaza Setiabudi Srondol	Semarang
+140	KFC	14004131	Singosaren Solo	Solo
+140	KFC	14004148	Solo Grand Mall	Solo
+140	KFC	14004155	Solo Square	Solo
+140	KFC	14004162	Hartono Mall Solo Baru	Solo
+140	KFC	14004179	Magelang	Magelang
+140	KFC	14004186	Armada Town Square	Magelang
+140	KFC	14004193	Jepara	Jawa Tengah
+140	KFC	14004209	Salatiga	Jawa Tengah
+140	KFC	14004216	Ramayana Kudus	Jawa Tengah
+140	KFC	14004223	Pacific Mall Tegal	Jawa Tengah
+140	KFC	14004230	Sutoyo Tegal	Jawa Tengah
+140	KFC	14004247	Plaza Banjasari Pklg	Jawa Tengah
+140	KFC	14004254	Sri Ratu Purwokerto	Jawa Tengah
+140	KFC	14004261	Cilacap	Jawa Tengah
+140	KFC	14004278	Riau Bandung	Bandung
+140	KFC	14004285	Metro Margahayu	Bandung
+140	KFC	14004292	Metro Trade Center Bandung	Bandung
+140	KFC	14004308	Jatinangor Town Square	Bandung
+140	KFC	14004315	Carrefour Kiara Condong	Bandung
+140	KFC	14004322	Ujung Berung	Bandung
+140	KFC	14004339	Setiabudi Bandung	Bandung
+140	KFC	14004346	Pasir Kaliki Pajajaran	Bandung
+140	KFC	14004353	Bandung Trade Center	Bandung
+140	KFC	14004360	Paris Van Java	Bandung
+140	KFC	14004377	Cihampelas Walk	Bandung
+140	KFC	14004384	Setiabudi Sukawangi	Bandung
+140	KFC	14004391	Istana Plaza	Bandung
+140	KFC	14004407	Surya Sumantri Bandung	Bandung
+140	KFC	14004414	Dago	Bandung
+140	KFC	14004421	Buah Batu	Bandung
+140	KFC	14004438	ITC Kopo	Bandung
+140	KFC	14004445	Kepatihan Bandung	Bandung
+140	KFC	14004452	Bandung Trade Mall	Bandung
+140	KFC	14004469	Merdeka 2 Bandung	Bandung
+140	KFC	14004476	Festival City Link	Bandung
+140	KFC	14004483	Cimahi Mall	Bandung
+140	KFC	14004490	Cibabat	Bandung
+140	KFC	14004506	Rest Area Km.97	Bandung
+140	KFC	14004513	Kartini Cirebon	Cirebon
+140	KFC	14004520	Cirebon Mall	Cirebon
+140	KFC	14004537	Grage Mall Cirebon	Cirebon
+140	KFC	14004544	Cirebon Superblock	Cirebon
+140	KFC	14004551	Grage City Mall	Cirebon
+140	KFC	14004568	Subang	Jawa Barat
+140	KFC	14004575	Yogya Sukabumi	Jawa Barat
+140	KFC	14004582	Sadang Square Purwakarta	Jawa Barat
+140	KFC	14004599	Garut Plaza	Jawa Barat
+140	KFC	14004605	Plaza Mayasari Tasikmalaya	Jawa Barat
+140	KFC	14004612	Plaza Asia Tasikmalaya	Jawa Barat
+140	KFC	14004629	Griya Sumedang	Jawa Barat
+140	KFC	14004636	ITC Cempaka Mas Lt. 5	Jabodetabek
+140	KFC	14004643	Foodcourt Artha Gading Mall	Jabodetabek
+140	KFC	14004650	Lemabang Palembang	Palembang
+140	KFC	14004667	Jambu Air Bukit Tinggi	Padang
+140	KFC	14004674	Natar Milenium	Lampung
+140	KFC	14004681	Sentul City	Bogor
+140	KFC	14004698	Citraland - Makassar	Makassar
+140	KFC	14004704	Basuki Rahmad	Jabodetabek
+140	KFC	14004711	KM 26 Gempol	Jabodetabek
+140	KFC	14004728	Transmart Cikokol	Jabodetabek
+140	KFC	14004735	Mayasari Plaza	Bandung
+140	KFC	14004742	Cik Ditiro	Jakarta
+140	KFC	14004759	Grand Metropolitan Bekasi	Bekasi
+140	KFC	14004766	Suzuya Banda Aceh	Aceh
+140	KFC	14004773	Ancol Beach City	Jakarta
+140	KFC	14004780	MT Haryono Semarang	Semarang
+140	KFC	14004803	Dermaga Point Palembang	Palembang
+140	KFC	14004810	Ambon Kakialy	Ambon
+140	KFC	14004827	Jatiasih Bekasi	Bekasi
+140	KFC	14004834	Waena Papua	Papua
+140	KFC	14004841	Big Mall Smarinda	Samarinda
+140	KFC	14004858	BTC Bekasi	Bekasi
+140	KFC	14004865	Bukit Semarang Baru	Semarang
+140	KFC	14004872	Royal Klaten	Klaten
+140	KFC	14004889	Wahidin Gresik	Gresik
+140	KFC	14005015	NSO Bangkinang	Indonesia
+140	KFC	14004797	Teuku Umar Barat	Jakarta
+140	KFC	14004896	Plaza Bengkinang - Riau	Riau
+140	KFC	14004902	Botani Square	Bogor
+140	KFC	14004919	Harmony Ceger	Jakarta
+140	KFC	14004926	Marelan Raya Medan	Medan
+140	KFC	14004933	BEC Bandung 	Bandung
+140	KFC	14004940	Djuanda Jakarta	Jakarta
+140	KFC	14004957	Cipondoh Tangsel	Tangerang 
+140	KFC	14004964	Rumbai Pekanbaru	Pekanbaru
+140	KFC	14004971	Airport Hub	Jakarta
+140	KFC	14004988	Pejangkik Mataram	Mataram
+140	KFC	14004995	Franseda Mas Kupang	Kupang
+140	KFC	14005008	Citraland Celebes	Jabodetabek
+---------

@@ -1,0 +1,249 @@
+<?php echo $this->doctype();?>
+<html>
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_g_slime bd_publisher_dashboard">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		<?php echo $this->render("includes/hidden.phtml"); ?>
+		
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+								"Management" => "active",
+								"Publisher Dashboard" => "active");
+				$array = array(
+								"item" => $crumb,
+								"class" => "col-lg-9",
+								"style" => "padding-right:15px"
+								);
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+			
+			<div class="col-lg-3" id="search-crumb" style="padding-left:0px;">
+				<div class="col-lg-12 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+					<select class="form-control" id="cbpublisher">
+						<?php if ($this->mySession->publisher_id == "") : ?>
+							<option value="">All Publisher</option>
+						<?php endif; ?>
+						<?php foreach($this->publisherList as $publisher) : ?>
+							<option value="<?php echo $publisher->name; ?>"><?php echo $publisher->name; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div><!-- /.col-lg-4 col-lg-push-4-->
+			</div>
+			
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+				<div class="panel-body">
+					<h1>&nbsp;&nbsp;<?php echo $this->attr->title; ?></h1>
+					<hr/>
+					
+					<div class="clear"></div>
+					
+					<div class="row">
+							
+							<div class="col-lg-8">
+							<div class="panel panel-grey">
+								<div class="panel-heading">
+									<i class="fa fa-bar-chart-o fa-fw" style="padding-top:10px;"></i> Monthly Revenue Chart
+									
+									<div class="btn-group pull-right">	
+										<button id="export" class="btn btn-default"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;Export CSV</button>
+										<button type="button" data-time="daily" class="btn btn-default filter_button" value="daily">Daily</button>
+										<button type="button" data-time="weekly" class="btn btn-default filter_button" value="weekly">Weekly</button>
+										<button type="button" data-time="monthly" class="btn btn-default filter_button active" value="monthly">Monthly</button>						
+									</div>
+									<div class="clear"></div>
+									
+								</div>
+								<!-- /.panel-heading -->
+								<div class="panel-body">
+									<div id="monthly_graph" style="width:100%">
+									</div>
+								</div>
+								<!-- /.panel-body -->
+							</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-4">
+								<div class="panel panel-grey">
+									<div class="panel-heading">
+										<i class="fa fa-trophy fa-fw"></i> Top 5 Device Contribution
+									</div>
+									<!-- /.panel-heading -->
+									<div class="panel-body">
+										<div class="table-responsive">
+											<table class="table table-bordered table-hover table-striped">
+												<thead>
+													<tr>
+														<th style="text-align:center;" width="50px">No.</th>
+														<th width="320px">Device</th>
+														<th style="text-align:right;">Revenue</th>
+													</tr>
+												</thead>
+												<tbody id="top5Con">
+													<?php 
+													$no = 1; 
+													foreach($this->top5Con as $data) : ?>
+														<tr>
+															<td align="center"><?php echo $no; ?></td>
+															<td >Samsung <?php echo $data->name;?></td>
+															<td align="right"><?php echo number_format($data->total,0,".",",");?></td>
+														</tr>
+													<?php 
+													$no++;
+													endforeach; ?>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<!-- /.panel-body -->
+								</div>
+								</div>
+								
+								<div class="col-lg-4">
+									<div class="panel panel-purple">
+										<div class="panel-heading">
+											<div class="row">
+												<div class="col-xs-3">
+													<i class="fa fa-newspaper-o  fa-5x"></i>
+												</div>
+												<div class="col-xs-9 text-right">
+													<div class="huge" id="pubCount"><?php echo $this->publicationCount; ?></div>
+													<div>Total Publications</div>
+												</div>
+											</div>
+										</div>
+										<a href="#">
+											<div class="panel-footer">
+												<span class="pull-left">View Details</span>
+												<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+												<div class="clearfix"></div>
+											</div>
+										</a>
+									</div>
+								</div>
+					
+								
+							</div>
+							<!-- REVENUE TABLE -->
+								<div class="col-lg-12">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<i class="fa fa-table fa-fw" style="padding-top:10px;"></i> Monthly Revenue Table
+									</div>
+									<!-- /.panel-heading -->
+									<div class="panel-body">
+										<table class="table table-striped no-bottom" id="transaction_table">
+											<thead>
+												<tr>
+													<th style="width:400px">Publication Name</th>
+													<th style="width:15%">Publisher</th>
+													<th style="width:21%;text-align:right">Last Month</th>
+													<th style="width:21%;text-align:right">This Month</th>
+													<th style="width:21%;text-align:right">All Month</th>
+												</tr>
+											</thead>
+											<tbody id="revenueTable">
+												<?php
+													$total_last = 0; $total_this = 0; $total_all = 0;
+													foreach($this->revenueTable as $tbl) : ?>
+												<tr>
+													<td style="width:400px"><?php echo $tbl->product;?></td>
+													<td style="width:15%"><?php echo $tbl->publisher;?></td>
+													<td style="width:21%" align="right">Rp. <?php echo number_format($tbl->last_month, 0, ".",",");?>,-</td>
+													<td style="width:21%" align="right">Rp. <?php echo number_format($tbl->this_month, 0, ".",",");?>,-</td>
+													<td style="width:21%" align="right">Rp. <?php echo number_format($tbl->all_month, 0, ".",",");?>,-</td>
+													<?php 
+														$total_last += $tbl->last_month;
+														$total_this += $tbl->this_month;
+														$total_all += $tbl->all_month;
+													?>
+												</tr>
+												<?php endforeach; ?>
+											</tbody>
+											
+										</table>
+										<table class="table">
+											<tfoot>
+												<tr>
+													<th>Total</th>
+													<th style="width:21%;text-align:right">Rp. <span id="total_last"><?php echo number_format($total_last, 0, ".",",");?></span>,-</th>
+													<th style="width:21%;text-align:right">Rp. <span id="total_this"><?php echo number_format($total_this, 0, ".",",");?></span>,-</th>
+													<th style="width:21%;text-align:right">Rp. <span id="total_all"><?php echo number_format($total_all, 0, ".",",");?></span>,-</th>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+									<!-- /.panel-body -->
+								</div>
+								</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-4">
+							<div class="panel panel-grey">
+								<div class="panel-heading">
+									<i class="fa fa-pie-chart fa-fw"></i> Monthly Revenue
+								</div>
+								<!-- /.panel-heading -->
+								<div class="panel-body">
+									<div id="monthly_publication_revenue" style="width:100%">
+									</div>
+								</div>
+								<!-- /.panel-body -->
+							</div>
+							</div>
+							
+							<div class="col-lg-4">
+							<div class="panel panel-grey">
+								<div class="panel-heading">
+									<i class="fa fa-pie-chart fa-fw"></i> Device Contribution per Month
+								</div>
+								<!-- /.panel-heading -->
+								<div class="panel-body">
+									<div id="device_contribution" style="width:100%">
+									</div>
+								</div>
+								<!-- /.panel-body -->
+							</div>
+							</div>
+							
+							<div class="col-lg-4">
+							<div class="panel panel-grey">
+								<div class="panel-heading">
+									<i class="fa fa-pie-chart fa-fw"></i> Downloaded Content per Month
+								</div>
+								<!-- /.panel-heading -->
+								<div class="panel-body">
+									<div id="download_content" style="width:100%">
+									</div>
+								</div>
+								<!-- /.panel-body -->
+							</div>
+							</div>
+						</div>
+					<center>
+					<div class="bg-log-loading" style="display:block">
+						<div class="loading-text">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+						</div>
+					</div>
+					</center>
+				</div> <!-- panel-body close -->
+				</div> <!-- panel panel-primary close -->
+			</div> <!--col-sm-12 close -->
+		</div> <!--content close -->
+	</div> <!-- ch-container close -->
+</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/dashboard/publisherdashboard.js"); ?>

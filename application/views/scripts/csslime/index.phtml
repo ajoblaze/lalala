@@ -1,0 +1,213 @@
+<?php echo $this->doctype(); ?>
+<html ng-app="payment">
+    <head>
+        <?php echo $this->headTitle();?>
+        <?php echo $this->render("includes/script.phtml");?>
+    </head>
+    <body class="bd_g_slime bd_cs_slime" ng-controller="paymentCtrl">
+        <?php echo $this->render("includes/header.phtml");?>
+        <?php echo $this->render("includes/hidden.phtml"); ?>
+    <div class="ch-container">
+        <div id="content" class="col-lg-12 push">
+                <?php echo $this->render("includes/menu.phtml"); ?>
+                <?php
+                $crumb = array("Home" => $this->baseUrl,
+                                "S Lime" => "active",
+                                "Subscription ".$this->param->pname => "active");
+                $array = array(
+                                "item" => $crumb,
+                                "class" => "col-lg-7",
+                                "style" => "padding-right:0px"
+                                );
+                echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+                ?>
+            <div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+                    <div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+                    <form action="<?php echo $this->baseUrl;?>/csslime/index" method="GET" role="form" id="search-form">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default search-btn" type="button" id="advanced_search_button">
+                                    <span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Search..." name="search" id="input_search" value="<?php echo $this->param->search;?>">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit" id="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </form>
+                    </div><!-- /.col-lg-4 col-lg-push-4-->
+                
+                    <div class="btn-group pull-right cs-not-show" id="export_csv">
+                    <!-- data toggle merupakan fungsi dari boostrap,dimana kita harus menggunakan data-toggle di button yg menjadi pemicu, dan tempat terjadi efek -->
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV  &nbsp;&nbsp; <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#" ng-click="exportCurrent($event)" >Export Current Document</a></li>
+                            <li><a href="#" ng-click="exportAll($event)">Export All</a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="col-lg-6" >
+                <div class="advanced_search_container col-sm-10" id="advanced_search_container">
+                    <div class="panel panel-default">
+                    <div class ="panel-body" >
+                        <h3>Advanced Search</h3><hr/>
+                        <form action="<?php echo $this->baseUrl;?>/csslime/index" method="GET" role="form" class="form-horizontal">
+                        <div class="form-horizontal">
+                            <div class="advanced-input-group">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Order ID</label>
+                                <div class="col-sm-9">
+                                <input type="text" class="form-control advanced-input" placeholder="Order ID" id="order_id" name="order_id" value="<?php echo $this->param->order_id;?>">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Customer Name</label>
+                                <div class="col-sm-9">
+                                <input type="text" class="form-control advanced-input" placeholder="Customer Name" name="name" id="name" value="<?php echo $this->param->name;?>">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                <input type="text" class="form-control advanced-input" placeholder="Email" name="email" id="email" value="<?php echo $this->param->email;?>">
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-3 control-label">Order Date</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control inline date"  name="start_order" id="start_order" value="<?php echo $this->param->start_order; ?>" placeholder="YYYY-MM-DD" style="width:48%" /> 
+									-
+									<input type="text" class="form-control inline date" style="width:48%" name="end_order" value="<?php echo $this->param->end_order; ?>" placeholder="YYYY-MM-DD" id="end_order" />
+								</div>
+							 </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-3 control-label">Transaction ID</label>
+                                <div class="col-sm-9">
+                                <input type="text" class="form-control advanced-input" placeholder="Transaction ID" name="transaction_id" id="transaction_id" value="<?php echo $this->param->transaction_id;?>">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Payment Type</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control advanced-input date" placeholder="Payment Type" name="payment_type" id="payment_type" value="<?php echo $this->param->payment_type;?>">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Status</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control advanced-input" placeholder="Status" name="status" id="status" value="<?php echo $this->param->status;?>">
+                            </div>
+                            </div>
+							
+							<div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Product Name</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control advanced-input" placeholder="Product Name.." name="pname" id="pname" value="<?php echo $this->param->pname;?>">
+                            </div>
+                            </div>
+                            
+							<button type="submit" class="btn btn-primary search-btn pull-right"><i class="glyphicon glyphicon-search"></i> &nbsp;Search</button>
+                            </div>
+                            </div>
+                         </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						
+						<div class="form-group pull-left form-inline">
+							<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{subscription.length | number:0}}</strong>&nbsp; from 
+							&nbsp;<strong>{{totalData | number:0}}</strong>&nbsp; data</h5></span>
+						</div>
+						<div class="form-group pull-right form-inline">
+							<div class="form-group ">
+								<div class="input-group ">
+								  <div class="input-group-addon">
+									<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length | number:0}}</span>
+									</div>
+								  <input class="form-control" ng-model="query[queryBy]" placeholder="Filter by..." value="<?php echo $this->param->search;?>">
+								</div>
+							</div>
+							<div class="form-group">
+								<select class="form-control" ng-model="queryBy">
+									<option value="$">All</option>
+									<option value="order_id">Order ID</option>
+									<option value="name">Customer Name</option>
+									<option value="email">Email</option>
+									<option value="order_date">Order Date</option>
+									<option value="order_total">Order Total</option>
+									<option value="transaction_id">Transaction ID</option>
+									<option value="payment_type">Payment Type</option>
+									<option value="status">Status</option>
+								</select>					
+							</div>
+							
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-time"></span> &nbsp;<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a id="btall" ng-click="start_date='';end_date='';Range = ''" value="all" href="#">All</a></li>
+									<li><a id="bt7days" ng-click="start_date='';end_date='';Range = 7" value="7days" href="#">7 Days</a></li>
+									<li><a id="bt30days" ng-click="start_date='';end_date='';Range = 30" value="30days" href="#">30 Days</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+					<div class='tb-test'>
+						<div class="t-c">
+							<table class="table table-striped" id="transaction_table">
+								<thead>
+									<tr>
+										<th width="270px"><a ng-click="predicate='order_id';reverse=!reverse"><button class="sort_tool">Order ID &nbsp;<span class="caret"></span></button></a></th>
+										<th width="13%"><a ng-click="predicate='name';reverse=!reverse"><button class="sort_tool">Customer Name &nbsp;<span class="caret"></span></button></a></th>
+										<th width="13%"><a ng-click="predicate='email';reverse=!reverse"><button class="sort_tool">Email &nbsp;<span class="caret"></span></button></a></th>
+										<th width="12%" ><a ng-click="predicate='order_date' | asDate;reverse=!reverse"><button class="sort_tool">Order Date &nbsp;<span class="caret"></span></button></a></th>
+										<th width="12%" style="text-align:center"><a ng-click="predicate='order_total';reverse=!reverse"><button class="sort_tool">Order Total &nbsp;<span class="caret"></span></button></a></th>
+										<th width="12%" style="text-align:center"><a ng-click="predicate='transaction_id';reverse=!reverse"><button class="sort_tool">Transaction ID &nbsp;<span class="caret"></span></button></a></th>
+										<th width="12%" style="text-align:center"><a ng-click="predicate='payment_type';reverse=!reverse"><button class="sort_tool">Payment Type &nbsp;<span class="caret"></span></button></a></th>
+										<th width="12%" style="text-align:center"><a ng-click="predicate='status';reverse=!reverse"><button class="sort_tool">Status &nbsp;<span class="caret"></span></button></a></th>
+									</tr>
+								</thead>
+								<tbody scroll>
+									<tr ng-repeat="data in filtered=(subscription | filter:query | filter:queryByDay) | orderBy:predicate:reverse">
+										<td width="280px"><a href="#" ng-click="getDetail($event,data)">{{data.order_id}}</a></td>
+										<td width="13%">{{ (data.name == null) ? '-' : data.name}}</td>
+										<td width="13%">{{data.email}}</td>
+										<td width="12%">{{data.order_date | asDate | date:'dd MMM yyyy HH:mm:ss'}}</td>
+										<td width="12%" align="center">{{data.order_total | number:0}}</td>
+										<td width="12%" align="center">{{ (data.transaction_id == null) ? '-' : data.transaction_id }}</td>
+										<td width="12%" align="center"><capital>{{ (data.payment_type == null) ? '-' : data.payment_type.replace('_',' ')}}</capital></td>
+										<td width="12%" align="center" style="vertical-align:middle;"><div class='label font-medium' ng-class="{'label-success':data.status=='completed', 'label-warning':data.status == 'pending', 'label-danger':data.status == 'expired' || data.status == 'failed'}"><capital>{{data.status}}</capital></div></td>  
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="bg-loading">
+							<div class="loading-text">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+							</div>
+						</div>
+						<center>
+						<div class="bg-log-loading">
+							<div class="loading-text">
+								<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+							</div>
+						</div>
+						</center>
+					</div>
+				</div>
+			</div>
+			
+        </div>
+	</div>
+    </body>
+	<?php echo $this->render("includes/csslime/detailbox.phtml"); ?>
+</html>
+<?php  echo $this->inlineScript()->appendFile($this->baseUrl."/js/cs/slime_search.js"); ?>

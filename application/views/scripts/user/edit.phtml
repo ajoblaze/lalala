@@ -1,0 +1,235 @@
+<?php echo $this->doctype();?>
+<html>
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_user">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+							   "Management" => "active",
+							   "Manage Users" => $this->baseUrl."/user",
+							   "Update User" => "active");
+				$array = array(
+								"item" => $crumb,
+								"class" => "col-lg-12",
+								"style" => "padding-right:15px"
+							  );
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+						
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+				<div class="panel-body">
+					<?php 
+						$attr = array( "method" => "POST", 
+									   "action" => $this->baseUrl."/user/chkedit",
+									   "class" => "form-horizontal",
+									   "autocomplete" => "off"
+									 );
+						echo $this->form("frmedit",$attr);
+					?>
+						<h3>&nbsp;<i class="glyphicon glyphicon-user"></i> &nbsp;Update User</h3><hr/>
+						<input type="hidden" id="userID" name="userID" value="<?php echo $this->user->userID;?>" />
+						<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Username</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email" placeholder="Email" value ="<?php echo $this->user->username;?>" maxlength="30" />
+						</div>
+						</div>
+						
+						<div class="form-group">
+						<label for="roles" class="col-sm-2 control-label">Roles</label>
+						<div class="col-sm-10">
+							<div class="form-group"> <div class="col-sm-12">
+							<select class="form-control" name="roleRadio" id="selectRole">
+							<?php
+								foreach($this->roles as $role):
+									if ($role->roleID == $this->config->role->id->aggregator) {
+										$ID = "aggregator";
+									} else if ($role->roleID == $this->config->role->id->merchant) {
+										$ID = "merchant";
+									} else {
+										$ID = $role->roleID;
+									}
+							?>	
+									<option class="role" value="<?php echo $role->roleID;?>" <?php echo ($role->roleID == $this->user->roleID ) ? "selected" : ""; ?>> <?php echo $role->roleName; ?></option>
+								
+							<?php
+								endforeach;
+							?>
+							</select>
+							</div> </div>
+						</div>
+						
+						<label for="project" class="col-sm-2 control-label">Projects</label>
+						<div class="col-sm-10">
+							<div class="form-group"> <div class="col-sm-12">
+							<select class="form-control chosen-select" multiple data-placeholder="   Select projects" name="cbPro[]" id="selectProjects">						
+							<?php
+								foreach ($this->projects as $project) :
+									$ID = "";
+									switch($project->projectID) {
+										case $this->config->project->id->slime : $ID = "slime" ;break;
+										case $this->config->project->id->sgift : $ID = "sgift" ;break;
+										case $this->config->project->id->salaam : $ID = "salaam" ;break;
+										case $this->config->project->id->sfit : $ID = "sfit" ;break;
+										case $this->config->project->id->sair : $ID = "sair" ;break;
+									}
+							?>
+								<option class="proj" id="<?php echo $ID; ?>" value="<?php echo $project->projectID;?>"
+									<?php 
+										$search = array_search($project->projectID, $this->project);
+										echo ( is_numeric($search)) ? "selected" : ""; 
+									?>
+								><?php echo $project->projectName; ?></option>
+							<?php
+								endforeach;
+							?>
+							</select>
+							</div> </div>
+						</div>
+
+						<div class="col-sm-12 d_none" id="panel_merchant_type" style="padding-left:0px; padding-right:0px;">
+						<label for="mername" class="col-sm-2 control-label">Merchant Name</label>
+						<div class="col-sm-10">
+							<div class="form-group"> <div class="col-sm-12">
+							<select id="cbtype" class="form-control" name="merchant_type">
+								<option value="0">- Choose here -</option>
+							<?php
+								foreach ($this->merchantList as $merchant) :
+							?>
+								<option <?php echo ($merchant->id == $this->user->provider_id) ? "selected" : ""; ?> value="<?php echo $merchant->id; ?>"><?php echo $merchant->name; ?></option>
+							<?php
+								endforeach;
+							?>
+							</select>
+							</div> </div>
+						</div>
+						</div>
+						
+						<div class="col-sm-12 d_none" id="panel_provider" style="padding-left:0px; padding-right:0px;">
+						<label for="aggname" class="col-sm-2 control-label">Aggregator Name</label>
+						<div class="col-sm-10">
+							<div class="form-group"> <div class="col-sm-12">
+							<select id="cbtype" class="form-control" name="aggregator_type">
+								<option value="0">- Choose here -</option>
+							<?php
+								foreach ($this->providerList as $provider) :
+							?>
+								<option <?php echo ($provider->id == $this->user->provider_id) ? "selected" : ""; ?> value="<?php echo $provider->id; ?>"><?php echo $provider->name; ?></option>
+							<?php
+								endforeach;
+							?>
+							</select>
+							</div> </div>
+						</div>
+						</div>
+						
+						<div class="col-sm-12 d_none" id="panel_merchant_list" style="padding-left:0px; padding-right:0px;">
+						<label for="merlist" class="col-sm-2 control-label">Merchant List</label>
+						<div class="col-sm-10">
+							<div class="form-group"> <div class="col-sm-12">
+							<select class="form-control chosen-select" multiple data-placeholder="   Select merchants" id="selectMerchant" name="cbMerchant[]">	
+							<?php
+								foreach ($this->merchantList as $merchant) :
+							?>
+								<option class="merch" value="<?php echo $merchant->id;?>"
+									<?php 
+										$search = array_search($merchant->id, $this->merchant);
+										echo ( is_numeric($search)) ? "selected" : ""; ?>
+								><?php echo $merchant->name;?></option>
+							<?php
+								endforeach;
+							?>
+							</select>
+							</div> </div>
+						</div>
+						</div>
+						
+						<div class="col-sm-12 d_none" id="panel_publisher_type" style="padding-left:0px; padding-right:0px;">
+							<label for="publisherlist" class="col-sm-2 control-label">Publisher Name</label>
+							<div class="col-sm-10">
+								<div class="form-group"> <div class="col-sm-12">
+								<select class="form-control" data-placeholder="Select publishers" id="selectPublisher" name="publisher_type">
+									<option value="">- Choose here -</option>
+								<?php
+									foreach ($this->publisherList as $publisher) :
+								?>
+									<option class="pub" <?php echo ($publisher->name == $this->user->publisher_id) ? "selected" : ""; ?> value="<?php echo $publisher->name;?>"><?php echo $publisher->name;?></option>
+								<?php
+									endforeach;
+								?>
+								</select>
+								</div> </div>
+							</div>
+							</div>
+						
+						<div class="col-sm-12 d_none" id="panel_segment_list" style="padding-left:0px; padding-right:0px;">
+						<label for="seglist" class="col-sm-2 control-label">Segment List</label>
+						<div class="col-sm-10">
+							<div class="form-group"> <div class="col-sm-12">
+							<select class="form-control chosen-select" multiple data-placeholder="   Select segments" id="selectSegment" name="cbSegment[]">	
+							<?php
+								foreach ($this->segmentList as $segment) :
+							?>
+								<option class="merch" value="<?php echo $segment->segment;?>"
+									<?php 
+										$search = array_search($segment->segment, $this->segment);
+										echo ( is_numeric($search)) ? "selected" : ""; ?>
+								><?php echo $segment->segment;?></option>
+							<?php
+								endforeach;
+							?>
+							</select>
+							</div> </div>
+						</div>
+						</div>
+						
+						</div>
+						
+						<div class="form-group">
+						<label for="activ" class="col-sm-2 control-label">Active</label>
+						<div class="col-sm-10">
+						<label class="checkbox-inline ">
+							&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" <?php echo ($this->user->active == 1) ? "checked" : "";?> name="chkactive" id="chkactive" value="1"> <strong>&nbsp;</strong>
+						</label>
+						</div>
+						</div>
+						
+						<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<label for="err" class="col-sm-12" style="color:red">
+								<?php echo $this->error; ?>
+							</label>
+						</div>
+						</div>
+						
+						<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="submit" class="btn btn-success" value="Submit"><i class="glyphicon glyphicon-ok"></i> &nbsp;<b>Submit</b></button>
+							<a href="<?php echo $this->baseUrl;?>/user"><button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> &nbsp;<b>Cancel</b></button></a>
+						</div>
+						</div>
+						
+						<div class="col-sm-offset-1 col-sm-11">
+							<?php echo $this->render("includes/user_note.phtml"); ?>
+						</div>
+					</form>
+					</div>
+				</div> </div>
+			</form>
+		</div>
+		</div>
+</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/user.js"); ?>

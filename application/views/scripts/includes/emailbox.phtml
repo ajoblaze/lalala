@@ -1,0 +1,64 @@
+<!-- Mail Box -->
+<div class="modal fade" id="change_email">
+  <div class="modal-dialog">
+    <div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h3>&nbsp;<span class="glyphicon glyphicon-envelope"></span>  &nbsp;Change User Email</h3>
+		</div>
+		
+		<div class ="modal-body" >
+			<div class="form-horizontal">
+				<div class="send_group">
+				
+				<div class="alert alert-danger alert-dismissible d_none" role="alert" id="errorChange">
+				  <!-- <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
+				  <strong>Error!</strong> &nbsp;<span id="errorChangeText"></span>
+				</div>
+				
+				<form>
+					<div class="form-group">
+					<label class="col-md-2 control-label">To</label>
+					<div class="col-md-10">
+						<select data-placeholder="Receiver" id="cbtoChange" multiple class="chosen-select" name="receiver">
+							<!-- Destination Email -->
+						</select>
+					</div>					
+					</div>
+				
+					<div class="form-group">
+					<label class="col-md-2 control-label">Email</label>
+					<div class="col-md-10">
+					<input type="text" class="form-control" name="email" placeholder="Email" id="oldemail" readonly />
+					</div>
+					</div>
+					
+					<div class="form-group">
+					<label class="col-md-2 control-label">New Email</label>
+					<div class="col-md-10">
+					<input type="email" class="form-control" name="newemail" placeholder="New Email" id="newemail" />
+					</div>
+					</div>
+					
+					<div class="form-group">
+					<label class="col-md-2 control-label">Reason</label>
+					<div class="col-md-10">
+					<textarea class="form-control msgbox" name="message" style="resize:none" placeholder="Your reason here.." id="reasonChange"></textarea>
+					</div>
+					</div>
+				</form>	
+				</div>
+			</div>
+		
+			<div class="modal-footer">
+				<div class="progress d_none" id="progresschangebar">
+				  <div class="progress-bar progress-bar-striped active w-100"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+					<span class="sr-only">Loading...</span>
+				  </div>
+				</div>
+				<button type="button" id="btchange_email" class="btn btn-primary pull-right" ><i class="glyphicon glyphicon-pencil"></i> &nbsp;Change Email</button>
+			</div>
+		</div>
+	</div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

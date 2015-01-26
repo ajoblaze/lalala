@@ -1,0 +1,260 @@
+<?php echo $this->doctype();?>
+<html ng-app="myAppSgift">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_g_sgift bd_ggi_providerrequest" ng-controller="searchCrtl">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	<input type="hidden" id="hid_param_url" name="hid_param_url" value="<?php echo $this->param->url;?>" />
+	<input type="hidden" id="hid_param_start_date" name="hid_param_start_date" value="<?php echo $this->param->start_date;?>" />
+	<input type="hidden" id="hid_param_end_date" name="hid_param_end_date" value="<?php echo $this->param->end_date;?>" />
+	<div class="ch-container">
+	<div class="row">
+	   
+	<!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+			
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			$crumb = array("Home" => $this->baseUrl,
+							"Galaxy Gift ID" => "active",
+							"Provider Request" => "active");
+			$array = array(
+							"item" => $crumb,
+							"class" => "col-lg-7",
+							"style" => "padding-right:0px"
+							);
+			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+		?>
+		
+		<div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+			<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+				<form action="<?php echo $this->baseUrl;?>/cssgift/providerrequest" method="GET" role="form" id="search-form">
+					<div class="input-group">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default search-btn" type="button" id="advanced_search_button">
+						<span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+						</button>
+					</span>
+					<input type="text" class="form-control" placeholder="Search.." name="q" id="input_search" value="<?php echo $this->param->q;?>">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</div><!-- /input-group -->
+				</form>
+			</div><!-- /.col-lg-4 col-lg-push-4-->
+			
+			<div class="btn-group pull-right" id="export_csv">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a ng-click="exportCurrent($event)" href="#">Export Filtered Document</a></li>
+					<li><a ng-click="exportAll($event)" href="#">Export All Document</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="col-sm-6" ><div class="advanced_search_container col-sm-10" id="advanced_search_container"><div class="panel panel-default">  
+			<div class ="panel-body">
+			<h3>Advanced Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/cssgift/providerrequest" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+					<div class="form-horizontal"><div class="advanced-input-group">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">URL</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="URL" name="title" value="<?php echo $this->param->url;?>">
+							</div>
+						</div>
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-3 control-label">Created Date</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control inline date"  name="start_date" id="start_date" value="<?php echo $this->param->start_date; ?>" placeholder="YYYY-MM-DD" style="width:48%" /> 
+							-
+							<input type="text" class="form-control inline date" style="width:48%" name="end_date" value="<?php echo $this->param->end_date; ?>" placeholder="YYYY-MM-DD" id="end_date" />
+						</div>
+					 </div>
+
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><i class="glyphicon glyphicon-search"></i> &nbsp;Search</button>
+					</div></div>
+				</form>
+			</div>
+		</div></div></div>
+		
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+			<div class="panel-body" style="padding-bottom:0px;">
+					
+			<div class="row">
+			
+			
+			<!-- Popup -->
+			<div class="panel panel-primary promo_detail_container">
+			  <div class="panel-heading">
+			  <button type="button" class="close white" data-dismiss="modal" id="close_promo"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="panel-title">Promo Detail</h3>
+			  </div>
+			  <div class="panel-body" id="detail_promo">
+				Panel content
+			  </div>
+				<table class="table table-bordered promo_table table-striped"  >
+					<thead>
+						<tr>
+							<th>Total Coupon</th>
+							<th>Total Redeem</th>
+							<th>Remaining Redeem</th>
+							<th>Total Claim</th>
+							<th>Remaining Claim</th>
+						</tr>
+					</thead>
+					<tbody id="promo_number">
+						<tr>
+						</tr>
+					</tbody>
+				  </table>
+			</div>
+			
+			<div class="panel panel-primary user_detail_container">
+		
+				
+		
+				<div class="panel-heading">
+					<button type="button" class="close" data-dismiss="modal" id="close_user"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="panel-title">Details</h3>
+				</div>
+				
+				<div class="clear"></div>
+				<div class="panel-body" id="detail_user">
+					Panel content
+				</div>
+				<div class="panel-footer">
+				<form action="<?php echo $this->baseUrl; ?>/cssgift/exporttxtdetail" method="post" id="txtForm">
+					<input type="hidden" name="content" id="contenttxt"/>
+					
+					<input class="btn btn-default" type="submit" name="submit" id="contenttxt" value="Download as Text">
+					
+					</input>
+				</form>
+				</div>
+			</div>
+			
+			<!-- -->
+			
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<form class="form-inline" role="form">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list.length | number:0}}</strong>&nbsp; from 
+				&nbsp;<strong>{{totalData | number:0}}</strong>&nbsp; data</h5></span>
+				</form>
+			</div>
+			
+			<div class="form-group pull-right form-inline" style="margin-right:15px;" id="filter-textbox">
+				
+				<div class="form-group ">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Type the filter here.." >
+					</div>
+				</div>
+				
+				<div class="form-group" id="filter-option">
+					<select class="form-control" ng-model="queryBy" >
+						<option value="$">All</option>
+						<option value="url">URL</option>
+					</select>		
+				</div>
+				
+				&nbsp; &nbsp;&nbsp;
+				
+				<div class="d_none">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="time_filter">
+							<span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a id="btall" ng-click="start_date = ''; end_date = ''; DateRange = ''" value="all" href="#">All</a></li>
+							<li><a id="bt7days" ng-click="start_date = ''; end_date = ''; DateRange = 7" value="7days" href="#">7 Days</a></li>
+							<li><a id="bt30days" ng-click="start_date = ''; end_date = ''; DateRange = 30" value="30days" href="#">30 Days</a></li>
+						</ul>
+					</div>
+					
+					<div class="btn-group">	
+						<button class="btn btn-success " type="button" id="start_date_btn" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span> </button>
+								<div class="date_dropdown pull-right dropdown-menu" role="menu">
+							<div class="row">
+								<div class="col-md-6">
+									<div id="datepicker1"></div>
+								</div>
+								<div class="col-md-6">
+									<div id="datepicker2"></div>
+								</div>
+							</div>
+							<div class="row">
+							
+								<div class="col-md-12">
+									<button class="btn btn-success pull-right" id="apply_date" type="button" ng-click="DateRange = ''">Apply</button>
+							</div>
+							</div>
+						</div>	
+						
+					<!--date -->
+					</div>
+					<div class="form-group has-success" id="redeem/claim">
+						<select class="form-control" ng-model="dateBy" id="redeem" style="border-radius: 0px 4px 4px 0px;">
+							<option value="redeem_time" selected="selected">Redeem Time</option>
+							<option value="claim_time">Claim Time</option>
+						</select>
+						
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+	
+
+			<div class='tb-test'>
+			<div class="t-c">
+				<table class="table table-striped merchant_table" id="merchant_table1">	
+					<thead>
+					<tr>
+						<th width="10%" style="text-align:center"><a ng-click="sort_by('id')"><button class="sort_tool">ID <span class="caret"></span></button></a></th>
+						<th width="500px"><a ng-click="sort_by('creation_time')"><button class="sort_tool">Created At <span class="caret"></span></button></a></th>
+						<th width="40%" style="text-align:center"><a ng-click="sort_by('url')"><button class="sort_tool">URL <span class="caret"></span></button></a></th>
+						<th width="25%" style="text-align:center">Action</th>
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="x in filtered = ( search_list | filter:query ) | orderBy:predicate:reverse ">
+							<td width="10%" align="center">{{ x.id }}</td>
+							<td width="500px">{{ x.creation_time | asDate | date:'dd MMM yyyy - HH:mm:ss' }}</td>
+							<td width="40%" align="center">{{ x.url }}</td>
+							<td width="25%" align="center"> <button class="btn btn-primary" popup-detail detailid="{{ x.id }}"><span class="glyphicon glyphicon-folder-open"></span> &nbsp; Detail</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	
+			<div class="bg-loading">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+				</div>
+			</div>	
+			</div>
+			<center>
+			<div class="bg-log-loading" style="display:block;">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+				</div>
+			</div>
+			</center>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- Cover -->
+	<div class="cover"></div>
+	</body>	
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/cs/providerrequest.js"); ?>

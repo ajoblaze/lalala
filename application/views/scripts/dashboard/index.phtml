@@ -1,0 +1,89 @@
+<?php echo $this->doctype();?>
+<html>
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_dashboard bd_index">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+								"Management" => "active",
+								"Dashboard" => "active");
+				$array = array(
+								"item" => $crumb,
+								"class" => "col-lg-12",
+								"style" => "padding-right:15px"
+								);
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+			
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+				<div class="panel-body">
+					<h3>&nbsp;<i class="glyphicon glyphicon-folder-close"></i> &nbsp;<?php echo $this->attr->title; ?></h3><hr/>
+					
+					<div class="clear"></div>
+					<br/>
+					<div class='tb-test'>
+						<table class="table table-striped"> 
+							<thead>
+								<tr>
+									<td>No.</td> 
+									<td>Projects</td> 
+									<td>Total Installs</td>
+									<td>Total Uninstalls</td>
+									<td>Active Installs</td>
+									<td>Rating / People</td>
+									<td>Total Errors</td>
+									<td>Total Carriers</td>
+									<td>Total Devices</td>
+								</tr>
+							</thead>
+							<tbody align="center">
+							
+								<?php
+								$no = 1;
+								foreach($this->dashboardData as $data) :
+								?>
+								<tr>
+								<td><?php echo $no;?>.</td>
+								<td><?php echo $data->projectName;?></td>
+								<td><a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/installs"><strong><?php echo number_format($data->total_install,0,".",","); ?></strong></a></td>
+								<td><a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/installs"><strong><?php echo number_format($data->total_uninstall,0,".",","); ?></strong></a></td>
+								<td>
+								<a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/installs">
+								<strong><?php 
+								$activeInstall = $data->total_install - $data->total_uninstall;
+								echo number_format($activeInstall,0,".",",");
+								?></strong>
+								</a></td>
+								<td><a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/review"><strong><?php echo $data->rating; ?></strong></a></td>
+								<td><a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/errorreport"><strong><?php echo number_format($data->total_error,0,".",","); ?></strong></a></td>
+								<td><a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/carrier"><strong><?php echo number_format($data->total_carrier,0,".",",");?></strong></a></td>
+								<td><a href="<?php echo $this->baseUrl;?>/<?php echo $data->projectLink;?>/devices"><strong><?php echo number_format($data->total_devices,0,".",",");?></strong></a></td>
+								</tr>
+								<?php
+									$no++;
+								endforeach;
+								?>
+							</tbody>
+						</table>
+					</div>
+
+				
+				</div> <!-- panel-body close -->
+				</div> <!-- panel panel-primary close -->
+			</div> <!--col-sm-12 close -->
+		</div> <!--content close -->
+	</div> <!-- ch-container close -->
+</body>
+</html>

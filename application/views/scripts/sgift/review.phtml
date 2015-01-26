@@ -1,0 +1,309 @@
+<?php echo $this->doctype();?>
+<html ng-app="reviewApp">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_reviews_sgift bd_sgift" ng-controller="reviewCrtl">
+{{ ff() }}
+	<?php echo $this->render("includes/header.phtml"); ?>
+		<?php echo $this->render("includes/hidden.phtml"); ?>
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+							   "Apps" => "active",
+							   "Galaxy Gift ID" => "active",
+							   "Installs" => "active");
+				$array = array(
+								"item" => $crumb,
+								"class" => "col-lg-12",
+								"style" => "padding-right:15px"
+								);
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+			
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+				<div class="panel-body">
+					<h3><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</h3><hr/>
+					<ul class="nav nav-tabs" role="tablist" id="myTab">
+						  <li class="active"><a href="#google" role="tab" data-toggle="tab">Google Play</a></li>
+						  <li><a href="#inapp" id="btapp" role="tab" data-toggle="tab">In App Feedback</a></li>
+						</ul>
+					
+					<div class="clear"></div>
+					
+					<div class="tab-content">
+					
+					  <div class="tab-pane fade in active" id="google"><!-- TAB GOOGLE -->
+						
+						<br/>
+							<div class="btn-group pull-right cs-not-show" id="export_csv">
+								<button id="export" class="btn btn-default pull-right"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;Export CSV</button>
+							</div>
+						<br/>
+
+					<div class='tb-test'>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<td width="15%"><a data-col="review_date" class="sortable" title="click to sort"><button class="sort_tool" value="sort_date">Date <span class="caret"></span></button></a></td>
+									<td width="15%"><a data-col="star_rating" class="sortable" title="click to sort"><button class="sort_tool" value="sort_rate">Star Rating <span class="caret"></span></span></button></a></td>
+									<td width="20%"><a data-col="review_title" class="sortable" title="click to sort"><button class="sort_tool" value="sort_date">Review Title <span class="caret"></span></button></a></td>
+									<td width="50%"><a data-col="review_text" class="sortable" title="click to sort"><button class="sort_tool" value="sort_text">Review Text <span class="caret"></span></button></a></td>
+								</tr>
+							</thead>
+							<tbody id="table_data">
+							<?php
+							$temp_data = $this->review_list;
+							for($i = 0; $i< count($temp_data); $i++){
+							?>
+								<tr>
+								<td><?php echo $temp_data[$i]["review_date"]; ?></td>
+								<td align="center"><ul class="star-container">
+								<?php 
+								$star = str_replace("\0", "", $temp_data[$i]["star_rating"]) ;
+									for($x = 0 ; $x < $star; $x++){
+											?>
+												<li><span class="glyphicon glyphicon-star"></span></li>
+											<?php
+									}
+								?>
+								<?php 
+									for($x = 0 ; $x < 5-$star; $x++){
+											?>
+												<li><span class="glyphicon glyphicon-star-empty"></span></li>
+											<?php
+									}
+								?>
+								</ul></td>
+								<td><?php echo $temp_data[$i]["review_title"] ; ?></td>
+								<td><?php echo $temp_data[$i]["review_text"] ; ?></td>
+								</tr>
+							<?php
+								}
+							?>
+					</tbody>
+					</table>
+				</div>
+					  
+					  
+			</div>
+			
+			<div class="tab-pane fade" id="inapp">
+				
+				<div class="col-lg-5">
+				<div class="form-group pull-left form-inline" style="margin-left:0px;">
+					<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{review_list.length}}</strong>&nbsp; from 
+					&nbsp;<strong><?php echo $this->totalData; ?></strong>&nbsp; data</h5></span>
+				</div>
+				</div>
+				
+				<div class="col-lg-7" style="margin-top: 12px;">
+					<div class="form-group pull-right form-inline" style="margin-right:0px;">
+					
+					<div class="pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+						<form action="<?php echo $this->baseUrl;?>/slime/review" method="GET" role="form" id="search-form">
+							<div class="input-group">
+								<span class="input-group-btn">
+								<button class="btn btn-default search-btn" type="button" id="advanced_search_button">
+									<span class="caret"></span>
+								</button>
+								</span>
+								<input type="text" class="form-control" placeholder="Search.." name="q" id="input_search" value="<?php echo $this->param->q;?>">
+								<span class="input-group-btn">
+									<button class="btn btn-default search-btn" type="submit" id="search_button">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+								
+							</div>
+						</form>
+					</div>
+					
+					<div class="btn-group cs-not-show" id="export_csv">
+					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+						<li><a ng-click="exportCurrent($event)" href="#">Export Current Document</a></li>
+						<li><a ng-click="exportAll($event)" href="#">Export All</a></li>
+					  </ul>
+					</div>
+					
+					</div>
+				</div>
+				
+				<div class="col-sm-6" >
+					<div class="advanced_search_container col-sm-8" id="advanced_search_container">
+					<div class="panel panel-default">
+					  
+					<div class ="panel-body" >
+						<h3>Advance Search</h3><hr/>
+						<form action="<?php echo $this->baseUrl;?>/sgift/review" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+						<div class="form-horizontal">
+							<div class="advanced-input-group">
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">Date</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control inline date"  name="start_date" id="start_date" value="<?php echo $this->param->start_date; ?>" placeholder="YYYY-MM-DD" style="width:48%" /> 
+										-
+										<input type="text" class="form-control inline date" style="width:48%" name="end_date" value="<?php echo $this->param->end_date; ?>" placeholder="YYYY-MM-DD" id="end_date" />
+									</div>
+								 </div>
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">Name</label>
+									<div class="col-sm-9">
+									  <input type="text" class="form-control advanced-input" placeholder="Name" id="name" name="name" value="<?php echo $this->param->name;?>">
+									</div>
+								 </div>
+								 <div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control advanced-input" placeholder="Email" id="email" name="email" value="<?php echo $this->param->email;?>">
+									</div>
+								 </div>
+								 
+								 <div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">Rating</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control advanced-input" placeholder="Star Rating" id="rating" name="rating" value="<?php echo $this->param->rating;?>">
+									</div>
+								 </div>
+								 
+								 <div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">Review</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control advanced-input" placeholder="Review" id="review" name="review" value="<?php echo $this->param->review;?>">
+									</div>
+								 </div>
+										 
+								<button class="btn btn-primary search-btn pull-right" id="adv-button"><i class="glyphicon glyphicon-search"></i> &nbsp;Search</button>
+							</div>
+							</div>
+						</form>
+						</div>
+						</div>
+					</div>
+				</div>
+				
+			<div class="form-group pull-right form-inline" style="margin-right:15px;">
+				<div class="form-group ">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Filter by..." />
+					</div>
+				</div>
+				<div class="form-group">
+					<select class="form-control" ng-model="queryBy">
+						<option value="$">All</option>
+						<option value="review_date">Date</option>
+						<option value="name">Name</option>
+						<option value="email">Email</option>
+						<option value="subject">Subject</option>
+						<option value="feedback">Review</option>
+					</select>		
+				</div>	
+				
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a id="btall" ng-click="start_date='';end_date='';Range = ''" value="all" href="#">All</a></li>
+						<li><a id="bt7days" ng-click="start_date='';end_date='';Range = 7" value="7days" href="#">7 Days</a></li>
+						<li><a id="bt30days" ng-click="start_date='';end_date='';Range = 30" value="30days" href="#">30 Days</a></li>
+					</ul>
+				</div>
+				
+				<div class="btn-group pull-right">	
+					<button class="btn btn-default " type="button" id="start_date_btn" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span> </button>
+							<div class="date_dropdown pull-right dropdown-menu" role="menu">
+						<div class="row">
+							<div class="col-md-6">
+								<div id="datepicker1"></div>
+							</div>
+							<div class="col-md-6">
+								<div id="datepicker2"></div>
+							</div>
+						</div>
+						<div class="row">
+						
+							<div class="col-md-12">
+								<button class="btn btn-default pull-right" id="apply_date" type="button" ng-click="applyDate($event)">Apply</button>
+						</div>
+						</div>
+					</div>	
+				<!--date -->
+				</div>&nbsp;
+			</div>
+
+			<!-- end of advanced search -->	
+			<div class="clear"></div>				
+					  
+					<div class='tb-test'>
+					<div class="t-c">
+					<table class="table table-striped" id="transaction_table" >	
+						<thead>
+							<tr>
+								<th style="width:270px"><a href="#" ng-click="sort_by('review_date | asDate')"><button class="sort_tool" value="sort_date">Date <span class="caret"></span></button></a></th>
+								<th style="width:15%"><a href="#" ng-click="sort_by('name')"><button class="sort_tool" value="sort_date">Name <span class="caret"></span></button></a></th>
+								<th style="width:17%"><a href="#" ng-click="sort_by('email')"><button class="sort_tool" value="sort_date">Email <span class="caret"></span></button></a></th>
+								<th style="width:12%"><a href="#" ng-click="sort_by('star_rating')"><button class="sort_tool" value="sort_date">Rating <span class="caret"></span></button></a></th>
+								<th style="width:35%"><a href="#" ng-click="sort_by('review_text')"><button class="sort_tool" value="sort_date">Review <span class="caret"></span></button></a></th>
+								<th style="width:10%;text-align:center;"><a href="#" ng-click="sort_by('feedback')"><button class="sort_tool" value="sort_date">Reply <span class="caret"></span></button></a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="x in filtered = ( review_list | filter:query | filter:queryByDay | filter:queryByPickerDay ) | orderBy:predicate:reverse" >
+								<td style="width:270px">{{ x.review_date  | asDate | date:'dd MMM yyyy - HH:mm' }}</td>
+								<td style="width:15%">{{ x.name }}</td>
+								<td style="width:17%">{{ x.email}}</td>
+								<td style="width:12%" make-star amount="{{(x.star_rating | num) }}"></td>
+								<td style="width:35%">{{ x.review_text }}</td>
+								<td style="width:10%" align = "center">
+								<a href="#mailFeedback" ng-show="x.reply==null" data-toggle="modal" class="btn-reply" data-id="{{x.id}}" style="text-decoration: none;">
+								<button class="btn btn-primary" title="Reply" ng-click="doReply(x, $index, $event)"><span class="glyphicon glyphicon-envelope"></span></button>
+								</a>
+								<button class="btn btn-success" title="Feedback" ng-click="viewReply(x, $event)"ng-show="x.reply!=null" class="btn-feedback" data-id="{{x.id}}" style="text-decoration: none;">
+								<span class="glyphicon glyphicon-ok"></span></button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					  </div>
+					   <!-- Loading Bar -->
+					<?php echo $this->render("includes/review/feedback.phtml"); ?>
+					<?php echo $this->render("includes/review/feedback_reply.phtml"); ?>
+						<div class="bg-loading">
+							<div class="loading-text">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+							</div>
+						</div>
+						
+					  </div>
+					  <center>
+						<div class="bg-log-loading" style="display:block">
+							<div class="loading-text">
+								<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+							</div>
+						</div>
+						</center>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ adjustTable() }}
+	</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/sgift/sgift_review.js"); ?>

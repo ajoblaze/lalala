@@ -1,0 +1,45 @@
+<!-- Device Box -->
+<div class="modal fade" id="downloadHistory">
+  <div class="modal-dialog" style="width:955px">
+    <div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h3><span class="glyphicon glyphicon-list-alt"></span>  &nbsp;Download History (<span class="pname"></span>)</h3>
+		</div>
+		
+		<div class ="modal-body" >
+			<div class="form-horizontal">
+				<div class="send_group">
+				<table class="table table-striped" id="doug-neiner-five" style="width:920px;" >	
+					<thead>
+					<tr>
+						<th width="60px" style="text-align:center">No. </th>
+						<th width="180px"><a ng-click="sort_c_by('name')"><button class="sort_tool">Product Name<span class="caret"></span></button></a></th>
+						<th width="180px"><a ng-click="sort_c_by('author')"><button class="sort_tool">Publisher<span class="caret"></span></button></a></th>
+						<th width="180px" style="text-align:center"><a ng-click="sort_c_by('release_date | asDate')"><button class="sort_tool">Release Date<span class="caret"></span></button></a></th>
+						<th width="180px" style="text-align:center"><a ng-click="sort_c_by('price')"><button class="sort_tool">Value<span class="caret"></span></button></a></th>
+						<th width="180px"><a ng-click="sort_c_by('download_time | asDate')"><button class="sort_tool">Download Time<span class="caret"></span></button></a></th>											
+					</tr>
+					</thead>				
+					<tbody>
+						<tr ng-if="productData.length <= 0">
+							<td colspan="6" style="width:920px" align="center">
+								<span class="glyphicon glyphicon-exclamation-sign"></span> &nbsp;<strong>No Download History Found...</strong>
+							</td>
+						</tr>
+						<tr ng-repeat="data in productData | orderBy:predicate_c:reverse_c">
+							<td width="60px" align="center">{{ $index+1 }}.</td>
+							<td width="180px">{{data.name}}</td>
+							<td width="180px">{{data.author}}</td>
+							<td width="180px" align="center">{{data.release_date | asDate | date: 'dd MMM yyyy'}} </td>
+							<td width="180px" align="center">{{data.price | number : 0}}</td>
+							<td width="180px">{{data.download_time | asDate | date: 'dd MMM yyyy HH:mm:ss'}}</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

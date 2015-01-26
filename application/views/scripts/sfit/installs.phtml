@@ -1,0 +1,195 @@
+<?php echo $this->doctype();?>
+<html>
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_installs_sfit bd_sfit">
+	<?php echo $this->render("includes/header.phtml"); ?>
+
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		<?php echo $this->render("includes/hidden.phtml"); ?>
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+								"Apps" => "active",
+								"S Fit" => "active",
+								"Installs" => "active");
+				$array = array(
+								"item" => $crumb,
+								"class" => "col-lg-12",
+								"style" => "padding-right:15px"
+								);
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+									
+			<!-- Content Placed here -->
+			<div class="col-sm-12">
+			
+			<h3>&nbsp;&nbsp;<?php echo $this->attr->title; ?></h3><hr/>
+		
+			<ul class="nav nav-tabs" role="tablist" id="myTab">
+				<li class="active"><a href="#google" role="tab" data-toggle="tab">Google Play</a></li>
+				<li><a href="#inapp" id="btapp" role="tab" data-toggle="tab">Samsung Apps</a></li>
+			</ul>
+			
+			<div class="clear"></div><br/>
+			
+			<div class="tab-content">
+			
+				<div class="tab-pane fade in active" id="google">
+				<div class="panel panel-default"><div class="panel-body">
+					<div class="col-sm-12"><div class="form-group pull-right form-inline" style="margin-right:15px;">
+						<div class="btn-group" style="position:relative;margin:0" id="export_csv">
+						<button id="export" class="btn btn-default pull-right"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;Export CSV</button>
+						</div>&nbsp;
+						
+						<div class="btn-group" style="position:relative; margin:0">	
+							<button type="button" class="btn btn-default filter_button active" value="all">all</button>
+							<button type="button" class="btn btn-default filter_button" value="7days">7 days</button>
+							<button type="button" class="btn btn-default filter_button" value="30days">30 days</button>
+						</div>
+							
+						<div class="pull-right dropdown_date_btn dropdown" style="position:relative;top:0;margin:0">
+						<button class="btn btn-default " type="button" id="start_date_btn" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span> </button>
+						<div class="date_dropdown pull-right dropdown-menu" id="date_dropdown" role="menu">
+							<div class="row">
+								<div class="col-md-6">
+								<div id="datepicker1"></div>
+								<!--<input type="text" id="datepicker1" placeholder="start date">-->
+								</div>
+								<div class="col-md-6">
+								<div id="datepicker2"></div>
+								<!--<input type="text" id="datepicker2" placeholder="end date">-->
+								</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-12">
+								<button class="btn btn-default pull-right" id="apply_date" type="button">Apply</button>
+							</div>
+							</div>
+						</div>	
+						</div>
+					</div></div>
+					
+					<div class="col-sm-12">
+					<div id="container-unin" style="margin-top:0"></div>
+					</div>
+						
+				</div></div>
+				
+				<div class="panel panel-default"><div class="panel-body" style="padding:0;margin:0">
+				<table class="table table-striped" id="slime_install">
+					<thead><tr>
+						<th class="text-center"><h4><b>TOTAL DOWNLOAD</b></h4></th>
+						<th class="text-center"><h4><b>TOTAL UNINSTALL</b></h4></th>
+						<th class="text-center"><h4><b>TOTAL ACTIVE INSTALL</b></h4></th>
+					</tr></thead>
+					<tbody><tr></tr></tbody>
+				</table>
+				</div></div>
+				
+				<div class="panel panel-default"><div class="panel-body" style="padding:0;margin:0">
+				<table class="table table-striped" id="slime_daily_install">
+					<thead><tr>
+						<th class="text-center"><h5><b>Transaction Date</b></h5></th>
+						<th class="text-center"><h5><b>Daily Downloads</b></h5></th>
+						<th class="text-center"><h5><b>Daily Uninstalls</b></h5></th>
+						<th class="text-center"><h5><b>Active Installs</b></h5></th>
+					</tr></thead>
+					<tbody></tbody>
+				</table>
+				</div></div>	
+				</div>
+			
+				<div class="tab-pane fade" id="inapp">
+					<div class="panel panel-default">
+					<div class="panel-body">
+
+					<div class="col-md-12">
+					<div class="form-group pull-right form-inline">
+						<div class="btn-group" style="position:relative;margin:0" id="export_csv">
+						<button id="export_sam" class="btn btn-default pull-right"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;Export CSV</button>	
+						</div>&nbsp;
+						
+						<div class="btn-group" style="position:relative;margin:0">	
+							<button type="button" class="btn btn-default filter_button_sam active" value="all">all</button>
+							<button type="button" class="btn btn-default filter_button_sam" value="7days">7 days</button>
+							<button type="button" class="btn btn-default filter_button_sam" value="30days">30 days</button>
+						</div>
+						
+						<div class="pull-right dropdown_date_btn dropdown" style="position:relative; top:0; margin:0">
+							<button class="btn btn-default " type="button" id="start_date_btn_sam" data-toggle="dropdown"><span class="glyphicon glyphicon-calendar"></span> </button>
+							
+							<div class="date_dropdown pull-right dropdown-menu" id="date_dropdown_sam" role="menu">
+								<div class="row">
+									<div class="col-md-6">
+									<div id="datepicker1_sam"></div>
+									<!--<input type="text" id="datepicker1" placeholder="start date">-->
+									</div>
+									<div class="col-md-6">
+									<div id="datepicker2_sam"></div>
+									<!--<input type="text" id="datepicker2" placeholder="end date">-->
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-md-12">
+									<button class="btn btn-default pull-right" id="apply_date_sam" type="button">Apply</button>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+					</div>
+					
+					<div class="col-md-12" id="div-con">
+					<div id="container-unin-apps" style="width:93.5% !important;margin-top:0;"></div>
+					</div>
+					
+					</div>
+					</div>
+					
+					<div class="panel panel-default">
+					<div class="panel-body" style="padding:0;margin:0">
+						<table class="table table-striped" id="slime_install2">
+						<thead><tr>
+							<th class="text-center"><h4><b>TOTAL DOWNLOAD</b></h4></th>
+						</tr></thead>
+						<tbody><tr></tr></tbody>
+						</table>
+					</div>
+					</div>
+					
+					<div class="panel panel-default">
+					<div class="panel-body" style="padding:0;margin:0">
+						<table class="table table-striped" id="slime_daily_install2">
+						<thead><tr>
+							<th class="text-center"><h5><b>Transaction Date</b></h5></th>
+							<th class="text-center"><h5><b>Daily Downloads</b></h5></th>
+						</tr></thead>
+						<tbody></tbody>
+						</table>
+					</div>
+					</div>	
+				</div>
+			
+			</div>
+			
+			</div>
+			
+			<div id="loading_gif"><img src="<?php echo $this->baseUrl; ?>/assets/images/loading.gif" width="15px"></img></div>
+			
+		</div>
+			
+		</div>
+	</div>
+</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/sfit/sfit_install.js")
+								->appendFile($this->baseUrl."/js/sfit/sfit_install_samapps.js"); ?>

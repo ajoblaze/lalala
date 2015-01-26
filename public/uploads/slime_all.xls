@@ -1,0 +1,114 @@
+order_id	order_date	order_total	transaction_id	payment_type	status	name	email
+2016	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2018	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2020	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2202	2014-11-27	20000	71aa8447-68d0-4c92-8326-0e8a7aa52fda	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+1911	2014-11-27	20001			pending	mbe te	msci.development@gmail.com
+1912	2014-11-27	3500			pending	mbe te	msci.development@gmail.com
+1914	2014-11-27	3500			pending	mbe te	msci.development@gmail.com
+1915	2014-11-27	3500			pending	mbe te	msci.development@gmail.com
+1916	2014-11-27	3500	80c7f7f9-cebf-412a-9b6f-d4e0da5afa04	cimb_clicks	completed	mbe te	msci.development@gmail.com
+1917	2014-11-27	20000			pending	Msci Dev	msci.dev@gmail.com
+1918	2014-11-27	20000			pending	Msci Dev	msci.dev@gmail.com
+1919	2014-11-27	20000			pending	Msci Dev	msci.dev@gmail.com
+1920	2014-11-27	20001			pending	mbe te	msci.development@gmail.com
+1921	2014-11-27	20001			pending	mbe te	msci.development@gmail.com
+1922	2014-11-27	20001			pending	mbe te	msci.development@gmail.com
+2005	2014-11-27	2000			pending	mbe te	msci.development@gmail.com
+2011	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+1203	2014-11-26	20000			pending	Msci Dev	msci.dev@gmail.com
+1204	2014-11-26	20000			pending	Msci Dev	msci.dev@gmail.com
+1205	2014-11-26	20000			pending	Msci Dev	msci.dev@gmail.com
+2012	2014-11-27	20001			pending	mbe te	msci.development@gmail.com
+2014	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2015	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2021	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2022	2014-11-27	50000			pending	ta	pvt1.s11@gmail.com
+2023	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+1211	2014-11-26	20001	164e7986-60b2-4edf-8355-e2f7dbf5c0d5	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+2024	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2025	2014-11-27	50000			pending	mbe te	msci.development@gmail.com
+2026	2014-11-27	100000			pending	ta	pvt1.s11@gmail.com
+2104	2014-11-27	20000			pending	mbe te	msci.development@gmail.com
+1301	2014-11-26	20000			pending	Msci Dev	msci.dev@gmail.com
+1302	2014-11-26	20000	61a2a36e-a444-44a7-a443-ae1ba219e8b5	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+1303	2014-11-26	20000	ff5a49b0-81ae-47d2-9bb1-736e7f8276e1	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+1402	2014-11-26	20000	dff2b368-f9d6-403e-937c-67e840244c60	cimb_clicks	completed	mbe te	msci.development@gmail.com
+2108	2014-11-27	20000	85f9ce1c-5d80-41b5-8fae-9785cfb9916e	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+2203	2014-11-27	50000	ad88e0e8-d913-4a0e-b09c-8b7c5c9ca965	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2204	2014-11-27	20000	6a3b0a83-8c6a-42cb-b11d-a3850d036833	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+1506	2014-11-26	20000	98b343af-f501-4a73-9fcd-6eb0ebb89ac7	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+1507	2014-11-26	20000			pending	mbe te	msci.development@gmail.com
+1602	2014-11-26	100000			pending	mbe te	msci.development@gmail.com
+1607	2014-11-26	50000			pending	mbe te	msci.development@gmail.com
+2606	2014-11-28	20000	c52f4c7f-0ebf-488d-a953-dd354a554967	cimb_clicks	completed	Chatty Best	chat.bbtest2@gmail.com
+1913	2014-11-27	3500			pending	mbe te	msci.development@gmail.com
+1923	2014-11-27	20001			pending	mbe te	msci.development@gmail.com
+2001	2014-11-27	2000			pending	mbe te	msci.development@gmail.com
+2002	2014-11-27	2000			pending	mbe te	msci.development@gmail.com
+2003	2014-11-27	2000			pending	mbe te	msci.development@gmail.com
+2004	2014-11-27	2000			pending	mbe te	msci.development@gmail.com
+2007	2014-11-27	50000			pending	ta	pvt1.s11@gmail.com
+2008	2014-11-27	50000			pending	mbe te	msci.development@gmail.com
+2009	2014-11-27	100000			pending	ta	pvt1.s11@gmail.com
+2010	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2013	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2017	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2019	2014-11-27	20000			pending	ta	pvt1.s11@gmail.com
+2027	2014-11-27	20000	b67eca57-54cd-416c-b699-1bb513c4ea14	cimb_clicks	completed	ta	pvt1.s11@gmail.com
+2028	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2029	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2030	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2031	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2032	2014-11-27	3500			pending	ta	pvt1.s11@gmail.com
+2101	2014-11-27	50000			pending	ta	pvt1.s11@gmail.com
+2201	2014-11-27	20000	86df74bf-4d46-433e-a00c-2675f364a76e	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+2205	2014-11-27	20000	7a90a8e1-b9d1-4991-9e94-2aed7da28e9b	cimb_clicks	completed	Msci Dev	msci.dev@gmail.com
+2401	2014-11-27	20000			pending	Msci Dev	msci.dev@gmail.com
+2403	2014-11-28	100000	99a5f33e-64ab-435a-a056-5249adff3e95	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2404	2014-11-28	20000	8c0785e8-383e-459f-94fa-0bfbce073595	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2601	2014-11-28	20000			pending	mbe te	msci.development@gmail.com
+2602	2014-11-28	20000			pending	mbe te	msci.development@gmail.com
+2603	2014-11-28	20000			pending	mbe te	msci.development@gmail.com
+2604	2014-11-28	20000			pending	mbe te	msci.development@gmail.com
+2605	2014-11-28	20001			pending	mbe te	msci.development@gmail.com
+2607	2014-11-28	20000	25d624a9-eef8-4db9-a364-09bd337e5d50	cimb_clicks	completed	mbe te	msci.development@gmail.com
+2608	2014-11-28	3500	27c330ec-5929-4b13-bf2e-0a8382065e87	cimb_clicks	completed	Chatty Best	chat.bbtest2@gmail.com
+2609	2014-11-28	20001	3ddb9c15-c29e-4e2c-9ce6-0567e7493d5c	cimb_clicks	completed	mbe te	msci.development@gmail.com
+2610	2014-11-28	3500			pending	ta	pvt1.s11@gmail.com
+2611	2014-11-28	3500			pending	ta	pvt1.s11@gmail.com
+2613	2014-11-28	20000			pending	Chatty Best	chat.bbtest2@gmail.com
+2614	2014-11-28	20000			pending	mbe te	msci.development@gmail.com
+2615	2014-11-28	20000	75ef0451-8682-42aa-9045-0931bcfb4c30	cimb_clicks	completed	Sendra Wijaya	sendrawijaya90@gmail.com
+2616	2014-11-28	50000			pending	Sendra Wijaya	sendrawijaya90@gmail.com
+2621	2014-11-28	20000	14b22049-66a6-4f5d-b1e7-9759873c63be	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2617	2014-11-28	3500			pending	Sendra Wijaya	sendrawijaya90@gmail.com
+2618	2014-11-28	100000			pending	mbe te	msci.development@gmail.com
+2619	2014-11-28	50000			pending	mbe te	msci.development@gmail.com
+2612	2014-11-28	3500	420674be-a51f-4a53-ba95-78c6520206d9	cimb_clicks	completed	ta	pvt1.s11@gmail.com
+2620	2014-11-28	20000	3c190aaa-1130-4c93-8409-84256e867d98	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2701	2014-11-28	20000	df85af3a-616a-4c80-82fc-0fa026ae8f7d	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2702	2014-11-28	20000	5807a520-2608-4e07-b769-ecca26d718dd	cimb_clicks	completed	ta	pvt1.s11@gmail.com
+2703	2014-11-28	100000			pending	ianners rusendro	ian81ners@gmail.com
+2704	2014-11-28	20000	4a5bb456-eb3f-4fd3-8edd-5f3bc9c2c6f1	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2705	2014-11-28	20000	9c7617af-00fe-498b-8674-e70454508644	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2706	2014-11-28	20000	1cf1924e-d59c-4221-ba08-06c4fec261e0	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2707	2014-11-28	20000	317e076e-4503-49ad-88e5-21af794e2a13	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2708	2014-11-28	20000	552f7024-59aa-4a15-91b2-999b354c6262	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2709	2014-11-28	20000	6ee39283-f5e2-48c9-8d41-aba542149880	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2710	2014-11-28	20000	d8528cfd-9457-4157-be94-9e9c8f0ad698	cimb_clicks	completed	Chandra Yang	otama.ariq@gmail.com
+2711	2014-11-28	50000			pending	ta	pvt1.s11@gmail.com
+2712	2014-11-28	100000			pending	ta	pvt1.s11@gmail.com
+2713	2014-11-28	100000			pending	ta	pvt1.s11@gmail.com
+2714	2014-11-28	100000			pending	ta	pvt1.s11@gmail.com
+2715	2014-11-28	100000			pending	ta	pvt1.s11@gmail.com
+2717	2014-11-28	20001			pending	Chatty Best	chat.bbtest2@gmail.com
+2716	2014-11-28	100000	53689331-14bc-4954-9e4d-f9d9221bdb15	cimb_clicks	completed	ta	pvt1.s11@gmail.com
+2718	2014-11-28	20000			pending	ta	pvt1.s11@gmail.com
+2719	2014-11-28	100000			pending	Chatty Best	chat.bbtest2@gmail.com
+2720	2014-11-28	20001			pending	Chatty Best	chat.bbtest2@gmail.com
+2721	2014-11-28	100000			pending	Chatty Best	chat.bbtest2@gmail.com
+2722	2014-12-01	20000			pending	Chatty Best	chat.bbtest2@gmail.com
+2723	2014-12-01	20000			pending	Chatty Best	chat.bbtest2@gmail.com
+2724	2014-12-01	20000	dbcaecb8-ec16-4c60-abdd-42e4bec4dc7a	cimb_clicks	completed	Chatty Best	chat.bbtest2@gmail.com
+---------

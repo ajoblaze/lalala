@@ -1,0 +1,310 @@
+<?php echo $this->doctype();?>
+<html>
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_userbase bd_dashboard">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<div class="d_none" id="activeMonthly"><?php echo $this->activeMonthlyTemp; ?></div>
+	<div class="d_none" id="activeWeekly"><?php echo $this->activeWeeklyTemp; ?></div>
+	<div class="d_none" id="activeDaily"><?php echo $this->activeDailyTemp; ?></div>
+	<div class="d_none" id="allDeviceSegment"><?php echo $this->allDeviceSegment; ?></div>
+	<div class="ch-container">
+		<div class="row">
+	   
+		<!-- left menu starts -->
+		<?php echo $this->render("includes/menu.phtml"); ?>
+		<?php echo $this->render("includes/hidden.phtml"); ?>
+		
+		<div id="content" class="col-lg-12 col-sm-12 push">
+			<?php
+				$crumb = array("Home" => $this->baseUrl,
+							   "Dashboard" => "active",
+							   "User-base Dashboard" => "active");
+				$array = array(
+							"item" => $crumb,
+							"class" => "col-lg-12",
+							"style" => "padding-right:15px"
+						);
+				echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+			?>
+			
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+				<div class="panel-body">
+					<h3>&nbsp;<i class="glyphicon glyphicon-folder-close"></i> &nbsp;Dashboard</h3><hr/>
+					
+					<div class="clear"></div>
+					<br/>
+					<?php echo $this->render("dashboard/popupSegment.phtml"); ?>
+					<!-- CHART -->
+				<div class="panel panel-default container chart-draggable" id="chart" draggable="true">
+				 <button type="button" class="close" data-dismiss="modal" id="close_chart"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				 <div class="clear"></div>
+				 <div class="bg-loading-segment" id="chart-bg">
+				 </div>	
+						<div class="loading-circle" id="chart-circle">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+				</div>	
+				<div class="panel-body">
+					<div id="container" ></div>
+				</div>
+				</div>
+				
+				<!-- PREMIUM -->
+				<div class="panel panel-default container" id="dv_pr" style="" draggable="true">
+					<button type="button" class="close" data-dismiss="modal" id="close_dv_pr"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<div class="clear"></div>
+					<h2>&nbsp;&nbsp;Premium Devices</h2>
+					<div class="clear"></div>
+
+					<div class="bg-loading-segment" id="dv_pr-bg"></div>
+					<div class="loading-circle" id="dv_pr-circle">
+						<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+
+					<div class="panel-body">
+						<div id="table_dv_pr">
+							<table class="table table-striped devices_data">
+								<thead>
+									<tr>
+										<td>No.</td>
+										<td>Model</td>
+										<td>Device Name</td>
+									</tr>
+								</thead>
+								<tbody align="center"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- NEW ENTRY -->
+				<div class="panel panel-default container" id="dv_ne" style="" draggable="true">
+					<button type="button" class="close" data-dismiss="modal" id="close_dv_ne"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<div class="clear"></div>
+					<h2>&nbsp;&nbsp;New Entry Devices</h2>
+					<div class="clear"></div>
+
+					<div class="bg-loading-segment" id="dv_ne-bg"></div>
+					<div class="loading-circle" id="dv_ne-circle">
+						<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+
+					<div class="panel-body">
+						<div id="table_dv_ne">
+							<table class="table table-striped devices_data">
+								<thead>
+									<tr>
+										<td>No.</td>
+										<td>Model</td>
+										<td>Device Name</td>
+									</tr>
+								</thead>
+								<tbody align="center"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<!-- TABLET -->
+				<div class="panel panel-default container" id="dv_tb" style="" draggable="true">
+					<button type="button" class="close" data-dismiss="modal" id="close_dv_tb"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<div class="clear"></div>
+					<h2>&nbsp;&nbsp;Tablet Devices</h2>
+					<div class="clear"></div>
+
+					<div class="bg-loading-segment" id="dv_tb-bg"></div>
+					<div class="loading-circle" id="dv_tb-circle">
+						<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+
+					<div class="panel-body">
+						<div id="table_dv_tb">
+							<table class="table table-striped devices_data">
+								<thead>
+									<tr>
+										<td>No.</td>
+										<td>Model</td>
+										<td>Device Name</td>
+									</tr>
+								</thead>
+								<tbody align="center"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+					<div class='tb-test'><!-- userbase data-->
+						<table class="table table-striped"> 
+							<thead>
+								<tr>
+									<td>App</td> 
+									<td>Segment</td> 
+									<td>Downloads</td>
+									<td>Active Installs</td>
+									<td>Registered Users</td>
+									<td><a href="javascript:void(0)" class="chart_btn" data-app="ggi" data-val="monthly">Monhtly Active Users</a></td>
+									<td><a href="javascript:void(0)" class="chart_btn" data-app="ggi" data-val="weekly">Weekly Active Users</a></td>
+									<td><a href="javascript:void(0)" class="chart_btn" data-app="ggi" data-val="all">Daily Active Users</a></td>
+								</tr>
+							</thead>
+							<tbody align="center">
+							
+								<?php
+								$no = 1;
+								for($i=0;$i<count($this->apps);$i++){
+									$flag=count($this->segment_labels)*$i;
+									for($x=0;$x<count($this->segment_labels);$x++){
+								?>
+									<?php if ($no == 1 && $i != 0) { ?>
+										<tr class="row-header">
+											<td>App</td> 
+											<td>Segment</td> 
+											<td>Downloads</td>
+											<td>Active Installs</td>
+											<td>Registered Users</td>
+											<td><a href="javascript:void(0)" class="chart_btn" data-app="slime" data-val="monthly">Monthly Active Users</a></td>
+											<td><a href="javascript:void(0)" class="chart_btn" data-app="slime" data-val="weekly">Weekly Active Users</a></td>
+											<td><a href="javascript:void(0)" class="chart_btn" data-app="slime" data-val="all">Daily Active Users</a></td>
+										</tr>
+									<?php } ?>
+									<tr>
+									<?php
+									if($no==1){
+									?>
+										<td rowspan="6"><?php echo $this->apps[$i];?>
+										</td>
+										<?php
+										$no++;
+										} ?>
+										<td>
+											<?php 
+											if($this->segment_labels[$x]!='Others'){
+											?> 
+												<a href="#" onclick="popupsegment('<?php echo $this->segment_labels[$x];?>')" data-toggle="modal" data-target="#popup_segment_container" class="user_button">
+													<?php echo $this->segment_labels[$x];?>
+												</a>
+											<?php 
+											}
+											else {
+												echo $this->segment_labels[$x];
+											}	
+											?>
+										</td>
+										<td>
+											<?php echo number_format($this->downloadsData[$x+$flag],0,'',',');?>
+										</td>
+										<td>
+											<?php echo number_format($this->activeinstallsData[$x+$flag],0,'',',');?>
+										</td>
+										<td>
+											<?php echo number_format($this->regusersData[$x+$flag],0,'',',');?>
+										</td>
+										<td data-toggle="tooltip" data-html="true"  data-placement="top" class="cursor" title="Number of user who active in a month ago">
+											<?php echo number_format($this->activeMonthly[$x+$flag],0,'',',');?>
+										</td>
+										<td data-toggle="tooltip" data-html="true"  data-placement="top" class="cursor" title="Number of user who active in a week ago">
+											<?php echo number_format($this->activeWeekly[$x+$flag],0,'',',');?>
+										</td>
+										<td>
+											<?php 
+												if($i==0){
+													echo number_format($this->totalDailyActive[$x],0,'',',')." / ";
+												}
+												else {
+													echo '';
+												}
+											?>
+											 <?php echo number_format($this->activeDaily[$x+$flag],0,'',',');?>
+										</td>
+									</tr>
+								<?php
+									}
+									$no=1;
+								}
+								?>
+							</tbody>
+						</table>
+					</div>
+					<div class="title"><h3>Monthly</h3></div>
+					<div class='tb-test' id="monthly_table"><!-- Monthly -->
+						<table class="table table-striped"> 
+							<thead>
+								<tr>
+									<td>Segment</td> 
+									<td>Promos</td>
+									<td>Vouchers</td>
+									<td>Monthly Active Users</td>
+									<td>Redeems</td>
+									<td>Claims</td>
+								</tr>
+							</thead>
+							<tbody align="center">
+							
+							</tbody>
+						</table>
+					<div class="bg-loading-segment">
+						</div>	
+						<div class="loading-circle">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+						</div>	
+					</div>
+					
+			<div class="title"><h3>Weekly</h3></div>					
+					<div class='tb-test' id="weekly_table"><!-- Weekly -->
+						<table class="table table-striped"> 
+							<thead>
+								<tr>
+									<td>Segment</td> 
+									<td>Promos</td>
+									<td>Vouchers</td>
+									<td>Weekly Active Users</td>
+									<td>Redeems</td>
+									<td>Claims</td>
+								</tr>
+							</thead>
+							<tbody align="center">
+
+							</tbody>
+						</table>
+					<div class="bg-loading-segment">
+
+						</div>	
+						<div class="loading-circle">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+						</div>	
+					</div>				
+					
+				<div class="title"><h3>Daily</h3></div>			
+					<div class='tb-test' id="daily_table"><!-- Daily -->
+						<table class="table table-striped" id="daily"> 
+							<thead>
+								<tr>
+									<td>Segment</td> 
+									<td>Promos</td>
+									<td>Vouchers</td>
+									<td>Daily Active Users</td>
+									<td>Redeems</td>
+									<td>Claims</td>
+								</tr>
+							</thead>
+							<tbody align="center">
+	
+							</tbody>
+						</table>
+					<div class="bg-loading-segment">
+						</div>	
+						<div class="loading-circle">
+							<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+						</div>	
+					</div>	
+				</div> <!-- panel-body close -->
+				</div> <!-- panel panel-primary close -->
+			</div> <!--col-sm-12 close -->
+		</div> <!--content close -->
+	</div> <!-- ch-container close -->
+</body>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/dashboard/userbase.js"); ?>

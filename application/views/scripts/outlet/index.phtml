@@ -1,0 +1,380 @@
+<?php echo $this->doctype();?>
+<html ng-app="myOutlet">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_g_sgift bd_sgift_outlet" ng-controller="searchCrtl">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	<div class="ch-container">
+	<div class="row">
+	   
+	<!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+			
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			$crumb = array("Home" => $this->baseUrl,
+					"Galaxy Gift ID" => "active",
+					"Outlet" => "active");
+			$array = array(
+					"item" => $crumb,
+					"class" => "col-lg-7",
+					"style" => "padding-right:0px"
+					);
+			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+		?>
+		
+		<div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+			<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+				<form action="<?php echo $this->baseUrl;?>/outlet/index" method="GET" role="form" id="search-form">
+					<div class="input-group">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default search-btn" type="button" id="advanced_search_button">
+						<span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+						</button>
+					</span>
+					<input type="text" class="form-control" placeholder="Search.." name="q" id="input_search" value="<?php echo $this->param->q;?>">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</div><!-- /input-group -->
+				</form>
+			</div><!-- /.col-lg-4 col-lg-push-4-->
+			
+			<div class="btn-group pull-right" id="export_csv">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a ng-click="exportCurrent($event)" href="#">Export Filtered Document</a></li>
+					<li><a ng-click="exportAll($event)" href="#">Export All Document</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="col-sm-6" ><div class="advanced_search_container col-sm-10" id="advanced_search_container"><div class="panel panel-default">  
+			<div class ="panel-body">
+			<h3>Advanced Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/outlet/index" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+					<div class="form-horizontal"><div class="advanced-input-group">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Provider Name</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Provider Name" name="provider_name" id="provider_name" value="<?php echo $this->param->provider_name;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Promo ID</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Promo ID" name="promo_id" id="promo_id" value="<?php echo $this->param->promo_id;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Promo Name</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Promo Name" name="promo_name" id="promo_name" value="<?php echo $this->param->promo_name;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Claim Type</label>
+							<div class="col-sm-9">
+								<label class="chk"><input type="checkbox" id="claim_type1" name="claim_type[]" value="offline" class="chk_item" <?php echo ( in_array( "offline", $this->param->claim_type) ) ? "checked" : "";?>/>&nbsp;Offline</label>							
+								<label class="chk"><input type="checkbox" id="claim_type2" name="claim_type[]" value="online" class="chk_item" <?php echo ( in_array( "online", $this->param->claim_type) ) ? "checked" : "";?>/>&nbsp;Online</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Merchant ID</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Merchant ID" name="merchant_id" id="merchant_id" value="<?php echo $this->param->merchant_id;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Merchant Name</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Merchant Name" name="merchant_name" id="merchant_name" value="<?php echo $this->param->merchant_name;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Outlet ID</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Outlet ID" name="outlet_id" id="outlet_id" value="<?php echo $this->param->outlet_id;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Outlet Name</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Outlet Name" name="outlet_name" id="outlet_name" value="<?php echo $this->param->outlet_name;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Start Time</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="YYYY-MM-DD HH24:MI:SS" name="start_time" id="start_time" value="<?php echo $this->param->start_time;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">End Time</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="YYYY-MM-DD HH24:MI:SS" name="end_time" id="end_time" value="<?php echo $this->param->end_time;?>">
+							</div>
+						</div>
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><i class="glyphicon glyphicon-search"></i> &nbsp;Search</button>
+					</div></div>
+				</form>
+			</div>
+		</div></div></div>
+		
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+			
+			<div class="panel-body">				
+			
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<form class="form-inline" role="form">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list_promo.length | number:0}}</strong>&nbsp; from 
+				&nbsp;<strong>{{totalPromo | number:0}}</strong>&nbsp; data</h5></span>
+				</form>
+			</div>
+			
+			<div class="form-group pull-right form-inline" style="margin-right:15px;" id="filter-textbox">	
+				<div class="form-group ">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Type the filter here.." >
+					</div>
+				</div>
+				
+				<div class="form-group" id="filter-option">
+					<select class="form-control" ng-model="queryBy" >
+						<option value="$">All</option>
+						<option value="provider_name">Provider Name</option>
+						<option value="promo_id">Promo ID</option>
+						<option value="promo_name">Promo Name</option>
+						<option value="claim_type">Claim Type</option>
+						<option value="merchant_id">Merchant ID</option>
+						<option value="merchant_name">Merchant Name</option>
+						<option value="outlet_id">Outlet ID</option>
+						<option value="outlet_name">Outlet Name</option>
+						<option value="start_time">Start Time</option>
+						<option value="end_time">End Time</option>
+					</select>		
+				</div>
+				
+				&nbsp; &nbsp;&nbsp;
+			</div>
+			<div class="clear"></div>
+			
+			<div class='tb-test'>
+			<div class="pull-left">
+			</div>
+			<div class="t-c">
+				<?php 
+					$size =  "10";
+					$headSize = "200px";
+				?>
+				<table class="table table-striped" id="transaction_table" >	
+					<thead>
+					<tr>
+						<th width="<?php echo $headSize; ?>" style="text-align:center;"><a ng-click="sort_by('provider_name')"><button class="sort_tool">Provider Name<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by('promo_id')"><button class="sort_tool">Promo ID<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by('promo_name')"><button class="sort_tool">Promo Name<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by(claim_type')"><button class="sort_tool">Claim Type<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by('merchant_id')"><button class="sort_tool">Merchant ID<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('merchant_name')"><button class="sort_tool">Merchant Name<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('outlet_id')"><button class="sort_tool">Outlet ID<span class="caret"></span></button></a></th>	
+						<th width="<?php echo $size."%"; ?>" style="text-align:center;"><a ng-click="sort_by('outlet_name')"><button class="sort_tool">Outlet Name<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('start_time | asDate')"><button class="sort_tool">Start Time<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('end_time | asDate')"><button class="sort_tool">End Time<span class="caret"></span></button></a></th>
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="x in filtered = (search_list_promo | filter: query) | orderBy:predicate:reverse ">
+							<td width="<?php echo $headSize; ?>" style="word-break:break-all; text-align:center;"ng-bind-html="trustHtml(x.provider_name)"></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.promo_id}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center" ng-bind-html="trustHtml(x.promo_name)"></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.claim_type}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.merchant_id}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center" ng-bind-html="trustHtml(x.merchant_name)"></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.outlet_id}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center" ng-bind-html="trustHtml(x.outlet_name)"></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.start_time | asDate | date:'dd MMM yyyy HH:mm:ss'}}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{x.end_time | asDate | date:'dd MMM yyyy HH:mm:ss'}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="bg-loading">
+				<div class="loading-text">
+				<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+				</div>
+			</div>
+			<center>
+			<div class="bg-log-loading">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+				</div>
+			</div>
+			</center>
+			
+			</div>
+			
+			
+			<div style="padding:20px">
+				<legend>
+					Merchant Outlet
+				</legend>
+			</div>
+			
+			<div class="row" style="margin-bottom:15px;">
+			<div class="col-lg-5 pull-right" id="search-crumb" style="margin-top:0px;">
+				<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+					<form action="<?php echo $this->baseUrl;?>/outlet/index" method="GET" role="form" id="search-form">
+						<div class="input-group">
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default search-btn" type="button" id="advanced_search_button_merchant">
+							<span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+							</button>
+						</span>
+						<input type="text" class="form-control" placeholder="Search.." name="q_merchant" id="input_search_merchant" value="<?php echo $this->param->q_merchant;?>">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+						</span>
+						</div><!-- /input-group -->
+					</form>
+				</div><!-- /.col-lg-4 col-lg-push-4-->
+				
+				<div class="btn-group pull-right" id="export_csv">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a ng-click="exportCurrentMerchant($event)" href="#">Export Filtered Document</a></li>
+						<li><a ng-click="exportAllMerchant($event)" href="#">Export All Document</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+			
+			<div class="col-sm-6" ><div class="advanced_search_container col-sm-8" id="advanced_search_container_merchant"><div class="panel panel-default">  
+			<div class ="panel-body">
+			<h3>Advanced Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/outlet/index" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+					<div class="form-horizontal"><div class="advanced-input-group">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Merchant ID</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Merchant ID" name="merchant_id_merchant" id="merchant_id_merchant" value="<?php echo $this->param->merchant_id_merchant;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Merchant Name</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Merchant Name" name="merchant_name_merchant" id="merchant_name_merchant" value="<?php echo $this->param->merchant_name_merchant;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Outlet ID</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Outlet ID" name="outlet_id_merchant" id="outlet_id_merchant" value="<?php echo $this->param->outlet_id_merchant;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Outlet Name</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="Outlet Name" name="outlet_name_merchant" id="outlet_name_merchant" value="<?php echo $this->param->outlet_name_merchant;?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">City</label>
+							<div class="col-sm-9">
+							<input type="text" class="form-control advanced-input" placeholder="City" name="city_merchant" id="city_merchant" value="<?php echo $this->param->city_merchant;?>">
+							</div>
+						</div>
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><i class="glyphicon glyphicon-search"></i> &nbsp;Search</button>
+					</div></div>
+				</form>
+			</div>
+			</div></div></div>
+			
+			<div class="clear"></div>
+			
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<form class="form-inline" role="form">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list_merchant.length | number:0}}</strong>&nbsp; from 
+				&nbsp;<strong>{{totalMerchant | number:0}}</strong>&nbsp; data</h5></span>
+				</form>
+			</div>
+				
+			<div class="form-group pull-right form-inline" style="margin-right:0;" id="filter-textbox">
+				<div class="form-group ">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered_merchant.length}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query_detail[queryBy_detail]" placeholder="Type the filter here.." >
+					</div>
+				</div>
+				
+				<div class="form-group" id="filter-option">
+					<select class="form-control" ng-model="queryBy_detail" >
+						<option value="$">All</option>
+						<option value="merchant_id">Merchant ID</option>
+						<option value="merchant_name">Merchant Name</option>
+						<option value="outlet_id">Outlet ID</option>
+						<option value="outlet_name">Outlet Name</option>
+						<option value="city">City</option>
+					</select>		
+				</div>
+			</div>
+			
+			<br/><br/><br/>
+			<div class="clear"></div>
+			<div class='tb-test'>
+			<div class="pull-left">
+			</div>
+			<div class="t-c">
+				<?php 
+					$size2 =  "20";
+					$headSize2 = "450px";
+				?>
+				<table class="table table-striped merchant_table">	
+					<thead>
+					<tr>
+						<th width="<?php echo $headSize2; ?>" style="text-align:center;"><a ng-click="sort_by_detail('merchant_id')"><button class="sort_tool">Merchant ID<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size2."%"; ?>" style="text-align:center;"><a ng-click="sort_by_detail('merchant_name')"><button class="sort_tool">Merchant Name<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size2."%"; ?>" style="text-align:center"><a ng-click="sort_by_detail('outlet_id')"><button class="sort_tool">Outlet ID<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size2."%"; ?>" style="text-align:center"><a ng-click="sort_by_detail('outlet_name')"><button class="sort_tool">Outlet Name<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size2."%"; ?>" style="text-align:center;"><a ng-click="sort_by_detail('city')"><button class="sort_tool">City<span class="caret"></span></button></a></th>
+					</tr>
+					</thead>				
+					<tbody scroll2>
+						<tr ng-repeat="x in filtered_merchant = (search_list_merchant | filter:query_detail) | orderBy:predicate_detail:reverse_detail">
+							<td width="<?php echo $headSize2; ?>" style="word-break:break-all; text-align:center;">{{x.merchant_id}}</td>
+							<td width="<?php echo $size2."%"; ?>" style="text-align:center">{{x.merchant_name}}</td>
+							<td width="<?php echo $size2."%"; ?>" style="text-align:center">{{x.outlet_id}}</td>
+							<td width="<?php echo $size2."%"; ?>" style="text-align:center">{{x.outlet_name}}</td>
+							<td width="<?php echo $size2."%"; ?>" style="text-align:center">{{x.city}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="bg-loading">
+				<div class="loading-text">
+				<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+				</div>
+			</div>	
+			
+			</div>
+			
+			</div>
+		</div>
+		</div>
+	</div>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/sgift/outlet.js"); ?>

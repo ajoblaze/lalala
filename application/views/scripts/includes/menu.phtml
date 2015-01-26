@@ -1,0 +1,152 @@
+<nav id="menu" class="panel" role="navigation">
+	<div class="drawer-default">	
+		<div class="drawer-brand"> &nbsp;<a href="#"><span><i class="glyphicon glyphicon-list"></i> &nbsp;&nbsp;Menu</span></a></div>
+		
+		<!-- User Management -->
+		<div class="beside-ad-not-show">
+			<p class="drawer-nav-title">User Management</p>
+			<ul class="drawer-nav-list">		
+			<li id="mn_user" class="beside-ad-not-show"><a class="ajax-link" href="<?php echo $this->baseUrl;?>/user" ><span><i class="glyphicon glyphicon-user"></i> &nbsp;Manage Users</span></a></li>		
+			<li id="mn_log" class="beside-ad-not-show"><a class="ajax-link" href="<?php echo $this->baseUrl;?>/log" ><span><i class="glyphicon glyphicon-list-alt"></i> &nbsp;User Logs</span></a></li>
+			</ul>
+		</div>
+	
+		<!-- Reporting System -->	
+		<div class="ma-not-show mr-not-show pu-not-show">
+			<p class="drawer-nav-title">Reporting System</p>
+			<ul class="drawer-nav-list">
+				<li class="cs-not-show sr-not-show" ><a data-id="-2" class="accordion"><span><i class="glyphicon glyphicon-dashboard"></i> &nbsp;Dashboard &nbsp;<span class="caret" id="crt-2"></span></a></li>
+				<ul class="nav nav-pills nav-stacked d_none" id="accordion-down-2">
+					<li id="mn_dashboard"><a href="<?php echo $this->baseUrl;?>/dashboard" class="ajax-link">
+						<span><i class="glyphicon glyphicon-dashboard"></i>&nbsp; Google Play Dashboard </span></a></li>
+					<li id="mn_userbase"><a href="<?php echo $this->baseUrl;?>/dashboard/ubase" class="ajax-link">
+						<span><i class="glyphicon glyphicon-dashboard"></i>&nbsp; User-base Dashboard </span></a></li>
+				</ul>			
+				<li class="cs-not-show sr-not-show cspm-not-show pm-not-show" id="mn_countly"><a href="<?php echo $this->baseUrl;?>/countly" class="ajax-link"><span><i class="glyphicon glyphicon-stats"></i> &nbsp;Countly</span></a></li>
+				<li id="mn_cs_customer" class="sr-not-show cspm-not-show pm-not-show"><a href="<?php echo $this->baseUrl;?>/customer"><i class="glyphicon glyphicon-user"></i> &nbsp;Customers</a></li>
+				<li class="po-not-show cs-not-show cspm-not-show pm-not-show" id="mn_managesapps"><a class="ajax-link" href="<?php echo $this->baseUrl;?>/managesamsung" ><span><i class="glyphicon glyphicon-hdd"></i> &nbsp;Manage Samsung Apps</span></a></li>	
+			</ul>
+		</div>
+	<?php 
+		$search = array_search($this->config->project->id->sgift, $this->mySession->project);
+		if (is_numeric($search)) 
+		{
+	?>
+		<!-- Galaxy Gift ID -->
+		<p class="drawer-nav-title"><a class="accordion cursor" data-id="-3">Galaxy Gift ID&nbsp;<span class="caret" id="crt-3"></a></p>
+		<ul class="drawer-nav-list nav-stacked d_none apps-nav-list" id="accordion-down-3">
+			<li class="ma-not-show mr-not-show pm-not-show pu-not-show cspm-not-show" id="mn_sgift"><a class="accordion apps-menu" data-id="1"><span><i class="glyphicon glyphicon-inbox"></i> &nbsp;Reports&nbsp;<span class="caret" id="crt1"></span></span></a></li>
+			<ul class="nav nav-pills nav-stacked d_none" id="accordion-down1">
+				<li class="cs-not-show" id="mn_installs_sgift"><a href="<?php echo $this->baseUrl;?>/sgift/installs" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-save"></i> &nbsp;Installs</span></a></li>
+				<li id="mn_reviews_sgift"><a href="<?php echo $this->baseUrl;?>/sgift/review" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</span></a></li>			
+				<li id="mn_error_sgift" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/sgift/errorreport" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-remove"></i> &nbsp;Errors</span></a></li>
+				<li id="mn_carrier_sgift" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/sgift/carrier" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-transfer"></i> &nbsp;Carriers</span></a></li>
+				<li id="mn_devices_sgift" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/sgift/devices" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-phone"></i> &nbsp;Devices</span></a></li>
+			</ul>
+			<li class="cs-not-show mr-not-show ma-not-show sr-not-show cspm-not-show pm-not-show" id="mn_chartbase"><a href="<?php echo $this->baseUrl;?>/dashboard/chart" class="ajax-link"><span><i class="glyphicon glyphicon-stats"></i>&nbsp; Claim &amp; Redeem Chart </span></a></li>	
+			<li id="mn_cs_sgift" class="ma-not-show mr-not-show pm-not-show pu-not-show cspm-not-show sr-not-show"><a href="<?php echo $this->baseUrl;?>/cssgift" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-tags"></i>&nbsp; Transaction</span></a></li>
+			<li id="mn_sgift_customer" class="mr-not-show ma-not-show cs-not-show po-not-show pu-not-show cspm-not-show" ><a href="<?php echo $this->baseUrl;?>/custggi" class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Customers</a></li>
+			<li id="mn_redeem" class="po-not-show cs-not-show pu-not-show cspm-not-show"><a href="<?php echo $this->baseUrl;?>/merchant" class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Claim &amp; Redeem</a></li>
+			<li id="mn_promo" class="po-not-show cs-not-show pu-not-show cspm-not-show"><a href="<?php echo $this->baseUrl;?>/merchant/promo"  class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Promo</a></li>
+			<li id="mn_outlet" class="po-not-show cs-not-show pu-not-show cspm-not-show"><a href="<?php echo $this->baseUrl;?>/outlet"  class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Outlet</a></li>
+			<li id="mn_ggi_promo" class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show cspm-not-show"><a class="ajax-link apps-menu" href="<?php echo $this->baseUrl;?>/productggi"><span><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Promo &amp; Detail</span></a></li>
+			<li id="mn_ggi_segment" class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show cspm-not-show"><a class="ajax-link apps-menu" href="<?php echo $this->baseUrl;?>/productggi/promosegment"><span><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Promo Segment</span></a></li>
+			<li id="mn_ggi_providerrequest" class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show cspm-not-show"><a class="ajax-link apps-menu" href="<?php echo $this->baseUrl;?>/cssgift/providerrequest"><span><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Provider Request</span></a></li>	
+			<li id="mn_redeem_log" class="beside-ad-not-show"><a class="ajax-link apps-menu" href="<?php echo $this->baseUrl;?>/serverlog/redeemlog"><span><i class="glyphicon glyphicon-book"></i> &nbsp;Redeem Log</span></a></li>
+			<li id="mn_claim_log" class="beside-ad-not-show"><a class="ajax-link apps-menu" href="<?php echo $this->baseUrl;?>/serverlog/claimlog"><span><i class="glyphicon glyphicon-book"></i> &nbsp;Claim Log</span></a></li>
+		</ul>
+	<?php 	
+		} 
+	?>
+				
+	<?php 
+		$search = array_search($this->config->project->id->slime, $this->mySession->project);
+		if (is_numeric($search)) 
+		{
+	?>
+		<!-- S Lime -->
+		<p class="drawer-nav-title"><a class="accordion cursor" data-id="-4">S Lime&nbsp;<span class="caret" id="crt-4"></a></p>
+		<ul class="drawer-nav-list nav-stacked d_none apps-nav-list" id="accordion-down-4">
+			<li id="mn_slime" class="ma-not-show mr-not-show pm-not-show pu-not-show cspm-not-show"><a class="accordion apps-menu" data-id="0"><span><i class="glyphicon glyphicon-inbox"></i> &nbsp;Reports&nbsp;<span class="caret" id="crt0"></span></span></a></li>
+			<ul class="nav nav-pills nav-stacked d_none" id="accordion-down0">
+				<li id="mn_installs_slime" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/slime/installs" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-save"></i> &nbsp;Installs</span></a></li>
+				<li id="mn_reviews_slime"><a href="<?php echo $this->baseUrl;?>/slime/review" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</span></a></li>
+				<li id="mn_error_slime" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/slime/errorreport" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-remove"></i> &nbsp;Errors</span></a></li>
+				<li id="mn_carrier_slime" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/slime/carrier" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-transfer"></i> &nbsp;Carriers</span></a></li>
+				<li id="mn_devices_slime" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/slime/devices" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-phone"></i> &nbsp;Devices</span></a></li>
+			</ul>
+			<li id="mn_slime_dashboard" class="cs-not-show ma-not-show mr-not-show pu-not-show"><a href="<?php echo $this->baseUrl; ?>/dslimedashboard" class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;S-Lime Dashboard</a></li>
+			<li id="mn_publisher_dashboard" class="cs-not-show ma-not-show mr-not-show sr-not-show"><a href="<?php echo $this->baseUrl; ?>/dslimedashboard/publisher" class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Publisher Dashboard</a></li>
+			<li id="mn_cs_slime" class="pm-not-show"><a href="<?php echo $this->baseUrl;?>/csslime" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-tags"></i> &nbsp;Subscription</span></a></li>
+			<li id="mn_cs_download" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/download" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-tags"></i> &nbsp;Download</span></a></li>
+			<li id="mn_slime_favourite" class="cs-not-show"><a href="<?php echo $this->baseUrl;?>/favourite"  class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Publication Download</a></li>					
+			<li id="mn_slime_promo" class="cs-not-show ma-not-show mr-not-show sr-not-show"><a href="<?php echo $this->baseUrl;?>/promo" class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Promo &amp; Detail</a></li>
+			<li id="mn_slime_customer" class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show"><a href="<?php echo $this->baseUrl;?>/custslime"  class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Customers</a></li>
+			<li id="mn_publisher_content" class="cs-not-show ma-not-show mr-not-show sr-not-show"><a href="<?php echo $this->baseUrl;?>/publisher/content"  class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Uploaded Content</a></li>
+			<li id="mn_publisher_package" class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show"><a href="<?php echo $this->baseUrl;?>/packages" class="apps-menu"><i class="glyphicon glyphicon-briefcase"></i> &nbsp;Packages</a></li>
+		</ul>
+	<?php 
+		} 
+	?>
+			
+	<?php 
+		$search = array_search($this->config->project->id->salaam, $this->mySession->project);
+		if (is_numeric($search)) 
+		{
+	?>
+		<!-- Salaam -->
+		<div class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show cspm-not-show">
+			<p class="drawer-nav-title"><a class="accordion cursor" data-id="2">Salaam&nbsp;<span class="caret" id="crt2"></a></p>
+			<ul class="drawer-nav-list nav-stacked d_none apps-nav-list" id="accordion-down2">
+				<li id="mn_installs_salaam"><a href="<?php echo $this->baseUrl;?>/salaam/installs" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-save"></i> &nbsp;Installs</span></a></li>
+				<li id="mn_reviews_salaam"><a href="<?php echo $this->baseUrl;?>/salaam/review" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</span></a></li>
+				<li id="mn_error_salaam"><a href="<?php echo $this->baseUrl;?>/salaam/errorreport" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-remove"></i> &nbsp;Errors</span></a></li>
+				<li id="mn_carrier_salaam"><a href="<?php echo $this->baseUrl;?>/salaam/carrier" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-transfer"></i> &nbsp;Carriers</span></a></li>
+				<li id="mn_devices_salaam"><a href="<?php echo $this->baseUrl;?>/salaam/devices" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-phone"></i> &nbsp;Devices</span></a></li>
+			</ul>
+		</div>
+	<?php 
+		} 
+	?>
+			
+	<?php 
+		$search = array_search($this->config->project->id->sfit, $this->mySession->project);
+		if (is_numeric($search)) 
+		{
+	?>
+		<!-- S Fit -->
+		<div class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show cspm-not-show">
+			<p class="drawer-nav-title"><a class="accordion cursor" data-id="3">S Fit&nbsp;<span class="caret" id="crt3"></a></p>
+			<ul class="drawer-nav-list nav-stacked d_none apps-nav-list" id="accordion-down3">
+				<li id="mn_installs_sfit"><a href="<?php echo $this->baseUrl;?>/sfit/installs" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-save"></i> &nbsp;Installs</span></a></li>
+				<li id="mn_reviews_sfit"><a href="<?php echo $this->baseUrl;?>/sfit/review" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</span></a></li>
+				<li id="mn_error_sfit"><a href="<?php echo $this->baseUrl;?>/sfit/errorreport" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-remove"></i> &nbsp;Errors</span></a></li>
+				<li id="mn_carrier_sfit"><a href="<?php echo $this->baseUrl;?>/sfit/carrier" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-transfer"></i> &nbsp;Carriers</span></a></li>
+				<li id="mn_devices_sfit"><a href="<?php echo $this->baseUrl;?>/sfit/devices" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-phone"></i> &nbsp;Devices</span></a></li>
+			</ul>
+		</div>
+	<?php 
+		} 
+	?>
+			
+	<?php 
+		$search = array_search($this->config->project->id->sair, $this->mySession->project);
+		if (is_numeric($search)) 
+		{
+	?>
+		<div class="cs-not-show ma-not-show mr-not-show sr-not-show pu-not-show cspm-not-show">
+			<!-- S Air -->
+			<p class="drawer-nav-title"><a class="accordion cursor" data-id="4">S Air&nbsp;<span class="caret" id="crt4"></a></p>
+			<ul class="drawer-nav-list nav-stacked d_none apps-nav-list" id="accordion-down4">
+				<li id="mn_installs_sair"><a href="<?php echo $this->baseUrl;?>/sair/installs" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-save"></i> &nbsp;Installs</span></a></li>
+				<li id="mn_reviews_sair"><a href="<?php echo $this->baseUrl;?>/sair/review" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-comment"></i> &nbsp;Reviews</span></a></li>
+				<li id="mn_error_sair"><a href="<?php echo $this->baseUrl;?>/sair/errorreport" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-remove"></i> &nbsp;Errors</span></a></li>
+				<li id="mn_carrier_sair"><a href="<?php echo $this->baseUrl;?>/sair/carrier" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-transfer"></i> &nbsp;Carriers</span></a></li>
+				<li id="mn_devices_sair"><a href="<?php echo $this->baseUrl;?>/sair/devices" class="ajax-link apps-menu"><span><i class="glyphicon glyphicon-phone"></i> &nbsp;Devices</span></a></li>
+			</ul>
+		</div>
+	<?php 
+		} 
+	?>
+	</div>
+</nav>

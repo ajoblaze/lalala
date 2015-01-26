@@ -1,0 +1,226 @@
+<?php echo $this->doctype();?>
+<html ng-app="myAppSlime">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_g_slime bd_cs_download" ng-controller="searchCrtl">
+<!--{{ff()}} -->
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	<div class="ch-container">
+	<div class="row">
+	   
+	<!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+			
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			$crumb = array("Home" => $this->baseUrl,
+					"S Lime" => "active",
+					"Download" => "active");
+			$array = array(
+					"item" => $crumb,
+					"class" => "col-lg-7",
+					"style" => "padding-right:0px"
+					);
+			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+		?>
+		
+		<div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+			<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+				<form action="<?php echo $this->baseUrl;?>/download" method="GET" role="form" id="search-form">
+					<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default search-btn" type="button" id="advanced_search_button"><span class="caret"></span></button>
+					</span>
+					<input type="text" class="form-control" placeholder="Search.." name="q" id="input_search" value="<?php echo $this->param->q;?>">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</div><!-- /input-group -->
+				</form>
+			</div><!-- /.col-lg-4 col-lg-push-4-->
+			
+			<div class="btn-group pull-right" id="export_csv">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a ng-click="exportCurrent($event)" href="#">Export Filtered Data</a></li>
+					<li><a ng-click="exportAll($event)" href="#">Export All</a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<div class="col-lg-6" >
+			<div class="advanced_search_container col-sm-10" id="advanced_search_container">
+			<div class="panel panel-default">
+			  
+			<div class ="panel-body" >
+				<h3>Advance Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/download" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+				<div class="form-horizontal">
+					<div class="advanced-input-group">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Name</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="User Name.." name="name" id="name" value="<?php echo $this->param->name;?>">
+							</div>
+						 </div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Email.." name="email" id="email" value="<?php echo $this->param->email;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Device Model</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Device Model.." name="device_model" id="device_model" value="<?php echo $this->param->device_model;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">IMEI</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="IMEI.." name="device_identifier" id="device_identifier" value="<?php echo $this->param->device_identifier;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Product</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Product.." name="product" id="product" value="<?php echo $this->param->product;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Download Time</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control inline date"  name="start_download" id="start_download" value="<?php echo $this->param->start_download; ?>" placeholder="YYYY-MM-DD" style="width:48%" /> 
+								-
+								<input type="text" class="form-control inline date" style="width:48%" name="end_download" value="<?php echo $this->param->end_download; ?>" placeholder="YYYY-MM-DD" id="end_download" />
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Segment</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="segment" id="segment">
+									<option value="">- All Status -</option>
+									<option value="enabled" <?php echo (strcasecmp($this->param->status, "enabled") == 0) ? "selected" : ""; ?>>Active</option>
+									<option value="disabled" <?php echo (strcasecmp($this->param->status, "disabled") == 0) ? "selected" : ""; ?>>Suspended</option>
+								</select>
+							</div>
+						 </div>
+						
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><span class="glyphicon glyphicon-search"></span> &nbsp;Search</button>
+					</div>
+					</div>
+				</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+			
+			<div class="panel-body">					
+			<div class="row">
+
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<form class="form-inline" role="form">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list.length | number:0}}</strong>&nbsp; from 
+						&nbsp;<strong>{{totalData | number:0}}</strong>&nbsp; data</h5></span>
+				</form>
+			</div>
+			
+			<div class="form-group pull-right form-inline" style="margin-right:15px;">	
+				
+				<div class="form-group" id="filter-textbox">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length | number:0}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Filter by..." >
+					</div>
+				</div>
+				<div class="form-group" id="filter-option">
+					<select class="form-control" ng-model="queryBy">
+						<option value="$">All</option>
+						<option value="download_time">Download Time</option>
+						<option value="name">Name</option>
+						<option value="email">Email</option>
+						<option value="device_model">Device Model</option>
+						<option value="device_identifier">IMEI</option>
+						<option value="end_date">End Date</option>
+						<option value="valid_date">Valid Date</option>
+					</select>		
+				</div>
+				
+				&nbsp;
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a id="btall" ng-click="DateRange = ''" value="all" href="#">All</a></li>
+						<li><a id="bt7days" ng-click="DateRange = 7" value="7days" href="#">7 Days</a></li>
+						<li><a id="bt30days" ng-click="DateRange = 30" value="30days" href="#">30 Days</a></li>
+					</ul>
+				</div>
+			</div>	
+			</div><!-- /.row -->
+
+			<div class='tb-test'>
+				<div class="pull-left">
+				</div>
+				<div class="t-c">
+				<?php 
+					$size =  "15";
+					$headSize = "300px";
+				?>
+				<table class="table table-striped" id="transaction_table" >	
+					<thead>
+					<tr>
+						<th width="<?php echo $headSize; ?>"><a ng-click="sort_by('download_time | asDate')"><button class="sort_tool">Download Time <span class="caret"></span></button></a></th>
+						<th width="<?php echo ($size-3)."%"; ?>" style="text-align:center;"><a ng-click="sort_by('name')"><button class="sort_tool">Name <span class="caret"></span></button></a></th>
+						<th width="<?php echo ($size-3)."%"; ?>" style="text-align:center;"><a ng-click="sort_by('email')"><button class="sort_tool">Email <span class="caret"></span></button></a></th>
+						<th width="<?php echo ($size-2)."%"; ?>" style="text-align:center"><a ng-click="sort_by('device_model')"><button class="sort_tool">Device <span class="caret"></span></button></a></th>
+						<th width="<?php echo ($size-6)."%"; ?>" style="text-align:center"><a ng-click="sort_by('segment')"><button class="sort_tool">Segment <span class="caret"></span></button></a></th>
+						<th width="<?php echo ($size-3)."%"; ?>"><a ng-click="sort_by('product')"><button class="sort_tool">Product <span class="caret"></span></button></a></th>						
+						<th width="<?php echo ($size+17)."%"; ?>"><a ng-click="sort_by('download_url')"><button class="sort_tool">Download URL <span class="caret"></span></button></a></th>						
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="x in filtered = ( search_list | filter:query | filter:queryByDay) | orderBy:predicate:reverse ">
+							<td width="<?php echo $headSize; ?>" style="word-break:break-all;">{{ (x.download_time == null) ? '-' : (x.download_time | asDate | date:'dd MMM yyyy HH:mm:ss') }}</td>
+							<td width="<?php echo ($size-3)."%"; ?>" align="center">{{ (x.name == null) ? '-' : x.name }}</td>
+							<td width="<?php echo ($size-3)."%"; ?>" align="center">{{(x.email == null) ? '-' : x.email}}</td>
+							<td width="<?php echo ($size-2)."%"; ?>" align="center"><strong><capital>{{ (x.product_name == null) ? '-' : x.product_name }}</capital></strong><br/><em>{{ (x.device_model == null) ? '-' : x.device_model }}</em><br/>{{ (x.device_identifier == null) ? '-' : x.device_identifier }}</td>
+							<td width="<?php echo ($size-6)."%"; ?>" align="center">{{ (x.segment == null) ? '-' : x.segment }}</td>
+							<td width="<?php echo ($size-3)."%"; ?>"><strong ng-bind-html="trustHtml(x.product)"></strong><br/>ed : {{ (x.release_date == null) ? '-' : (x.release_date | asDate | date:'dd MMM yyyy') }}</td>
+							<td width="<?php echo ($size+17)."%";?>">{{ (x.download_url == null || x.download_url.trim() == '') ? '-' : x.download_url }}</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				</div>
+					
+				<div class="bg-loading">
+					<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+				</div>	
+			</div>
+			<center>
+			<div class="bg-log-loading" style="display:block">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+				</div>
+			</div>
+			</center>
+			</div>
+		</div>
+		</div>
+	</div>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/slime/download.js"); ?>

@@ -1,0 +1,39 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml");?>
+</head>
+<body class="bd_countly">
+<?php echo $this->render("includes/header.phtml"); ?>
+
+<div class="ch-container">
+	<div class="row">
+   
+    <!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			//$crumb = array("Home" => $this->baseUrl,
+			//			   "Countly" => $this->baseUrl."/countly");
+			//echo $this->generate($this->config->param->gen->BREADCRUMB, $crumb);
+		?>
+		
+		<div class="col-lg-12" style="padding-right:0px; padding-left:0px;">
+			<ol class="breadcrumb">
+				<li><a href="<?php echo $this->baseUrl ?>">Home</a></li>
+				<li class="active">Management</li>
+				<li class="active">Countly</li>
+			</ol>
+		</div>
+		
+		<!-- Content Placed here -->
+		<iframe id="fr" style="width:100%;height:850px;border:thin solid silver" src="<?php echo $this->config->frame->countly;?>">
+		</iframe>
+	</div>
+</div>
+</body>
+</html>

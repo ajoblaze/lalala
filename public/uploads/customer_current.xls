@@ -1,0 +1,260 @@
+customer_id	name	email	imei	type	device_model	app	status	first_download_date	last_download_date	product_name	price	$$hashKey
+-	julie julie 	julie.niez@gmail.com	354584060275505	imei	Samsung SM-G750H	Slime	active	2014-11-17 09:00	2014-11-17 09:00	Galaxy Mega 2		003
+-	Sawaluddin ilham Tarigan 	sawaluddinilham@gmail.com	356001060170329	imei	Samsung SM-N910H	Slime	active	2014-11-17 02:36	2014-11-17 02:36	Galaxy Note 4		004
+-	Novri Elisabeth 	novri.elisabeth@gmail.com	352999060134373	imei	Samsung SM-T805	Slime	active	2014-11-17 08:53	2014-11-17 09:08	Galaxy Tab S 10.5"		005
+-	Utiek Putri Narotomo 	utiekputri@gmail.com	354204060233442	imei	Samsung SM-T705	Slime	active	2014-11-17 10:20	2014-11-17 10:59	Galaxy Tab S 8.4"		006
+-	Handaya Setiadi 	handayasetiadi@gmail.com	356001060021159	imei	Samsung SM-N910H	Slime	active	2014-11-17 03:16	2014-11-17 07:40	Galaxy Note 4		007
+-	Wildan Ardiansyah 	wildanardiyansyah07@gmail.com	354584060268666	imei	Samsung SM-G750H	Slime	active	2014-11-17 00:01	2014-11-17 00:02	Galaxy Mega 2		008
+-	Mega Duo 	megaduo88@gmail.com	354584060337420	imei	Samsung SM-G750H	Slime	active	2014-11-17 10:06	2014-11-17 10:14	Galaxy Mega 2		009
+-	maya agustvira 	m.agustvira@gmail.com	352324060037338	imei	Samsung SM-T111	Slime	active	2014-11-17 07:18	2014-11-17 07:25	Galaxy Tab3 Lite 3G		00A
+-	Victor Archie 	victorwinardy@gmail.com	356001060058797	imei	Samsung SM-N910H	Slime	active	2014-11-17 00:08	2014-11-17 00:09	Galaxy Note 4		00B
+-	bambang pamungkas 	bspamungkas@gmail.com	356001060017686	imei	Samsung SM-N910H	Slime	active	2014-11-17 11:04	2014-11-17 11:18	Galaxy Note 4		00C
+-	Merlis Fadjar 	merlisf@gmail.com	354584060788846	imei	Samsung SM-G750H	Slime	active	2014-11-17 00:39	2014-11-17 00:49	Galaxy Mega 2		00D
+-	Ely Ismunandar 	ismunely@gmail.com	357358050098061	imei	Samsung GT-P5200	Slime	active	2014-11-17 03:12	2014-11-17 05:53	Galaxy Tab 3 10.1"		00E
+-	YALES KURNIAWAN 	yales.kurniawan@gmail.com	354204060163540	imei	Samsung SM-T705	Slime	active	2014-11-17 10:11	2014-11-17 10:21	Galaxy Tab S 8.4"		00F
+-	Haikal Akbar 	haikalakbar50@gmail.com	356001060310735	imei	Samsung SM-N910H	Slime	active	2014-11-17 09:58	2014-11-17 09:58	Galaxy Note 4		00G
+-	Inri Rianay 	inrianay@gmail.com	351884060213651	imei	Samsung SM-T531	Slime	active	2014-11-17 08:01	2014-11-17 08:03	Galaxy Tab 4 10.1"		00H
+-	Agung Prabowo 	agungbou@gmail.com	356001060023536	imei	Samsung SM-N910H	Slime	active	2014-11-17 10:24	2014-11-17 10:24	Galaxy Note 4		00I
+-	Edwin Kurniawan 	blackscyte@gmail.com	356001060034491	imei	Samsung SM-N910H	Slime	active	2014-11-17 03:14	2014-11-17 03:19	Galaxy Note 4		00J
+-	Ricky Kamal 	ricky.x.kamal@gmail.com	356001060065313	imei	Samsung SM-N910H	Slime	active	2014-11-17 00:12	2014-11-17 00:16	Galaxy Note 4		00K
+-	Ambar Wanto 	wan70dhebel@gmail.com	356001060136510	imei	Samsung SM-N910H	Slime	active	2014-11-17 10:23	2014-11-17 10:35	Galaxy Note 4		00L
+-	ultra violet 	uv.intdesign@gmail.com	356001060159470	imei	Samsung SM-N910H	Slime	active	2014-11-17 05:06	2014-11-17 05:15	Galaxy Note 4		00M
+-	Nawa Lia 	nawalia.29@gmail.com	353571060720078	imei	Samsung SM-T231	Slime	active	2014-11-17 08:04	2014-11-17 08:04	Galaxy Tab 4 7"		00N
+-	Merry Malau 	merryrumondang@gmail.com	357198050653998	imei	Samsung GT-I9500	Slime	active	2014-11-17 10:26	2014-11-17 10:26	Galaxy S4		00O
+-	Sri Tiswan 	sritiswan@gmail.com	353571060441238	imei	Samsung SM-T231	Slime	active	2014-11-17 07:02	2014-11-17 09:45	Galaxy Tab 4 7"		00P
+-	Fitri Yaznil 	fini5112006@gmail.com	356001060044193	imei	Samsung SM-N910H	Slime	active	2014-11-17 04:55	2014-11-17 04:55	Galaxy Note 4		00Q
+-	Aggy Aggy 	aggyaggy1965@gmail.com	356001060162557	imei	Samsung SM-N910H	Slime	active	2014-11-17 07:12	2014-11-17 07:12	Galaxy Note 4		00R
+-	Noor Widiarta 	arsitadella@gmail.com	356001060119573	imei	Samsung SM-N910H	Slime	active	2014-11-17 10:20	2014-11-17 10:24	Galaxy Note 4		00S
+-	Erni Santoso 	ernisantoso79@gmail.com	354204060640273	imei	Samsung SM-T705	Slime	active	2014-11-17 11:19	2014-11-17 11:19	Galaxy Tab S 8.4"		00T
+-	Ronny Ichwan 	ronny.ichwan@gmail.com	354204060649464	imei	Samsung SM-T705	Slime	active	2014-11-17 09:14	2014-11-17 09:15	Galaxy Tab S 8.4"		00U
+-	Lisa Terinoto 	lisaterinoto86@gmail.com	357198050955450	imei	Samsung GT-I9500	Slime	active	2014-11-17 10:10	2014-11-17 10:20	Galaxy S4		00V
+-	Seny Saraswati	snsaraswati1@gmail.com	356001060103536	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		00W
+-	Faldi Fajar	faldifajar@gmail.com	352373050276091	imei	samsung GT-P3100	Sgift	active			Galaxy Tab 2 7"		00X
+-	Bimo Satrio Tengger	bimosatriot@gmail.com	356001060256763	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		00Y
+-	 Choqi Kusumah	bersama_dorin@yahoo.com	357198050653188	imei	samsung GT-I9500	Sgift	active			Galaxy S4		00Z
+-	Iwan Soerjono	cellindo@gmail.com	357198051024850	imei	samsung GT-I9500	Sgift	active			Galaxy S4		010
+-	Sandro Zhong	dragon.net05@yahoo.com	356001060196472	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		011
+-	Evan Junior	thunderz_boyz@yahoo.com	354833051420962	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		012
+-	Cahyadi Suwito	suwitocahyadi@gmail.com	358916050343347	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		013
+-	abe lie	rxseventyeight2@gmail.com	356741058570119	imei	samsung GT-I8190	Sgift	active			Galaxy S3 Mini		014
+-	amirah	batalyon0@gmail.com	354876060757619	imei	samsung SM-G355H	Sgift	active			Galaxy Core 2		015
+-	mas pri	mpri433@gmail.com	357381051285453	imei	samsung GT-S6310	Sgift	active			Galaxy Young		016
+-	Vincent Wu	iceennn96@gmail.com	355167057371153	imei	samsung GT-I9500	Sgift	active			Galaxy S4		017
+-	Saviena Asaqila	babyqilasavina@gmail.com	356789058907468	imei	samsung GT-S5282	Sgift	active			Galaxy Star		018
+-	Adrian Hertanto	adrian.hertanto89@gmail.com	356001060272885	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		019
+-	Lilywati 	tyan910@yahoo.com	355167057815506	imei	samsung GT-I9500	Sgift	active			Galaxy S4		01A
+-	Soenyali Soly	rejeki@melsa.net.id	356001060152764	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01B
+-	Hendra Hasim	hendrahasim72@gmail.com	356001060232855	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01C
+-	Donny Irawan	donny.irawan@gmail.com	356001060245873	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01D
+-	Siti Haroh	sitiharohmad@gmail.com	356743052699035	imei	samsung GT-B5330	Sgift	active	17 Nov 2014 06:35	17 Nov 2014 06:36	Galaxy Chat		01E
+-	harri yatna	harriyatna737@gmail.com	356746050339330	imei	samsung GT-S6310	Sgift	active			Galaxy Young		01F
+-	Darwis Tenggario	d4rw1z@yahoo.com	356001060196209	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 10:31	17 Nov 2014 10:32	Galaxy Note 4		01G
+-	Eka Putri	ekaputri40@gmail.com	356001060213657	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01H
+-	suryandi win	andi.ciptakantenagalistrik@gmail.com	356001060025580	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01I
+-	Nenden Kushermawan	nenden.kushermawan@gmail.com	357198051205905	imei	samsung GT-I9500	Sgift	active			Galaxy S4		01J
+-	Sutanz Kingster	sutanz_kingster86@hotmail.com	356001060210984	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01K
+-	Mike Sukamoto	mike61038@yahoo.com	356001060035381	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01L
+-	Santi Annisa Firdian	ntie_zthea@yahoo.com	356001060093281	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01M
+-	Nur Wahid	nwfr.nw@gmail.com	356746050126828	imei	samsung GT-S6310	Sgift	active			Galaxy Young		01N
+-	rokey ryan	rokey317@gmail.com	356743052167454	imei	samsung GT-B5330	Sgift	active	17 Nov 2014 06:10	17 Nov 2014 07:29	Galaxy Chat		01O
+-	Dede Ilham F	d.confident@gmail.com	357392055337570	imei	samsung GT-I9200	Sgift	active			Galaxy Mega 6.3		01P
+-	Oppy Lovestefkiversnakyvers Rakhazvariant	oppytriokta@yahoo.com	356743054773101	imei	samsung GT-B5330	Sgift	active			Galaxy Chat		01Q
+-	Shavanna Yasmin	shavannay@gmail.com	351665060103681	imei	samsung SM-N750	Sgift	active			Galaxy Note 3 Neo		01R
+-	Stephanie Tanujaya	stephanietanujaya@gmail.com	356797052508588	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		01S
+-	.Nancy Wendy	nancywen1011@gmail.com	356001060062765	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 06:56	17 Nov 2014 06:57	Galaxy Note 4		01T
+-	dinda ramadhan	dindamrs1981@gmail.com	356001060133384	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		01U
+-	Eva Novita	evanovita445@gmail.com	355308064907551	imei	samsung SM-G313HZ	Sgift	active	17 Nov 2014 07:09	17 Nov 2014 07:10	Galaxy V		01V
+-	Then Feri	asiu1619@gmail.com	354584060419863	imei	samsung SM-G750H	Sgift	active			Galaxy Mega 2		01W
+-	Immanuel Indra	indra_tare@yahoo.com	355167057234989	imei	samsung GT-I9500	Sgift	active			Galaxy S4		01X
+-	Nom Nom Goes	www.sofye16@gmail.com	357133055084303	imei	samsung GT-I8552	Sgift	active					01Y
+-	Linda Tirtadjaja	linda.tirtadjaja@yahoo.com	357198050982629	imei	samsung GT-I9500	Sgift	active			Galaxy S4		01Z
+-	Gisela Clarrisa	clarrisagisela@gmail.com	357379051738935	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		020
+-	Priscellia Angellia Setiady	prizzz2prizzz@yahoo.com	352957060206229	imei	samsung SM-G900H	Sgift	active			Galaxy S5		021
+-	gunawan tjarbini	gunawanlien@gmail.com	354653053082275	imei	samsung GT-B5330	Sgift	active			Galaxy Chat		022
+-	Asa Hasanah	asageningsih@gmail.com	355308060052873	imei	samsung SM-G313HZ	Sgift	active			Galaxy V		023
+-	Herman Bagus	bagusherman12@gmail.com	351651060813883	imei	samsung GT-S7270	Sgift	active			Galaxy Ace 3		024
+-	ferika widjaja	ahin.sinarterang@gmail.com	352373053513532	imei	samsung GT-P3100	Sgift	active			Galaxy Tab 2 7"		025
+-	Asmawatie Xu	asmawatisutrisno@yahoo.com	352700060426037	imei	samsung GT-I9060	Sgift	active			Galaxy Grand Neo		026
+-	Malahayati Chow	mala_chow08@yahoo.com.sg	356001060160437	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		027
+-	maya adi pranoto	mayajohanes@gmail.com	356001060113923	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		028
+-	Andi Natassa	andi.tnatassa@gmail.com	356001060195631	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		029
+-	patricia kosasih	patriciakosh@gmail.com	356001060114921	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02A
+-	Ludy Julia	bule.kakap@gmail.com	355056053690254	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		02B
+-	Ayu Silviani	asilviani23@gmail.com	357379052117055	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		02C
+-	Asta Chen	astatriyanti@gmail.com	355696057041499	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		02D
+-	endi	endi.supendighoni@gmail.com	354793055819900	imei	samsung GT-I9300	Sgift	active			Galaxy S3		02E
+-	Fifilia Kharisma	fifilkharisma@gmail.com	355971061552587	imei	samsung SM-G130H	Sgift	active	17 Nov 2014 09:30	17 Nov 2014 09:37	Galaxy Young 2		02F
+-	Patricia Salva Benedetta	tricia_laura@yahoo.co.id	358916050599278	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		02G
+-	Frederik Ariesta	frdarst@hotmail.com	356001060065354	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02H
+-	Daniel Santana	danielsantana1208@gmail.com	353845052638641	imei	samsung GT-N7105	Sgift	active					02I
+-	Chaterina Retty Dewi	beecuteee@gmail.com	352414061653397	imei	samsung SM-G7102	Sgift	active			Galaxy Grand 2		02J
+-	Arie Theodoric	cloudb100@gmail.com	356001060247200	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02K
+-	Aling Susi	alingsusi86@gmail.com	352414061701105	imei	samsung SM-G7102	Sgift	active			Galaxy Grand 2		02L
+-	Elly Ayhu	ellyayhu@ymail.com	357383051734175	imei	samsung GT-S6810	Sgift	active			Galaxy Fame		02M
+-	Imano Santoso P	imanosputra@gmail.com	356001060270863	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02N
+-	Eddy Mdn	eddyjanto@gmail.com	356001060240825	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02O
+-	olivia adriani	oliv3.a@gmail.com	356001060167184	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02P
+-	Jeffrey Prasetyo	jeffrey.prasetyo@gmail.com	356001060231261	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		02Q
+-	Novita Pit	novitapitt@yahoo.com	358916050613087	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		02R
+-	natasha irena	natasha.irena@gmail.com	352414064904342	imei	samsung SM-G7102	Sgift	active			Galaxy Grand 2		02S
+-	Salma Labita	salmalabita150698@gmail.com	356001060281399	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 08:16	17 Nov 2014 08:16	Galaxy Note 4		02T
+-	Juan Juli Andika Chandra	chandra_juan@yahoo.com	355056055443470	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		02U
+-	Linda Bunardi	bunardilinda@gmail.com	355696057032654	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		02V
+-	rokey ryan	rokey317@gmail.com	352414063743691	imei	samsung SM-G7102	Sgift	active	17 Nov 2014 06:10	17 Nov 2014 07:29	Galaxy Grand 2		02W
+-	Sally Wu	sally_wu@ymail.com	357379050858486	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		02X
+-	Edy cahyono	edy.cayo@gmail.com	355971061344977	imei	samsung SM-G130H	Sgift	active	17 Nov 2014 09:24	17 Nov 2014 09:24	Galaxy Young 2		02Y
+-	mber borot	mberborot@gmail.com	355010060015096	imei	samsung SM-G355H	Sgift	active			Galaxy Core 2		02Z
+-	Reza Kartawijaya	rezabalitour@gmail.com	356001060082540	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 10:17	17 Nov 2014 10:17	Galaxy Note 4		030
+-	Denny	odic1234@gmail.com	356001060011986	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		031
+-	Rahmat Hidayat	matdethirdman16@gmail.com	357638051513014	imei	samsung GT-I9152	Sgift	active			Galaxy Mega 5.8		032
+-	bimo dwiyanto	bimodwiyanto1@gmail.com	357379050795225	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		033
+-	Jenny Kongoas	jkongoasa0905@gmail.com	356001060001821	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		034
+-	Irwan	irwan_blup@yahoo.com	356001060181458	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		035
+-	fransiska ng	cieska88@gmail.com	356001060271333	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		036
+-	Suharto	suhartoandroid@gmail.com	357379052274005	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		037
+-	F. Iriadi	butik.oto@gmail.com	356001060031448	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 08:54	17 Nov 2014 08:56	Galaxy Note 4		038
+-	Rara Angel	rara_angel81@rocketmail.com	356001060213277	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		039
+-	Zaskia Aulia	zaskiaaulia76@gmail.com	356743052407918	imei	samsung GT-B5330	Sgift	active			Galaxy Chat		03A
+-	Rizka Octaviani	rizkacf@gmail.com	352414064474023	imei	samsung SM-G7102	Sgift	active			Galaxy Grand 2		03B
+-	Satrio Pujiadi	bostiti@yahoo.com	A0000045745C70	imei	samsung SCH-I759	Sgift	active			Infinite Duos		03C
+-	dian trinur cahyo	diantrinurcahyo@gmail.com	358070050239095	imei	samsung GT-S7270	Sgift	active			Galaxy Ace 3		03D
+-	Vincent Melvin	vleminjack@gmail.com	356001060179841	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		03E
+-	Nia Khusniati	niiaaneea@gmail.com	357198051131150	imei	samsung GT-I9500	Sgift	active			Galaxy S4		03F
+-	Alice Mariana	alice.mariana456@gmail.com	352921068928325	imei	samsung GT-S7262	Sgift	active	17 Nov 2014 10:26	17 Nov 2014 10:26	Galaxy Star Plus		03G
+-	Raymond Borge	raymondborge@gmail.com	358916050945935	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		03H
+-	Hendra Wantojo	hwantojo@gmail.com	356001060274956	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 11:00	17 Nov 2014 11:00	Galaxy Note 4		03I
+-	Gunardi Wu	gunardi.wu@gmail.com	356001060138904	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		03J
+-	alvin juliando	alvinjuliando02@gmail.com	356001060283361	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 10:30	17 Nov 2014 10:39	Galaxy Note 4		03K
+-	Rikda	rikda_rindiantika@yahoo.co.id	355167057585497	imei	samsung GT-I9500	Sgift	active			Galaxy S4		03L
+-	NoVi	nov251@gmail.com	357379050783932	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		03M
+-	Sukarma Putra	sukarmaputra@gmail.com	355308062723083	imei	samsung SM-G313HZ	Sgift	active			Galaxy V		03N
+-	Nanan Koesnandar	nanank1008@gmail.com	357638054196197	imei	samsung GT-I9152	Sgift	active			Galaxy Mega 5.8		03O
+-	Hengky Kurniawan	hengkybizgroup@gmail.com	356001060011945	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		03P
+-	Iswadi Syahril	iswadi.syahril@gmail.com	356001060229216	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 11:19	17 Nov 2014 11:19	Galaxy Note 4		03Q
+-	Yana Alisa	noone_tobe_someone@yahoo.com	355224060015879	imei	samsung SM-G7102	Sgift	active			Galaxy Grand 2		03R
+-	Arviani	arviadgk@gmail.com	352700061158795	imei	samsung GT-I9060	Sgift	active			Galaxy Grand Neo		03S
+-	Yonattan Han	nexmojave@gmail.com	358916050660021	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		03T
+-	tony kent	tony.kent1612@gmail.com	356001060244983	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 11:07	17 Nov 2014 11:07	Galaxy Note 4		03U
+-	novani budiarti	novani.budiarti@gmail.com	356260059261065	imei	samsung GT-I9300	Sgift	active			Galaxy S3		03V
+-	Chen PauLie	chen.paulie83@gmail.com	355056050880437	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		03W
+-	Andi Surya	andisurya1984@gmail.com	356001060139670	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		03X
+-	Alfian Dwi Irwin	alfiandwiirwin@yahoo.com	352414061604515	imei	samsung SM-G7102	Sgift	active			Galaxy Grand 2		03Y
+-	Aditya Nugroho	adityanugroho707@gmail.com	356001060160676	imei	samsung SM-N910H	Sgift	active	17 Nov 2014 10:32	17 Nov 2014 10:32	Galaxy Note 4		03Z
+-	Billy Ching	me@billyching.com	356001060274592	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		040
+-	PHIK SWAN LIM	merryswandahalim@gmail.com	358916051743214	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		041
+-	J Victor	jvicliando@gmail.com	352957061610320	imei	samsung SM-G900H	Sgift	active			Galaxy S5		042
+-	ipoenk saepulloh	ipoenksaepulloh22@gmail.com	354653051467627	imei	samsung GT-B5330	Sgift	active			Galaxy Chat		043
+-	Gracia Hutami Putri	hutami.putri@gmail.com	356876050311847	imei	samsung GT-I8262	Sgift	active			Galaxy Core		044
+-	Decy Jambol	decyjambol@gmail.com	356743052310682	imei	samsung GT-B5330	Sgift	active			Galaxy Chat		045
+-	Indah Idris	indahidris227@gmail.com	356748050154875	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		046
+-	Sukma Dewani	dewanisukma@gmail.com	358916052330144	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		047
+-	Priscilla Agatha	priscillagatha22@gmail.com	355056052669127	imei	samsung GT-N7100	Sgift	active			Galaxy Note 2		048
+-	ferdian mulya	ferdianmulya94@gmail.com	354833054616236	imei	samsung SM-N910C	Sgift	active					049
+-	Linda Dewi	linda_dewi03@yahoo.com	357379050630968	imei	samsung GT-I9082	Sgift	active			Galaxy Grand		04A
+-	Erlyna Widya Ekaningrum	erlyna_widya21@yahoo.com	356001060206271	imei	samsung SM-N910H	Sgift	active			Galaxy Note 4		04B
+-	Sisca Chearz	sisca.chearz@gmail.com	358916050875231	imei	samsung SM-N900	Sgift	active			Galaxy Note 3		04C
+-	Julie Widjaja	juliewid2403@yahoo.com	352957060436156	imei	samsung SM-G900H	Sgift	active			Galaxy S5		04D
+-	cevi kurnia dewi	cevidewi@gmail.com	356746052342779	imei	samsung GT-S6310	Sgift	active			Galaxy Young		04E
+-	Mohammad Iqbal Hamdani	muhamadiqbalhamdani248@gmail.com	354653054342371	imei	samsung GT-B5330	Sgift	active	17 Nov 2014 11:24	17 Nov 2014 11:24	Galaxy Chat		04F
+-	Hudan Fuadi	hoedz_foe@yahoo.com			 	Sgift	suspended					04G
+35942	null 	ady899@gmail.com	356001060040423	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 23:58	16 Nov 2014 23:58	Galaxy Note 4		04H
+43848	Soly Soe 	solysoe@gmail.com	356001060152764	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 23:58	16 Nov 2014 23:58	Galaxy Note 4		04I
+36671	Anto Suryana 	antoshimawan@gmail.com	356001060166947	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 23:54	16 Nov 2014 23:54	Galaxy Note 4		04J
+43937	Fadel Ilato 	fadelilato11@gmail.com	359714050754038	imei	Samsung SM-T331	Slime	active	16 Nov 2014 23:54	16 Nov 2014 23:54	Galaxy Tab 4 8"		04K
+43918	muhamad yunus 	myunus.batam@gmail.com	354204060670486	imei	Samsung SM-T705	Slime	active	16 Nov 2014 23:46	16 Nov 2014 23:46	Galaxy Tab S 8.4"		04L
+43832	Dedy Tanuwijaya 	dedytanu@gmail.com	353571060252775	imei	Samsung SM-T231	Slime	active	16 Nov 2014 23:45	16 Nov 2014 23:45	Galaxy Tab 4 7"		04M
+43875	Eddy Simon 	eddy.simon01@gmail.com	356001060177746	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 23:12	16 Nov 2014 23:12	Galaxy Note 4		04N
+43895	Naomi Aria 	kawaii.reiko@gmail.com	356001060135462	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 23:04	16 Nov 2014 23:04	Galaxy Note 4		04O
+43863	Johan Wiraga 	rwiraga@gmail.com	356001060173711	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 22:58	16 Nov 2014 22:58	Galaxy Note 4		04P
+41156	Gabrielle Jane 	gabbriellejane@gmail.com	353571060636571	imei	Samsung SM-T231	Slime	active	16 Nov 2014 22:53	16 Nov 2014 22:53	Galaxy Tab 4 7"		04Q
+42129	Donny Hendriyanto 	donny.hendriyanto.dh@gmail.com	353571060399261	imei	Samsung SM-T231	Slime	active	16 Nov 2014 22:42	16 Nov 2014 22:42	Galaxy Tab 4 7"		04R
+43862	usamah maskuri 	usamah.maskuri@gmail.com	356001060183249	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 22:29	16 Nov 2014 22:29	Galaxy Note 4		04S
+43932	Sasori Danna 	sasoridanna69@gmail.com	354204060627692	imei	Samsung SM-T705	Slime	active	16 Nov 2014 22:21	16 Nov 2014 22:21	Galaxy Tab S 8.4"		04T
+43921	Ichsan Nathin 	inathin@gmail.com	352999060011563	imei	Samsung SM-T805	Slime	active	16 Nov 2014 22:19	16 Nov 2014 22:19	Galaxy Tab S 10.5"		04U
+43856	Eric Darwin 	darwin.eric@gmail.com	356001060175138	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 22:15	16 Nov 2014 22:15	Galaxy Note 4		04V
+43917	junianto darmawan 	juniantodarmawan77@gmail.com	354204060486271	imei	Samsung SM-T705	Slime	active	16 Nov 2014 22:10	16 Nov 2014 22:10	Galaxy Tab S 8.4"		04W
+43808	Aryo Jati 	aryojati8@gmail.com	354204060652039	imei	Samsung SM-T705	Slime	active	16 Nov 2014 22:01	16 Nov 2014 22:01	Galaxy Tab S 8.4"		04X
+30898	Agus Purnomo 	guspoerna@gmail.com	353571060015057	imei	Samsung SM-T231	Slime	active	16 Nov 2014 21:54	16 Nov 2014 21:54	Galaxy Tab 4 7"		04Y
+43853	Piona Rizal 	chaion2901@gmail.com	356732056086927	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 21:54	16 Nov 2014 21:54	Galaxy Note 8.0		04Z
+36723	Ade Noorman 	adebaaman@gmail.com	356001060198031	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 21:53	16 Nov 2014 21:53	Galaxy Note 4		050
+43884	Tri Padukan Purba 	trippurba@gmail.com	354204060459088	imei	Samsung SM-T705	Slime	active	16 Nov 2014 21:53	16 Nov 2014 21:53	Galaxy Tab S 8.4"		051
+43936	suwandi muljadi 	s.muljadi33@gmail.com	354584060300691	imei	Samsung SM-G750H	Slime	active	16 Nov 2014 21:46	16 Nov 2014 21:46	Galaxy Mega 2		052
+43810	Arief Rachmat 	arief.rchmt@gmail.com	356001060160056	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 21:38	16 Nov 2014 21:38	Galaxy Note 4		053
+36340	rendy nurdjaja 	r3ndy3883@gmail.com	356001060071147	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 21:24	16 Nov 2014 21:24	Galaxy Note 4		054
+43854	Frastuzi Affan 	frastuzi@gmail.com	356001060066980	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 21:21	16 Nov 2014 21:21	Galaxy Note 4		055
+43837	robertus kristianto 	kristiano2009@gmail.com	354204060666187	imei	Samsung SM-T705	Slime	active	16 Nov 2014 21:16	16 Nov 2014 21:16	Galaxy Tab S 8.4"		056
+43867	Helena Helen 	helena.helen72@gmail.com	354204060630654	imei	Samsung SM-T705	Slime	active	16 Nov 2014 21:10	16 Nov 2014 21:10	Galaxy Tab S 8.4"		057
+43896	Fuad Rosyadi 	g.rosyadi16@gmail.com	354584060626665	imei	Samsung SM-G750H	Slime	active	16 Nov 2014 20:51	16 Nov 2014 20:51	Galaxy Mega 2		058
+43843	Tan Alexander 	pixeltanjaya@gmail.com	356001060014535	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 20:46	16 Nov 2014 20:46	Galaxy Note 4		059
+43836	She daffa 	shedaffa83@gmail.com	354204060180718	imei	Samsung SM-T705	Slime	active	16 Nov 2014 20:36	16 Nov 2014 20:36	Galaxy Tab S 8.4"		05A
+43922	Nugrohoari Wicaksono 	nugizev@gmail.com	354204060678737	imei	Samsung SM-T705	Slime	active	16 Nov 2014 20:12	16 Nov 2014 20:12	Galaxy Tab S 8.4"		05B
+43800	jumidin abu muhammad 	asshofi@gmail.com	357397056717852	imei	Samsung SM-T311	Slime	active	16 Nov 2014 20:03	16 Nov 2014 20:03			05C
+43825	Maharani Hartati 	maharani.hartati@gmail.com	353571060817643	imei	Samsung SM-T231	Slime	active	16 Nov 2014 19:30	16 Nov 2014 19:30	Galaxy Tab 4 7"		05D
+43861	Budiman Amd 	budimanamd2014@gmail.com	359714050638710	imei	Samsung SM-T331	Slime	active	16 Nov 2014 19:17	16 Nov 2014 19:17	Galaxy Tab 4 8"		05E
+43870	History Addict 	addicthistory@gmail.com	354204060650579	imei	Samsung SM-T705	Slime	active	16 Nov 2014 19:16	16 Nov 2014 19:16	Galaxy Tab S 8.4"		05F
+43842	Donny Otay 	donnyvikhtorlaurensotay@gmail.com	356001060107123	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 19:05	16 Nov 2014 19:05	Galaxy Note 4		05G
+34967	Opik Roziq 	opikroziq@gmail.com	354204060651676	imei	Samsung SM-T705	Slime	active	16 Nov 2014 18:35	16 Nov 2014 18:35	Galaxy Tab S 8.4"		05H
+43809	Tri Iwan 	3e1droid@gmail.com	359714050380503	imei	Samsung SM-T331	Slime	active	16 Nov 2014 18:27	16 Nov 2014 18:27	Galaxy Tab 4 8"		05I
+43869	Rahmawati Pone 	rahmawatip26@gmail.com	359714050624223	imei	Samsung SM-T331	Slime	active	16 Nov 2014 18:22	16 Nov 2014 18:22	Galaxy Tab 4 8"		05J
+43889	Nadhif Amin 	nadhifamin@gmail.com	351884060262864	imei	Samsung SM-T531	Slime	active	16 Nov 2014 18:19	16 Nov 2014 18:19	Galaxy Tab 4 10.1"		05K
+42162	Eldo Timothy Sinurat 	eldotimothy@gmail.com	356001060262803	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 18:09	16 Nov 2014 18:09	Galaxy Note 4		05L
+43865	Muhamad Yunus 	yunus.gamer@gmail.com	356396060939693	imei	Samsung SM-G530H	Slime	active	16 Nov 2014 18:07	16 Nov 2014 18:07			05M
+43915	Aqien Kurama 	akinkurama@gmail.com	354204060268281	imei	Samsung SM-T705	Slime	active	16 Nov 2014 18:07	16 Nov 2014 18:07	Galaxy Tab S 8.4"		05N
+43826	Dr Ginta 	gintaconan@gmail.com	354204060632445	imei	Samsung SM-T705	Slime	active	16 Nov 2014 18:06	16 Nov 2014 18:06	Galaxy Tab S 8.4"		05O
+43824	Olif Sahara 	olifsahara@gmail.com	354204060559259	imei	Samsung SM-T705	Slime	active	16 Nov 2014 18:05	16 Nov 2014 18:05	Galaxy Tab S 8.4"		05P
+43866	Rizal Gozali 	gozalirizal@gmail.com	352164060013511	imei	Samsung SM-P901	Slime	active	16 Nov 2014 17:56	16 Nov 2014 17:56	Galaxy Note Pro 12.2"		05Q
+43868	Abde Syah 	abdsyahid@gmail.com	354584060202814	imei	Samsung SM-G750H	Slime	active	16 Nov 2014 17:55	16 Nov 2014 17:55	Galaxy Mega 2		05R
+43880	Juan Cititel 	cititel.mlc@gmail.com	356001060215900	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 17:52	16 Nov 2014 17:52	Galaxy Note 4		05S
+43931	Antonius Parimin 	anton.grbdh@gmail.com	353571060317768	imei	Samsung SM-T231	Slime	active	16 Nov 2014 17:41	16 Nov 2014 17:41	Galaxy Tab 4 7"		05T
+43803	Rahma Nita 	rnita38@gmail.com	355051060060989	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 17:33	16 Nov 2014 17:33	Galaxy Note 4		05U
+43888	Hartono Arthadi 	hartono2357@gmail.com	356001060121496	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 16:52	16 Nov 2014 16:52	Galaxy Note 4		05V
+43879	Edy Purwanto 	iamedypurwanto@gmail.com	354204060632726	imei	Samsung SM-T705	Slime	active	16 Nov 2014 16:47	16 Nov 2014 16:47	Galaxy Tab S 8.4"		05W
+43904	lucky pua 	fp.seven7@gmail.com	356001060109764	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 16:44	16 Nov 2014 16:44	Galaxy Note 4		05X
+43823	zhafranto d 	zhafranto@gmail.com	353571060472241	imei	Samsung SM-T231	Slime	active	16 Nov 2014 16:42	16 Nov 2014 16:42	Galaxy Tab 4 7"		05Y
+43893	daniel charles 	dnlcharles74@gmail.com	356396060549914	imei	Samsung SM-G530H	Slime	active	16 Nov 2014 16:38	16 Nov 2014 16:38			05Z
+43807	lordZem xhizors 	zem.xhizors@gmail.com	356001060196431	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 16:32	16 Nov 2014 16:32	Galaxy Note 4		060
+41207	Firdaus RM 	firdaus.rm@gmail.com	356001060044169	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 16:17	16 Nov 2014 16:17	Galaxy Note 4		061
+43828	cok zack 	cokzack@gmail.com	356732055310989	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 16:02	16 Nov 2014 16:02	Galaxy Note 8.0		062
+43877	Reza Wardhana 	reza.aditya.wardhana@gmail.com	354484060003850	imei	Samsung SM-T705	Slime	active	16 Nov 2014 15:35	16 Nov 2014 15:35	Galaxy Tab S 8.4"		063
+43938	Nabilah Thalib 	nabilahthaliib@gmail.com	354204060659224	imei	Samsung SM-T705	Slime	active	16 Nov 2014 15:32	16 Nov 2014 15:32	Galaxy Tab S 8.4"		064
+43909	ardiyanti puspitasari 	puspitasari.ardiyanti@gmail.com	359714050316317	imei	Samsung SM-T331	Slime	active	16 Nov 2014 14:54	16 Nov 2014 14:54	Galaxy Tab 4 8"		065
+36759	Irvan Van 	vanatneh@gmail.com	356001060236070	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 14:43	16 Nov 2014 14:43	Galaxy Note 4		066
+43855	Tia Richard 	tiarichard.tr@gmail.com	356001060187653	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 14:03	16 Nov 2014 14:03	Galaxy Note 4		067
+29918	Lizawidyia Rini 	lizawidyiarini@gmail.com	351884060307958	imei	Samsung SM-T531	Slime	active	16 Nov 2014 13:56	16 Nov 2014 13:56	Galaxy Tab 4 10.1"		068
+35844	Sindu Yuwana 	sindu.yuwana@gmail.com	356001060034673	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 13:49	16 Nov 2014 13:49	Galaxy Note 4		069
+43840	Fikri Ashraf 	fikriashraf2@gmail.com	353571060539544	imei	Samsung SM-T231	Slime	active	16 Nov 2014 13:23	16 Nov 2014 13:23	Galaxy Tab 4 7"		06A
+37946	Melviani Zebua 	melvianiz13.mz@gmail.com	357397057539388	imei	Samsung SM-T311	Slime	active	16 Nov 2014 13:16	16 Nov 2014 13:16			06B
+43838	Elysabeth Tantri 	tantri1988@gmail.com	356001060237995	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 13:14	16 Nov 2014 13:14	Galaxy Note 4		06C
+43827	Ses Hermes 	seshermes91@gmail.com	354584060211773	imei	Samsung SM-G750H	Slime	active	16 Nov 2014 13:04	16 Nov 2014 13:04	Galaxy Mega 2		06D
+43849	Linda Tan 	lindatan889900@gmail.com	354584060328304	imei	Samsung SM-G750H	Slime	active	16 Nov 2014 12:57	16 Nov 2014 12:57	Galaxy Mega 2		06E
+35774	Raymond Harris 	rayz1734@gmail.com	356001060031091	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 12:55	16 Nov 2014 12:55	Galaxy Note 4		06F
+43912	Evita Zulfia 	evitazulfia52@gmail.com	354204060570637	imei	Samsung SM-T705	Slime	active	16 Nov 2014 12:55	16 Nov 2014 12:55	Galaxy Tab S 8.4"		06G
+30934	nur indah Pancawati 	nurindahpancawati@gmail.com	353571060029033	imei	Samsung SM-T231	Slime	active	16 Nov 2014 12:43	16 Nov 2014 12:43	Galaxy Tab 4 7"		06H
+43906	Yessy Oktaviani 	essy.octavy@gmail.com	354204060495256	imei	Samsung SM-T705	Slime	active	16 Nov 2014 12:35	16 Nov 2014 12:35	Galaxy Tab S 8.4"		06I
+35766	Iqbal Satria 	iqbalsatria@gmail.com	356001060030762	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 12:20	16 Nov 2014 12:20	Galaxy Note 4		06J
+42156	Penggemar Teknologi 	94d93t@gmail.com	354584060203119	imei	Samsung SM-G750H	Slime	active	16 Nov 2014 12:07	16 Nov 2014 12:07	Galaxy Mega 2		06K
+43929	Marjoko Susanto 	marjokosusanto71@gmail.com	357397057887118	imei	Samsung SM-T311	Slime	active	16 Nov 2014 11:59	16 Nov 2014 11:59			06L
+43850	Sui kiem 	suikiem76@gmail.com	357358050048785	imei	Samsung GT-P5200	Slime	active	16 Nov 2014 11:54	16 Nov 2014 11:54	Galaxy Tab 3 10.1"		06M
+43926	Margawianto Cahyadi 	margawianto.cahyadi@gmail.com	353771052287488	imei	Samsung GT-N7100	Slime	active	16 Nov 2014 11:48	16 Nov 2014 11:48	Galaxy Note 2		06N
+38821	Dana Yasa 	danayasa101014@gmail.com	359714050170649	imei	Samsung SM-T331	Slime	active	16 Nov 2014 11:41	16 Nov 2014 11:41	Galaxy Tab 4 8"		06O
+43878	Kurnia Akbari 	kurnia_akbari@ymail.com	357645059751652	imei	Samsung SM-T211	Slime	active	16 Nov 2014 11:26	16 Nov 2014 11:26			06P
+43925	Lukita Plus 	lukitaplus@gmail.com	354204060680170	imei	Samsung SM-T705	Slime	active	16 Nov 2014 11:06	16 Nov 2014 11:06	Galaxy Tab S 8.4"		06Q
+43846	Erwin Budiputra 	erwinbudiputra@gmail.com	358916051592710	imei	Samsung SM-N900	Slime	active	16 Nov 2014 10:53	16 Nov 2014 10:53	Galaxy Note 3		06R
+43847	yangsmid rahman 	yangsmid@gmail.com	356001060153226	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 10:50	16 Nov 2014 10:50	Galaxy Note 4		06S
+37269	agus triyono 	goestry@gmail.com	356732055893711	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 10:36	16 Nov 2014 10:36	Galaxy Note 8.0		06T
+43858	Marmo Sungkowo 	marmo.sungkow@gmail.com	356001060206438	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 10:20	16 Nov 2014 10:20	Galaxy Note 4		06U
+35931	Buyung Juwono 	buyung.juwono@gmail.com	356001060039813	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 10:16	16 Nov 2014 10:16	Galaxy Note 4		06V
+36188	Alen bhaskara 	lastofall.hd@gmail.com	356001060057625	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 10:16	16 Nov 2014 10:16	Galaxy Note 4		06W
+43920	muhammad tri 	muhammad.tri3@gmail.com	357397057377466	imei	Samsung SM-T311	Slime	active	16 Nov 2014 10:09	16 Nov 2014 10:09			06X
+43898	Fajar Venus 	fajarvenus@gmail.com	356001060213186	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 09:38	16 Nov 2014 09:38	Galaxy Note 4		06Y
+37057	Irfan Efendi 	satriopangestum07@gmail.com	356732055449308	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 09:34	16 Nov 2014 09:34	Galaxy Note 8.0		06Z
+43913	Christopher Andez Gunawan Darmowinoto 	christopher.andez89@gmail.com	351884060318369	imei	Samsung SM-T531	Slime	active	16 Nov 2014 09:32	16 Nov 2014 09:32	Galaxy Tab 4 10.1"		070
+33986	mardianna salim 	mardianna.salim78@gmail.com	354204060339033	imei	Samsung SM-T705	Slime	active	16 Nov 2014 09:16	16 Nov 2014 09:16	Galaxy Tab S 8.4"		071
+43919	Eva Anggeriani 	evaanggeriani@gmail.com	356001060057880	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 08:50	16 Nov 2014 08:50	Galaxy Note 4		072
+43301	Anita Tanujaya 	anitatanujaya@gmail.com	356732055758294	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 08:47	16 Nov 2014 08:47	Galaxy Note 8.0		073
+43897	Herianto Heri 	cunjin@gmail.com	356001060272406	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 08:41	16 Nov 2014 08:41	Galaxy Note 4		074
+43239	alan alan 	alanbugis@gmail.com	356732055975591	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 08:25	16 Nov 2014 08:25	Galaxy Note 8.0		075
+43813	ridwan hartono 	ridwan.hartono@gmail.com	356732055716284	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 08:05	16 Nov 2014 08:05	Galaxy Note 8.0		076
+43887	hengky suzanto 	hengkysuzanto@gmail.com	356732055626061	imei	Samsung GT-N5100	Slime	active	16 Nov 2014 07:43	16 Nov 2014 07:43	Galaxy Note 8.0		077
+43852	Pravin Raj 	pravinrajan93@gmail.com	356001060064704	imei	Samsung SM-N910H	Slime	active	16 Nov 2014 07:38	16 Nov 2014 07:38	Galaxy Note 4		078
+---------

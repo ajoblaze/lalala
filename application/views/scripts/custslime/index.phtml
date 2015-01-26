@@ -1,0 +1,234 @@
+<?php echo $this->doctype();?>
+<html ng-app="myAppSlime">
+<head>
+	<?php echo $this->headTitle();?>
+	<?php echo $this->render("includes/script.phtml"); ?>
+</head>
+<body class="bd_g_slime bd_slime_customer" ng-controller="searchCrtl">
+	<?php echo $this->render("includes/header.phtml"); ?>
+	<?php echo $this->render("includes/hidden.phtml"); ?>
+	<div class="ch-container">
+	<div class="row">
+	   
+	<!-- left menu starts -->
+	<?php echo $this->render("includes/menu.phtml"); ?>
+			
+	<div id="content" class="col-lg-12 col-sm-12 push">
+		<?php
+			$crumb = array("Home" => $this->baseUrl,
+					"S Lime" => "active",
+					"Customers" => "active");
+			$array = array(
+					"item" => $crumb,
+					"class" => "col-lg-7",
+					"style" => "padding-right:0px"
+					);
+			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
+		?>
+		
+		<div class="col-lg-5" id="search-crumb" style="padding-left:0px;">
+			<div class="col-lg-8 pull-right" id="search_container" style="padding-right:0px; padding-left:5px;">
+				<form action="<?php echo $this->baseUrl;?>/custslime/index" method="GET" role="form" id="search-form">
+					<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default search-btn" type="button" id="advanced_search_button"><span class="caret"></span></button>
+					</span>
+					<input type="text" class="form-control" placeholder="Search.." name="q" id="q" value="<?php echo $this->param->q;?>">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+					</div><!-- /input-group -->
+				</form>
+			</div><!-- /.col-lg-4 col-lg-push-4-->
+			
+			<div class="btn-group pull-right" id="export_csv">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-folder-open"></span> &nbsp; Export CSV &nbsp;&nbsp;<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+					<li><a ng-click="exportCurrent($event)" href="#">Export Filtered Data</a></li>
+					<li><a ng-click="exportAll($event)" href="#">Export All</a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<div class="col-lg-6" >
+			<div class="advanced_search_container col-sm-10" id="advanced_search_container">
+			<div class="panel panel-default">
+			  
+			<div class ="panel-body" >
+				<h3>Advance Search</h3><hr/>
+				<form action="<?php echo $this->baseUrl;?>/custslime/index" method="GET" role="form" class="form-horizontal" id="advance-search-form">
+				<div class="form-horizontal">
+					<div class="advanced-input-group">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Name</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Name.." name="name" id="name" value="<?php echo $this->param->name;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Email.." name="email" id="email" value="<?php echo $this->param->email;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Gender</label>
+							<div class="col-sm-9">
+							<select class="form-control" name="gender" id="gender">
+								<option value="">- All Gender -</option>
+								<option value="male" <?php echo (strcasecmp($this->param->gender, "male") == 0) ? "selected" : ""; ?>>Male</option>
+								<option value="female" <?php echo (strcasecmp($this->param->gender, "female") == 0) ? "selected" : ""; ?>>Female</option>
+							</select>
+							</div>
+						 </div>
+						
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Date of Birth</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control inline date"  name="start_dob" id="start_dob" value="<?php echo $this->param->start_dob; ?>" placeholder="YYYY-MM-DD" style="width:48%" /> 
+								-
+								<input type="text" class="form-control inline date" style="width:48%" name="end_dob" value="<?php echo $this->param->end_dob; ?>" placeholder="YYYY-MM-DD" id="end_dob" />
+							</div>
+						 </div>
+						  <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Interests</label>
+							<div class="col-sm-9">
+							  <input type="text" class="form-control advanced-input" placeholder="Interests.." name="interests" id="interests" value="<?php echo $this->param->interests;?>">
+							</div>
+						 </div>
+						 <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Registered Date</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control inline date"  name="start_registered" id="start_registered" value="<?php echo $this->param->start_registered; ?>" placeholder="YYYY-MM-DD" style="width:48%" /> 
+								-
+								<input type="text" class="form-control inline date" style="width:48%" name="end_registered" value="<?php echo $this->param->end_registered; ?>" placeholder="YYYY-MM-DD" id="end_registered" />
+							</div>
+						 </div>
+						 
+						  <div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">Status</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="status" id="status">
+									<option value="">- All Status -</option>
+									<option value="verified" <?php echo (strcasecmp($this->param->status, "verified") == 0) ? "selected" : ""; ?>>Verified</option>
+									<option value="unverified" <?php echo (strcasecmp($this->param->status, "unverified") == 0) ? "selected" : ""; ?>>Unverified</option>
+								</select>
+							</div>
+						 </div>
+						
+						<button class="btn btn-primary search-btn pull-right" id="adv-button"><span class="glyphicon glyphicon-search"></span> &nbsp;Search</button>
+					</div>
+					</div>
+				</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+			
+			<div class="panel-body">					
+			<div class="row">
+			
+			<!-- -->
+			
+			<div class="form-group pull-left form-inline" style="margin-left:15px;">
+				<form class="form-inline" role="form">
+				<span class="pull-left lbl"><h5>&nbsp; <i class="glyphicon glyphicon-eye-open"></i> &nbsp;Showing &nbsp;<strong>{{search_list.length | number:0}}</strong>&nbsp; from 
+						&nbsp;<strong>{{totalData | number:0}}</strong>&nbsp; data</h5></span>
+				</form>
+			</div>
+			
+			<div class="form-group pull-right form-inline" style="margin-right:15px;">	
+				
+				<div class="form-group" id="filter-textbox">
+					<div class="input-group ">
+					  <div class="input-group-addon">
+						<span class="glyphicon glyphicon-filter"></span>&nbsp;&nbsp;<span class="badge">{{filtered.length | number:0}}</span>
+					  </div>
+					  <input class="form-control" ng-model="query[queryBy]" placeholder="Filter by..." >
+					</div>
+				</div>
+				<div class="form-group" id="filter-option">
+					<select class="form-control" ng-model="queryBy">
+						<option value="$">All</option>
+						<option value="name">Name</option>
+						<option value="email">Email</option>
+						<option value="gender">Gender</option>
+						<option value="date_of_birth">Date of Birth</option>
+						<option value="interests">Interests</option>
+						<option value="creation_time">Registered Date</option>
+						<option value="status">Status</option>
+						<option value="device">Device</option>
+						<option value="download">Download</option>
+						<option value="trans">Transaction</option>
+					</select>		
+				</div>
+			</div>	
+			</div><!-- /.row -->
+
+			<div class='tb-test'>
+				<div class="pull-left">
+				</div>
+				<div class="t-c">
+				<?php 
+					$size =  "10";
+					$headSize = "300px";
+				?>
+				<table class="table table-striped" id="transaction_table" >	
+					<thead>
+					<tr>
+						<th width="<?php echo $headSize; ?>"><a ng-click="sort_by('name')"><button class="sort_tool">Name <span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>"><a ng-click="sort_by('email')"><button class="sort_tool">Email <span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('gender')"><button class="sort_tool">Gender<span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('date_of_birth')"><button class="sort_tool">Date of Birth <span class="caret"></span></button></a></th>	
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('creation_time | asDate')"><button class="sort_tool">Registered <span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('status')"><button class="sort_tool">Status <span class="caret"></span></button></a></th>							
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('transaction')"><button class="sort_tool">Transaction <span class="caret"></span></button></a></th>	
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('device')"><button class="sort_tool">Device <span class="caret"></span></button></a></th>	
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('download')"><button class="sort_tool">Download <span class="caret"></span></button></a></th>
+						<th width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="sort_by('subscription')"><button class="sort_tool">Subscription <span class="caret"></span></button></a></th>						
+					</tr>
+					</thead>				
+					<tbody scroll>
+						<tr ng-repeat="x in filtered = ( search_list | filter:query) | orderBy:predicate:reverse ">
+							<td width="<?php echo $headSize; ?>">{{ (x.name == null) ? '-' : x.name}}</td>
+							<td width="<?php echo $size."%"; ?>">{{ (x.email == null || x.email == '-') ? '-' : x.email }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center"><capital>{{ (x.gender == null || x.gender == '-') ? '-' : x.gender }}</capital></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{ (x.date_of_birth == null || x.date_of_birth.trim() == '') ? '-' : (x.date_of_birth | asDate | date:'dd MMM yyyy') }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center">{{ (x.creation_time == null || x.creation_time.trim() == '') ? '-' : (x.creation_time | asDate | date:'dd MMM yyyy') }}</td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center"><capital>{{ (x.status == null) ? '-' : x.status }}</capital></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center"><capital>{{ (x.transaction == null) ? '-' : (x.transaction | number : 0) }}</capital></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="showDevice($event, x)" class="btn btn-primary btn-customer cursor"><span class="glyphicon glyphicon-phone"></span> &nbsp;<strong>{{ (x.device == null) ? '0' : x.device | number : 0 }}</strong></a></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center"><a ng-click="showDownload($event, x)" class="btn btn-primary btn-customer cursor"><span class="glyphicon glyphicon-download"></span> &nbsp;<strong>{{ (x.download == null) ? '0' : x.download | number : 0 }}</strong></a></td>
+							<td width="<?php echo $size."%"; ?>" style="text-align:center"><a href="<?php echo $this->baseUrl;?>/csslime?email={{x.email}}" target="_new"  class="btn btn-primary btn-customer cursor"><span class="glyphicon glyphicon-book"></span> &nbsp;<strong>{{ (x.subscription == null) ? '0' : x.subscription | number : 0 }}</strong></a></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				</div>
+					
+				<div class="bg-loading">
+					<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="25px" height="25px"/>  &nbsp; &nbsp; <b>Loading...</b>
+					</div>
+				</div>	
+			</div>
+			<center>
+			<div class="bg-log-loading" style="display:block">
+				<div class="loading-text">
+					<img src="<?php echo $this->baseUrl;?>/assets/images/gray75_polling.gif" width="75px" height="75px"/><br/><h3><b>Loading...</b></h3>
+				</div>
+			</div>
+			</center>
+			</div>
+		</div>
+		</div>
+	</div>
+	<?php echo $this->render("includes/custslime/devicebox.phtml");?>
+	<?php echo $this->render("includes/custslime/downloadbox.phtml");?>
+</html>
+<?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/slime/custslime.js"); ?>
