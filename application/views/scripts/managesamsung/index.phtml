@@ -1,28 +1,0 @@
-<?php echo $this->doctype();?>
-<html>
-<head>
-	<?php echo $this->headTitle();?>
-	<?php echo $this->render("includes/script.phtml"); ?>
-</head>
-<body class="bd_managesapps">
-	<?php echo $this->render("includes/header.phtml"); ?>
-	<?php echo $this->render("includes/hidden.phtml"); ?>	
-	<div class="ch-container">
-	<div class="row">
-	<!-- left menu starts -->
-	<?php echo $this->render("includes/menu.phtml"); ?>
-	<div id="content" class="col-lg-12 col-sm-12 push">
-		<?php
-			$crumb = array("Home" => $this->baseUrl,
-						   "Management" => "active",
-						   "Manage Samsung Apps" => "active");
-			$array = array(
-							"item" => $crumb,
-							"class" => "col-lg-12",
-							"style" => "padding-right:0px"
-						  );
-			echo $this->generate($this->config->param->gen->BREADCRUMB, $array);
-		?>						<div class="col-lg-12 col-sm-12">		<div class="float_right" style="margin-right: 30px;">			<a href="<?php echo $this->baseUrl;?>/managesamsung/insert" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>&nbsp; Insert Data</a>		</div>				<ul class="nav nav-tabs" role="tablist" id="myTab">			<li class="active"><a href="#slime" role="tab" data-toggle="tab">S Lime</a></li>			<li><a href="#galgift" role="tab" data-toggle="tab">Galaxy Gift ID</a></li>			<li><a href="#salaam" role="tab" data-toggle="tab">Salaam</a></li>			<li><a href="#sfit" role="tab" data-toggle="tab">S Fit</a></li>		</ul>				<div class="clear"></div><br/>				<div class="tab-content">			<div class="tab-pane fade in active" id="slime">				<div class="col-sm-12">					<div class="panel panel-default"><div class="panel-body">					<h3>&nbsp;&nbsp;<i class="glyphicon glyphicon-save"></i>&nbsp;&nbsp;&nbsp;S Lime Install's Data</h3><hr/>						<table class="table table-striped" id="slime_daily_install">							<thead><tr>								<th class="text-center"><h5><b>Transaction Date</b></h5></th>								<th class="text-center"><h5><b>Daily Downloads</b></h5></th>								<th class="text-center"><h5><b>Actions</b></h5></th>							</tr></thead>							<tbody></tbody>						</table>					</div></div>				</div>			</div>						<div class="tab-pane fade" id="galgift">				<div class="col-sm-12">					<div class="panel panel-default"><div class="panel-body">					<h3>&nbsp;&nbsp;<i class="glyphicon glyphicon-save"></i>&nbsp;&nbsp;&nbsp;Galaxy Gift ID Install's Data</h3><hr/>						<table class="table table-striped" id="sgift_daily_install">							<thead><tr>								<th class="text-center"><h5><b>Transaction Date</b></h5></th>								<th class="text-center"><h5><b>Daily Downloads</b></h5></th>								<th class="text-center"><h5><b>Actions</b></h5></th>							</tr></thead>							<tbody></tbody>						</table>					</div></div>				</div>			</div>						<div class="tab-pane fade" id="salaam">				<div class="col-sm-12">					<div class="panel panel-default"><div class="panel-body">					<h3>&nbsp;&nbsp;<i class="glyphicon glyphicon-save"></i>&nbsp;&nbsp;&nbsp;Salaam Install's Data</h3><hr/>						<table class="table table-striped" id="salaam_daily_install">							<thead><tr>								<th class="text-center"><h5><b>Transaction Date</b></h5></th>								<th class="text-center"><h5><b>Daily Downloads</b></h5></th>								<th class="text-center"><h5><b>Actions</b></h5></th>							</tr></thead>							<tbody></tbody>						</table>					</div></div>				</div>			</div>						<div class="tab-pane fade" id="sfit">				<div class="col-sm-12">					<div class="panel panel-default"><div class="panel-body">					<h3>&nbsp;&nbsp;<i class="glyphicon glyphicon-save"></i>&nbsp;&nbsp;&nbsp;S Fit Install's Data</h3><hr/>						<table class="table table-striped" id="sfit_daily_install">							<thead><tr>								<th class="text-center"><h5><b>Transaction Date</b></h5></th>								<th class="text-center"><h5><b>Daily Downloads</b></h5></th>								<th class="text-center"><h5><b>Actions</b></h5></th>							</tr></thead>							<tbody></tbody>						</table>					</div></div>				</div>			</div>		</div>		</div>
-	</div>
-</body>
-</html><?php echo $this->inlineScript()->appendFile($this->baseUrl."/js/managesamsung/samsungapps_slime.js")								->appendFile($this->baseUrl."/js/managesamsung/samsungapps_sgift.js")								->appendFile($this->baseUrl."/js/managesamsung/samsungapps_salaam.js")								->appendFile($this->baseUrl."/js/managesamsung/samsungapps_sfit.js"); ?>

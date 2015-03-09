@@ -1,1 +1,0 @@
-<?php header("location:http://localhost/msci_reporting/dashboard-reporting/msci_reporting/public/error/error403");?>
