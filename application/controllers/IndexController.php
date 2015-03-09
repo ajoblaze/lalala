@@ -1,6 +1,9 @@
 <?php
 class IndexController extends Zend_Controller_Action
 {
+	private $url;
+	private $mySession,$config;
+
 	public function init()
 	{
 		$this->url = $this->getRequest()->getBaseURL();
@@ -33,6 +36,6 @@ class IndexController extends Zend_Controller_Action
 
 	public function mainAction()
 	{
-		
+
 	}
 }
