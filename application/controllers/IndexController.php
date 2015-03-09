@@ -49,11 +49,11 @@ class IndexController extends Zend_Controller_Action
 
 		foreach($row as $datauser)
 		{
-			if($param->txtuser == $row[""] && $param->txtpass == $)
+			if($param->txtuser == $row["username"] && md5($param->txtpass) == $row["password"])
 			{
 				$this->mySession->unlock();
-				$this->mySession->username = $param->txtuser;
-				$this->mySession->role = $param->txtuser;
+				$this->mySession->name = $row["name"];
+				$this->mySession->role = $row["row"];
 				$this->mySession->lock();
 				$this->_redirect("main");
 			}
