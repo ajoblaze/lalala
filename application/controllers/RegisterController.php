@@ -67,9 +67,9 @@ class RegisterController extends Zend_Controller_Action{
       }
       else{
          $this->_forward("insertdb", "register", null, array("username" => $this->username,
-                               "pass" => $this->pass,
+                               "password" => $this->pass,
                                "name" => $this->name,
-                               "_role" => $this->role));
+                               "role" => $this->role));
       }
    }
 
@@ -82,9 +82,9 @@ class RegisterController extends Zend_Controller_Action{
       $this->name = $this->_getParam("name");
       $this->role = $this->_getParam("role");
       $dataToInsert = array("username" => $this->username,
-                            "pass" => $this->pass,
+                            "password" => $this->pass,
                             "nama" => $this->nama,
-                            "_role" => $this->role);
+                            "ole" => $this->role);
       $this->db_user->insertNew($dataToInsert);
       $this->_redirect("index?err=2");
    }
