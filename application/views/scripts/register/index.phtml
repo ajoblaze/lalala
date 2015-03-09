@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>Register</title>
+   </head>
+   <body>
+      <form action="<?php echo $this->baseUrl; ?>/register/validasi" method="POST">
+        <table>
+           <tr>
+             <td>Name</td>
+             <td>:</td>
+             <td><input type="text" name="name" /></td>
+           </tr>
+          <tr>
+            <td>Username</td>
+            <td>:</td>
+            <td><input type="text" name="username" /></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>:</td>
+            <td><input type="password" name="pass" /></td>
+          </tr>
+          <tr>
+            <td>Role</td>
+            <td>:</td>
+            <td>
+               <select name="role">
+                  <option value="">Choose...</option>
+                  <option value="1">User</option>
+                  <option value="2">Admin</option>
+              </select>
+           </td>
+          </tr>
+          <tr>
+            <td colspan=3 style="color:red;"><?php echo $this->error; ?></td>
+          </tr>
+          <tr>
+            <td colspan=3><input type="submit" value="Register" /></td>
+        </table>
+     </form>
+   </body>
+</html>
