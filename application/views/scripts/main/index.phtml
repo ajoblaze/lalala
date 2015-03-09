@@ -1,0 +1,36 @@
+<HTML>
+	<HEAD>
+	
+	</HEAD>
+	
+	<BODY>
+		Halo, <?php $this->mySession->name?> ! </br>
+		
+		<?php if($this->mySession->role == $this->config->role->id->admin){?>
+		<table border=1>
+			<tr>
+				<th>No</th>
+				<th>Username</th>
+				<th>Full Name</th>
+				<th>Role</th>
+			</tr>
+			<tr>
+				<?php
+					$i = 1;
+					
+					foreach($this->userList as $row):
+				?>
+				<td><?php echo $i++; ?></td>
+				<td><?php echo $row->username ?></td>
+				<td><?php echo $row->name ?></td>
+				<td><?php echo $row->role == 0 ?"User" : "Admin"  ?></td>
+				<?php
+					endforeach;
+				
+				?>
+			</tr>
+		</table>
+	
+		<?php } ?>
+	</BODY>
+</HTML>
