@@ -1,1 +1,31 @@
-<?php echo "Hello World.."; ?>
+<html>
+  <head>
+    <title>Form Login</title>
+  </head>
+  <body bgcolor="#B5B5B5">
+    <center>
+      <div style="" width="500px" height="500px">
+        <form action="<?php echo $this->baseUrl; ?>/index/dologin" method="POST">
+          <table>
+            <tr>
+              <td>Username</td>
+              <td><input type="text" name="txtuser" /></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><input type="password" name="txtpass" /></td>
+            </tr>
+            <?php if(isset($this->error)): ?>
+              <tr>
+                <td colspan=2 style="color: red;"><?php echo $this->error; ?></td>
+              </tr>
+            <?php endif; ?>
+            <tr>
+              <td colspan=2><input type="submit" value="Submit" /><input type="reset" value="Reset" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </center>
+  </body>
+</html>
