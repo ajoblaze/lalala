@@ -59,7 +59,7 @@ class RegisterController extends Zend_Controller_Action{
       else if(strlen($param->name)==0){
          $this->_redirect("register?err=5");
       }
-      else if(strlen($param->role)==0){
+      else if($param->role==-1){
          $this->_redirect("register?err=6");
       }
       else if($this->checkuser($param->username)==0){
@@ -82,20 +82,19 @@ class RegisterController extends Zend_Controller_Action{
       $this->name = $this->_getParam("name");
       $this->role = $this->_getParam("role");
       $dataToInsert = array("username" => $this->username,
-                            "password" => $this->pass,
-                            "nama" => $this->nama,
-                            "ole" => $this->role);
-      $this->db_user->insertNew($dataToInsert);
-      $this->_redirect("index?err=2");
+                            "password" => md5($this->pass),
+                            "name" => $this->name,
+                            "role" => $this->role);
+		
+		$temp = $this->db_user->getUsername($this->username);
+		
+        $this->db_user->insertUser($dataToInsert);
+        $this->_redirect("index?err=2");
    }
 
    public function checkuser($username){
-      $sql = $this->db_user->getUsername();
-      foreach($sql as $u){
-         if($u == $username){
-            return 0;
-         }
-      }
-      return 1;
+      $temp = $this->db_user->getUsername($this->username);
+	  $nilai = count($temp);
+      return ($nilai == 0) ? 1 : 0;
    }
 }

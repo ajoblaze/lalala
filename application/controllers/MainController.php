@@ -4,10 +4,12 @@
 	09 / 03 / 2015
 
 */
+require_once "db_user/db_user.php";
+
 class MainController extends Zend_Controller_Action
 {
 	
-	var $db;
+	var $db,$user;
 	
 	public function init()
 	{
@@ -22,10 +24,6 @@ class MainController extends Zend_Controller_Action
 		/*Get Configuration Value*/
 		$this->config=Zend_Registry::get('config');
 		$this->view->config = $this->config;
-					
-		// Include Library
-		$this->library = (object) array( "validate" => new Validate() );
-		
 		
 		// Create entity of database
 		$this->db = new Db_User($this->config->resources->db);
@@ -36,9 +34,17 @@ class MainController extends Zend_Controller_Action
 	
 	public function indexAction()
 	{
-		$userlist = $this->db_user->getUser();
-		$this->view->userList = $userList;
+		$this->user = $this->db->getUser();
+		$this->view->user = $this->user;
+	}
+	
+	public function logoutAction(){
+		$this->_helper->viewRenderer->setNoRender();
 		
+		$this->mySession->unsetAll();
+		
+		//Redirect to Login
+		$this->_redirect("index");
 	}
 	
 	public function checkValid()

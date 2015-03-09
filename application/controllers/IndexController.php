@@ -6,17 +6,19 @@ class IndexController extends Zend_Controller_Action
 	private $mySession,$config;
 	private $datauser;
 
+	private  $db_user;
 	public function init()
 	{
 		$this->url = $this->getRequest()->getBaseURL();
 		$this->view->baseUrl = $this->url;
 
-		//$this->mySession = new Zend_Session_Namespace("Latihan");
-		//$this->view->mySession = $this->mySession;
+		$this->mySession = new Zend_Session_Namespace("user_data");
+		$this->view->mySession = $this->mySession;
 
-		//$this->config = Zend_Registry::get("config");
-		//$this->view->config = $this->config;
-
+		$this->config = Zend_Registry::get("config");
+		$this->view->config = $this->config;
+	
+		$this->db_user = new Db_User($this->config->resources->db);
 
 		$this->initView();
 	}
@@ -47,21 +49,18 @@ class IndexController extends Zend_Controller_Action
 
 		$datauser = $this->db_user->getUser();
 
-		foreach($row as $datauser)
+		foreach($datauser as $row)
 		{
-			if($param->txtuser == $row["username"] && md5($param->txtpass) == $row["password"])
+			if($param->txtuser == $row->username && md5($param->txtpass) == $row->password)
 			{
 				$this->mySession->unlock();
-				$this->mySession->name = $row["name"];
-				$this->mySession->role = $row["row"];
+				$this->mySession->name = $row->name;
+				$this->mySession->role = $row->role;
 				$this->mySession->lock();
 				$this->_redirect("main");
 			}
 		}
-		else
-		{
-			$this->_redirect("index?err=1");
-		}
+		$this->_redirect("index?err=1");
 
 	}
 }

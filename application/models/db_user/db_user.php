@@ -18,10 +18,11 @@
 		
 		public function getUser() {
 			$sql = $this->db->select()
-							->from("msuser", array("userid", 
+							->from("msuser", array("id", 
 												   "username", 
-												   "pass",
-												   "created_date" => "TO_CHAR(created_date, 'YYYY MM, DD HH24:MI')"));
+												   "password",
+												   "role",
+												   "name"));
 			return $this->db->fetchAll($sql);
 		}
 		
@@ -39,7 +40,7 @@
 		public function deleteUser($userID) {
 			try {
 				$this->db->beginTransaction();
-				$this->db->delete("msuser", "userid=".$this->escape($userID));
+				$this->db->delete("msuser", "id=".$this->escape($userID));
 				$this->db->commit();
 			} catch(Zend_Exception $e) {
 				$this->db->rollback();
@@ -50,13 +51,32 @@
 		public function updateUser($userID, $dataEdit) {
 			try {
 				$this->db->beginTransaction();
-				$this->db->update("msuser", $dataEdit, "userid=".$this->escape($userID));
+				$this->db->update("msuser", $dataEdit, "id=".$this->escape($userID));
 				$this->db->commit();
 			} catch(Zend_Exception $e) {
 				$this->db->rollback();
 				echo $e->getMessage();
 			}
 		}
+		
+		public function insertNew($dataToInsert){
+		  try{
+			 $this->db->beginTransaction();
+			 $this->db->insert("msuser", $dataToInsert);
+			 $this->db->commit();
+		 }catch(Zend_Exception $e){
+			 $this->db->rollback();
+			 echo $e->getMessage();
+		 }
+	   }
+
+	   public function getUsername($prmtr){
+		 $sql = $this->db->select()
+						 ->from("msuser", array("username"))
+						 ->where("username LIKE '".$prmtr."'");
+		 return $this->db->fetchAll($sql);
+	   }
+
 	}
 	
 	

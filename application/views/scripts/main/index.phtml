@@ -4,8 +4,9 @@
 	</HEAD>
 	
 	<BODY>
-		Halo, <?php $this->mySession->name?> ! </br>
-		
+		Halo, <?php echo $this->mySession->name;?> ! </br>
+		| <a href = "<?php echo $this->baseUrl ?>/main/logout"> Log Out </a>
+		</br>
 		<?php if($this->mySession->role == $this->config->role->id->admin){?>
 		<table border=1>
 			<tr>
@@ -13,22 +14,21 @@
 				<th>Username</th>
 				<th>Full Name</th>
 				<th>Role</th>
-			</tr>
-			<tr>
-				<?php
+			</tr><?php
 					$i = 1;
-					
-					foreach($this->userList as $row):
+					foreach ($this->user as $row) :
 				?>
-				<td><?php echo $i++; ?></td>
-				<td><?php echo $row->username ?></td>
-				<td><?php echo $row->name ?></td>
-				<td><?php echo $row->role == 0 ?"User" : "Admin"  ?></td>
-				<?php
+			<tr>
+				
+						<td><?php echo $i++; ?></td>
+						<td><?php echo $row->username ?></td>
+						<td><?php echo $row->name ?></td>
+						<td><?php echo $row->role == 0 ?"User" : "Admin"  ?></td>
+				
+			</tr><?php
 					endforeach;
 				
 				?>
-			</tr>
 		</table>
 	
 		<?php } ?>
