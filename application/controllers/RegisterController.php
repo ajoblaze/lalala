@@ -90,7 +90,7 @@ class RegisterController extends Zend_Controller_Action{
    }
 
    public function checkuser($username){
-      $sql = $this->db->getUsername();
+      $sql = $this->db_user->getUsername();
       foreach($sql as $u){
          if($u == $username){
             return 0;
