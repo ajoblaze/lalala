@@ -1,0 +1,36 @@
+<HTML>
+	<HEAD>
+	
+	</HEAD>
+	
+	<BODY>
+		Halo, <?php echo $this->mySession->name;?> ! </br>
+		| <a href = "<?php echo $this->baseUrl ?>/main/logout"> Log Out </a>
+		</br>
+		<?php if($this->mySession->role == $this->config->role->id->admin){?>
+		<table border=1>
+			<tr>
+				<th>No</th>
+				<th>Username</th>
+				<th>Full Name</th>
+				<th>Role</th>
+			</tr><?php
+					$i = 1;
+					foreach ($this->user as $row) :
+				?>
+			<tr>
+				
+						<td><?php echo $i++; ?></td>
+						<td><?php echo $row->username ?></td>
+						<td><?php echo $row->name ?></td>
+						<td><?php echo $row->role == 0 ?"User" : "Admin"  ?></td>
+				
+			</tr><?php
+					endforeach;
+				
+				?>
+		</table>
+	
+		<?php } ?>
+	</BODY>
+</HTML>
